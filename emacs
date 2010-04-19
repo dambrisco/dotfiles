@@ -17,7 +17,6 @@
 (load "my-env-vars")
 (load "my-disabled")
 (load "my-carbon-emacs")
-(load "my-fonts")
 (load "my-colors")
 
 ;(load "my-iswitchb")
@@ -37,10 +36,12 @@
 (load "my-rails")
 (load "my-haml")
 (load "my-javascript")
-(load "my-erlang")
+;(load "my-erlang")
+(load "my-markdown")
+(load "my-textile")
 
-(load "my-tabs")
 (load "my-snippets")
+(load "my-tabs")
 
 (load "my-csv")
 
@@ -50,9 +51,12 @@
 
 (load "my-utf-8")
 (load "my-global-keys")
+(load "my-scratch")
 
 (load "my-twitter")
 (load "my-private")
+
+(load "my-latex")
 
 ;; Beginning of the el4r block:
 ;; RCtool generated this block automatically. DO NOT MODIFY this block!

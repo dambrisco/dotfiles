@@ -28,11 +28,12 @@
 (global-set-key [(f8)]         'indent-region)
 (global-set-key [(control f8)] 'align)
 (global-set-key [(shift f8)]   'align-current)
+(global-set-key [(meta f8)]    'align-regexp)
 
 ;; Version control and change related
 ;(global-set-key [(control f9)]      'rails-svn-status-into-root)  ;; Move to rails mode?
 ;(global-set-key [(control meta f9)] (lambda () (interactive) (svn-status default-directory)))
-(global-set-key [(control f9)] (lambda () (interactive) (git-status default-directory)))
+(global-set-key [(control f9)] (lambda () (interactive) (magit-status default-directory)))
 (global-set-key [(meta f9)]         'autotest-switch)  ;; Move to ruby/rails mode?
 
 ;; Map the window manipulation keys to meta 0, 1, 2, o
@@ -57,7 +58,6 @@
 
 ;; Mac OS X conventions
 (global-set-key (kbd "M-a") 'mark-whole-buffer) ; was backward-sentence.
-(global-set-key (kbd "M-s") 'save-buffer) ; was center-line.
 
 ;; Find matching parens
 (global-set-key (kbd "C-'") 'match-paren)
@@ -67,3 +67,6 @@
 
 ;; ibuffer > list-buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+
+;; Easier buffer killing
+(global-set-key (kbd "M-k") 'kill-this-buffer)

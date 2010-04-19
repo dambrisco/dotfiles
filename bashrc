@@ -36,14 +36,19 @@ if [ -d /usr/local/mysql/bin ] ; then
 fi
 
 # PostgreSQL
-if [ -d /opt/local/lib/postgresql83/bin/ ] ; then
-  PATH="${PATH}:/opt/local/lib/postgresql83/bin/"
+if [ -d /opt/local/lib/postgresql83/bin ] ; then
+  PATH="${PATH}:/opt/local/lib/postgresql83/bin"
 fi
 
 # Subversion
 # if [ -d /opt/subversion/bin ] ; then
 #   PATH="/opt/subversion/bin:${PATH}"
 # fi
+
+# MacTex
+if [ -d /usr/texbin ] ; then
+  PATH="/usr/texbin:${PATH}"
+fi
 
 PATH=.:${PATH}
 
@@ -142,14 +147,6 @@ export HISTIGNORE="&:pwd:ls:ll:lal:[bf]g:exit:rm*:sudo rm*"
 export HISTCONTROL=erasedups
 # increase the default size from only 1,000 items
 export HISTSIZE=10000
-
-# By default up/down are bound to previous-history and next-history
-# respectively. The following does the same but gives the extra functionality
-# where if you type any text (or more accurately, if there is any text between
-# the start of the line and the cursor), the subset of the history starting with
-# that text is searched.
-bind '"\e[A"':history-search-backward
-bind '"\e[B"':history-search-forward
 
 ############################################################
 ## Aliases

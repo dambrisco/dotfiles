@@ -1,14 +1,22 @@
 ;;; Pretty colors
 
-(load-file "~/.emacs.d/vendor/color-theme-arjen/color-theme-arjen.el")
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/color-theme"))
+(require 'color-theme)
+(eval-after-load "color-theme"
+  '(progn
+     (color-theme-initialize)
+     (color-theme-hober)))
 
-(require 'color-theme-arjen)
-;(color-theme-initialize)
+;; (load-file "~/.emacs.d/vendor/color-theme-arjen/color-theme-arjen.el")
+;; (require 'color-theme-arjen)
+
+(load-file "~/.emacs.d/vendor/color-theme-ir-black/color-theme-ir-black.el")
 
 ;; (color-theme-reset-faces)
 
 ;; My current favorite color-theme
-(color-theme-arjen)
+(color-theme-ir-black)
+;; (color-theme-arjen)
 
 ;; Color-schemes that I thought were pleasing to the eye.  Most others are
 ;; pretty ugly.
@@ -27,3 +35,10 @@
 ;; (color-theme-rotor)
 ;; (color-theme-emacs-21)
 ;; (color-theme-gtk-ide)
+
+;; Cursor and region color overrides after switching to Emacs 23 on OSX
+;; (set-cursor-color "#014C88")
+(set-cursor-color "#666666")
+(blink-cursor-mode)
+(set-face-foreground 'region nil)
+(set-face-background 'region "#3D2101")

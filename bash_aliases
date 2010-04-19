@@ -41,10 +41,13 @@ alias gl="git pull"
 alias glr="git pull --rebase"
 alias gp="git push"
 alias gs="git status"
-alias gg="git log --pretty=oneline"
-alias ggs="git log --stat"
+alias gg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias ggs="gg --stat"
 alias gh="github"
 alias gsl="git shortlog -sn"
+alias gw="git whatchanged"
+alias gsr="git svn rebase"
+alias gsp="git svn dcommit"
 
 # Useful report of what has been committed locally but not yet pushed to another
 # branch.  Defaults to the remote origin/master.  The u is supposed to stand for
@@ -99,31 +102,32 @@ alias whotunes='lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689'
 ## Ruby
 ############################################################
 
-alias ri="qri"
-alias a="autotest -q -f"
+alias r="rake"
+alias a="rake db:test:clone && autotest -q"
 alias smp="staticmatic preview ."
 
 export GEMS=`gem env gemdir`/gems
-function findgem {
+function gemfind {
   echo `ls $GEMS | grep -i $1 | sort | tail -1`
 }
 
-# Use: cdgem <name>, cd's into your gems directory
+# Use: gemcd <name>, cd's into your gems directory
 # that best matches the name provided.
-function cdgem {
-  cd $GEMS/`findgem $1`
+function gemcd {
+  cd $GEMS/`gemfind $1`
 }
 
 # Use: gemdoc <gem name>, opens the rdoc of the gem
 # that best matches the name provided.
 function gemdoc {
-  open $GEMS/../doc/`findgem $1`/rdoc/index.html
+  open $GEMS/../doc/`gemfind $1`/rdoc/index.html
 }
 
 ############################################################
 ## Rails
 ############################################################
 
+alias rails="rails -m ~/.rails.d/template.rb"
 alias ss="script/server"
 alias sg="script/generate"
 alias sc="script/console"
@@ -135,12 +139,14 @@ alias tl='tail -f log/development.log'
 
 if [ -f /Applications/Emacs.app/Contents/MacOS/Emacs ]; then
   alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+  alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
 fi
 
 alias grep='GREP_COLOR="1;37;41" grep --color=auto'
 alias wgeto="wget -q -O -"
 alias sha1="openssl dgst -sha1"
 alias sha2="openssl dgst -sha256"
+alias b64="openssl enc -base64"
 
 alias flushdns='dscacheutil -flushcache'
 
