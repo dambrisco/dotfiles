@@ -254,6 +254,14 @@ imap <F9> <ESC>:set wrap!<CR>a
 map  <F8> :set hls!<CR>
 imap <F8> <ESC>:set hls!<CR>a
 
+" Cmd-y to duplicate visual selection beneath
+vmap <D-y> y'>p
+nmap <D-y> yyp
+
+" Shift-Cmd-y to duplicate and comment out orig selection
+vmap <D-Y> y'>pgv,cc'>
+nmap <D-Y> yypk,ccj
+
 " Functions
 " ------------------------------------------------------------
 
