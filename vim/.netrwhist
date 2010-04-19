@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/usr/local/lib/ruby19/gems/1.9.1/gems/ZenTest-4.2.1'
+let g:netrw_dirhist_2='/Users/jgarvin/Projects/CustomInk/tenderpivotalglue'
+let g:netrw_dirhist_3='/Users/jgarvin/Projects/OSS/coderifous.github.com'
+let g:netrw_dirhist_4='/Users/jgarvin/Projects/CustomInk/tinderpt'
+let g:netrw_dirhist_5='/Users/jgarvin/Projects/OSS/mongomapper'
+let g:netrw_dirhist_6='/Users/jgarvin/Projects/OSS/twitter.hovercard'
+let g:netrw_dirhist_7='/Users/jgarvin/Projects/OSS/twittercard'
