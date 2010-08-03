@@ -157,8 +157,11 @@ let NERDTreeMouseMode=1
 "let g:snip_elem_delim = ":"
 "let g:snip_set_textmate_cp = '1'  " Tab to expand snippets, not automatically.
 
+" peep open ********************************************************
+map <unique> <silent> ,f <Plug>PeepOpen
+
 " fuzzyfinder_textmate ********************************************************
-map ,f :FuzzyFinderTextMate<CR>
+" map ,f :FuzzyFinderTextMate<CR>
 map ,b :FuzzyFinderBuffer<CR>
 let g:fuzzy_ignore = '.git/*;*.swp;public/backend/*'
 
