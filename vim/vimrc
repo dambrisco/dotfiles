@@ -79,7 +79,11 @@ let Tlist_Show_One_File = 1   " Show only one file in the taglist at a time
 let Tlist_Sort_Type = "name"  " Sort tag list by names rather than order they are defined
 map <D-i> :TlistToggle<CR>
 
+" pathogen init
+call pathogen#runtime_append_all_bundles()
+
 " File Stuff ******************************************************************
+filetype off
 filetype plugin indent on
 " To show current filetype use: set filetype
 
