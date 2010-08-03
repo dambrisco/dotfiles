@@ -65,6 +65,10 @@ set foldenable                  " (fen) enables or disables folding
 " unfold all folds when a file is opened
 autocmd  BufWinEnter * normal zR
 
+set backup
+set backupdir=~/.vim_tmp
+set dir=~/.vim_tmp
+
 "set t_Co=256 " 256 colors
 set background=dark
 syntax on " syntax highlighting
