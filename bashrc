@@ -22,6 +22,11 @@ if [ -d /usr/local/bin ] ; then
   PATH="${PATH}:/usr/local/bin"
 fi
 
+# Node Package Manager
+if [ -d /usr/local/share/npm/bin ] ; then
+  PATH="${PATH}:/usr/local/share/npm/bin"
+fi
+
 # MacPorts
 if [ -d /opt/local/bin ] ; then
   PATH="/opt/local/bin:${PATH}"
@@ -181,6 +186,8 @@ fi
 ## Other
 ############################################################
 
+source /usr/local/etc/bash_completion.d/cdargs-bash.sh
+
 if [[ "$USER" == '' ]]; then
   # mainly for cygwin terminals. set USER env var if not already set
   USER=$USERNAME
@@ -192,3 +199,7 @@ if [ -f /opt/local/share/curl/curl-ca-bundle.crt ] ; then
 fi
 
 ############################################################
+
+# VI Mode
+
+set -o vi

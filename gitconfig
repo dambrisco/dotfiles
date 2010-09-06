@@ -18,4 +18,4 @@
 [merge]
   summary = true
 [push]
-  default = matching
+  default = tracking

@@ -192,6 +192,10 @@ let g:AutoComplPop_IgnoreCaseOption = 0
 let g:AutoComplPop_BehaviorKeywordLength = -1
 let g:AutoComplPop_MappingDriven=1
 
+
+" AutoClose config
+let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"'}
+
 " -----------------------------------------------------------------------------
 " |                             OS Specific                                   |
 " |                      (GUI stuff goes in gvimrc)                           |
