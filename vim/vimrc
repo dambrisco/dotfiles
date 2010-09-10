@@ -284,6 +284,10 @@ nmap <D-y> yyp
 vmap <D-Y> y'>pgv,cc'>
 nmap <D-Y> yypk,ccj
 
+" Cmd-j to jump to last line, Cmd-k to just to first line
+nmap <D-j> G
+nmap <D-k> gg
+
 " Functions
 " ------------------------------------------------------------
 
