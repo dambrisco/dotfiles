@@ -1,0 +1,14 @@
+# shells for developing BusyConf
+---
+- sencha_docs:
+  - cd Projects/sencha-touch-beta-0.95;
+  - serve 8000;
+- busyconf_building:
+  - cdb busyconf;
+  - rake;
+  - show tables;
+- busyconf_serving:
+  - cdb busyconf;
+  - serve 8100;
+- spare:
+  - cdb busyconf;
