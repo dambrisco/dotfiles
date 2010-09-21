@@ -141,6 +141,7 @@ if [ -f /Applications/Emacs.app/Contents/MacOS/Emacs ]; then
   alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
 fi
 
+alias serve='python -m SimpleHTTPServer'
 alias grep='GREP_COLOR="1;37;41" grep --color=auto'
 alias wgeto="wget -q -O -"
 alias sha1="openssl dgst -sha1"
