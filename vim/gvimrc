@@ -1,10 +1,5 @@
-" -----------------------------------------------------------------------------
-" |                            VIM Settings                                   |
-" |                              GUI stuff                                    |
-" -----------------------------------------------------------------------------
+" GUI Specific settings
 
-
-" OS Specific *****************************************************************
 if has("gui_macvim")
 
   set fuoptions=maxvert,maxhorz " fullscreen options (MacVim only), resized window when changed to fullscreen
@@ -14,12 +9,16 @@ if has("gui_macvim")
   set lcs=tab:¬¬,trail:·    " (lcs) strings used in 'list' mode to show hidden characters (default=eol:$)
   set listchars+=precedes:→ " (lcs) when 'nowrap', character to indicate that line continues off the page
   set listchars+=extends:←
+
   " Unmap Apple+T and Shift+Apple+T
   macmenu &File.Open\ Tab\.\.\. key=<nop>
+
   " FuzzyFinder
   nnoremap <D-T> :FuzzyFinderTextMate<CR>
+
   " NerdTree
   nnoremap <D-e> :NERDTreeToggle<CR>
+
   " Tab navigation like FF and TM
   nnoremap <D-M-right> :tabnext<CR>
   nnoremap <D-M-left> :tabprev<CR>
@@ -29,14 +28,9 @@ elseif has("gui_gtk2")
   set guifont=Monaco
   set guioptions-=T  " remove toolbar
 
-elseif has("x11")
-elseif has("gui_win32")
 end
 
-" General *********************************************************************
 set anti " Antialias font
-
-"set transparency=0
 
 " Default size of window
 set columns=120

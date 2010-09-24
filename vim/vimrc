@@ -1,7 +1,5 @@
-"" -----------------------------------------------------------------------------
-" |                            VIM Settings                                   |
-" |                   (see gvimrc for gui vim settings)                       |
-" -----------------------------------------------------------------------------
+" VIM Settings
+" see gvimrc for gui vim settings
 
 set nocompatible                " (cp) use Vim defaults (much better)
 syntax on                       " turns syntax highlighting on
@@ -23,7 +21,7 @@ set textwidth=80                " (tw) number of columns before an automatic lin
 set formatoptions=croq          " (fo) influences how vim automatically formats text
 set backspace=indent,eol,start  " (bs) allows backspacing beyond starting point of insert mode, indents and line breaks
 set nrformats+=alpha            " (nf) adds alpha chars to list that gets incremented/decremented with ^A/^X
-set lcs=tab:~~,trail:~    " (lcs) strings used in 'list' mode to show hidden characters (default=eol:$)
+set lcs=tab:~~,trail:~          " (lcs) strings used in 'list' mode to show hidden characters (default=eol:$)
 set list
 set winminheight=0              " (wmh) the minimal height of the window when it's not the current window
 
@@ -202,22 +200,6 @@ let g:AutoComplPop_MappingDriven=1
 
 " AutoClose config
 let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"'}
-
-" -----------------------------------------------------------------------------
-" |                             OS Specific                                   |
-" |                      (GUI stuff goes in gvimrc)                           |
-" -----------------------------------------------------------------------------
-
-" Mac *************************************************************************
-"if has("mac")
-  ""
-"endif
-
-" Windows *********************************************************************
-"if has("gui_win32")
-  ""
-"endif
-
 
 " make p in Visual mode overwrite the selected text with the previously yanked text
 "vnoremap p <Esc>:let current_reg = @"<CR>gvs<C-R>=current_reg<CR><Esc>
