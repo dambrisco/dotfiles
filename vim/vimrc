@@ -23,9 +23,7 @@ set textwidth=80                " (tw) number of columns before an automatic lin
 set formatoptions=croq          " (fo) influences how vim automatically formats text
 set backspace=indent,eol,start  " (bs) allows backspacing beyond starting point of insert mode, indents and line breaks
 set nrformats+=alpha            " (nf) adds alpha chars to list that gets incremented/decremented with ^A/^X
-set lcs=tab:␉_,trail:·,eol:¬    " (lcs) strings used in 'list' mode to show hidden characters (default=eol:$)
-set listchars+=precedes:→      " (lcs) when 'nowrap', character to indicate that line continues off the page
-set listchars+=extends:←
+set lcs=tab:~~,trail:~    " (lcs) strings used in 'list' mode to show hidden characters (default=eol:$)
 set list
 set winminheight=0              " (wmh) the minimal height of the window when it's not the current window
 
