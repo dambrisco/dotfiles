@@ -72,6 +72,9 @@ set background=dark
 syntax on " syntax highlighting
 colorscheme railscasts
 
+" toggle nerdtree
+command NT :NERDTreeToggle
+
 " easily get to vimrc
 command Vimrc :e ~/.vimrc
 
