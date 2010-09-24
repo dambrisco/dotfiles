@@ -158,6 +158,9 @@ let NERDTreeHijackNetrw=1
 " Single click for everything
 let NERDTreeMouseMode=1
 
+" Hide javascript files in nerdtree
+:command Nojs :let NERDTreeIgnore=[".js$"]
+
 " SnippetsEmu *****************************************************************
 "imap <unique> <C-j> <Plug>Jumper
 "let g:snip_start_tag = "_\."
