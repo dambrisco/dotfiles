@@ -18,29 +18,28 @@ syntax sync minlines=100
 " CoffeeScript allows dollar signs in identifiers
 setlocal isident+=$
 
-syntax keyword coffeeStatement return break continue throw
+syntax match coffeeStatement /\<\%(return\|break\|continue\|throw\)\>/
 highlight default link coffeeStatement Statement
 
-syntax keyword coffeeRepeat for while until loop
+syntax match coffeeRepeat /\<\%(for\|while\|until\|loop\)\>/
 highlight default link coffeeRepeat Repeat
 
-syntax keyword coffeeConditional if else unless switch when then
+syntax match coffeeConditional /\<\%(if\|else\|unless\|switch\|when\|then\)\>/
 highlight default link coffeeConditional Conditional
 
-syntax keyword coffeeException try catch finally
+syntax match coffeeException /\<\%(try\|catch\|finally\)\>/
 highlight default link coffeeException Exception
 
-syntax keyword coffeeOperator instanceof typeof delete
+syntax match coffeeOperator /\<\%(instanceof\|typeof\|delete\)\>/
 highlight default link coffeeOperator Operator
 
-syntax keyword coffeeKeyword new in of by where and or not is isnt
-\                            class extends super all
+syntax match coffeeKeyword /\<\%(new\|in\|of\|by\|where\|and\|or\|not\|is\|isnt\|class\|extends\|super\|all\)\>/
 highlight default link coffeeKeyword Keyword
 
-syntax keyword coffeeBoolean true on yes false off no
+syntax match coffeeBoolean /\<\%(\%(true\|on\|yes\|false\|off\|no\)\)\>/
 highlight default link coffeeBoolean Boolean
 
-syntax keyword coffeeGlobal null undefined
+syntax match coffeeGlobal /\<\%(null\|undefined\)\>/
 highlight default link coffeeGlobal Type
 
 syntax cluster coffeeReserved contains=coffeeStatement,coffeeRepeat,
@@ -48,16 +47,14 @@ syntax cluster coffeeReserved contains=coffeeStatement,coffeeRepeat,
 \                                      coffeeOperator,coffeeKeyword,
 \                                      coffeeBoolean,coffeeGlobal
 
-syntax match coffeeAssignmentChar /:/ contained
-syntax match coffeeAssignmentChar /=/ contained
+syntax match coffeeAssignmentMod /\%(\s\+\zs\%(and\|or\)\|\W\{,3}\)\ze=/ contained
+highlight default link coffeeAssignmentMod SpecialChar
+
+syntax match coffeeAssignmentChar /:\|=/ contained
 highlight default link coffeeAssignmentChar SpecialChar
 
-syntax match coffeeAssignment /@\?\I\%(\i\|::\|\.\|\[.\+\]\)*\s*\%(::\@!\|==\@!>\@!\)/
-\                             contains=@coffeeIdentifier,coffeeAssignmentChar,
-\                                       coffeeBrackets
-highlight default link coffeeAssignment Identifier
-
-syntax keyword coffeeVar this prototype arguments
+syntax match coffeeVar /\<\%(this\|prototype\|arguments\)\>/
+" Matches @-variables like @abc
 syntax match coffeeVar /@\%(\I\i*\)\?/
 highlight default link coffeeVar Type
 
@@ -73,12 +70,24 @@ highlight default link coffeeConstant Constant
 syntax match coffeePrototype /::/
 highlight default link coffeePrototype SpecialChar
 
+syntax region coffeeString start=/"/ skip=/\\\\\|\\"/ end=/"/ contains=@coffeeInterpString
+syntax region coffeeString start=/'/ skip=/\\\\\|\\'/ end=/'/ contains=@coffeeSimpleString
+highlight default link coffeeString String
+
 " What can make up a variable name
 syntax cluster coffeeIdentifier contains=coffeeVar,coffeeObject,coffeeConstant,
 \                                        coffeePrototype
 
-syntax match coffeeFunction /->/
-syntax match coffeeFunction /=>/
+syntax match coffeeAssignment /@\?\I\%(\i\|::\|\.\|\[.\+\]\|([^)]*)\)*\s*\%(::\@!\|\%(and\|or\|\|&&\|||\|?\|+\|-\|\/\|\*\|%\|<<\|>>\|>>>\|&\||\|\^\)==\@!>\@!\)/
+\                             contains=@coffeeIdentifier,coffeeAssignmentMod,
+\                                       coffeeAssignmentChar,coffeeBrackets,
+\                                       coffeeParens
+syntax match coffeeAssignment /\%("\|'\)[^'"]\+\%("\|'\)\s*:/ contains=coffeeString,
+\                                                                      coffeeAssignmentChar
+syntax match coffeeAssignment /\d*\%(\.\d\+\)\?\s*:/ contains=coffeeNumber,coffeeAssignmentChar
+highlight default link coffeeAssignment Identifier
+
+syntax match coffeeFunction /->\|=>/
 highlight default link coffeeFunction Function
 
 syntax keyword coffeeTodo TODO FIXME XXX contained
@@ -106,31 +115,25 @@ syntax region coffeeInterpolation matchgroup=coffeeInterpDelim
 \                                 contained contains=TOP
 highlight default link coffeeInterpDelim Delimiter
 
-syntax match coffeeInterpSimple /\#@\?\I\%(\i\|\.\)*/ contained
-highlight default link coffeeInterpSimple Identifier
-
 syntax match coffeeEscape /\\\d\d\d\|\\x\x\{2\}\|\\u\x\{4\}\|\\./ contained
 highlight default link coffeeEscape SpecialChar
 
 syntax cluster coffeeSimpleString contains=@Spell,coffeeEscape
-syntax cluster coffeeInterpString contains=@coffeeSimpleString,coffeeInterpSimple,
-\                                          coffeeInterpolation
+syntax cluster coffeeInterpString contains=@coffeeSimpleString,
+\                                           coffeeInterpolation
 
-syntax region coffeeRegExp start=/\// end=/\/[gimy]\{,4}/ oneline
+syntax region coffeeRegExp start=/)\@<!\%(\%((\s*\|=\s\+\)\@<=\/\|\s\zs\/\s\@!\)/
+\                          end=/\/[gimy]\{,4}/ oneline
 \                          contains=@coffeeInterpString
 highlight default link coffeeRegExp String
-
-syntax region coffeeString start=/"/ skip=/\\\\\|\\"/ end=/"/ contains=@coffeeInterpString
-syntax region coffeeString start=/'/ skip=/\\\\\|\\'/ end=/'/ contains=@coffeeSimpleString
-highlight default link coffeeString String
 
 syntax region coffeeHeredoc start=/"""/ end=/"""/ contains=@coffeeInterpString
 syntax region coffeeHeredoc start=/'''/ end=/'''/ contains=@coffeeSimpleString
 highlight default link coffeeHeredoc String
 
 syntax region coffeeCurlies start=/{/ end=/}/ contains=TOP
-syntax region coffeeBrackets start=/\[/ end=/\]/ contains=ALLBUT,coffeeAssignment
-syntax region coffeeParens start=/(/ end=/)/ contains=TOP
+syntax region coffeeBrackets start=/\[/ end=/\]/ contains=TOP,coffeeAssignment
+syntax match coffeeParens /(.*)/ contains=TOP,coffeeAssignment
 
 " Displays an error for trailing whitespace
 if !exists("coffee_no_trailing_space_error")

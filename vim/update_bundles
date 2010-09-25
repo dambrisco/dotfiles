@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+
+@github_bundles = []
+def github(path); @github_bundles << path; end
+
+github "scrooloose/nerdtree"
+github "msanders/snipmate.vim"
+github "timcharper/textile.vim"
+github "vim-ruby/vim-ruby"
+github "kchmck/vim-coffee-script"
+
+github "tsaleh/vim-align"
+github "tsaleh/vim-shoulda"
+github "tsaleh/vim-matchit"
+
+github "tpope/vim-fugitive"
+github "tpope/vim-git"
+github "tpope/vim-haml"
+github "tpope/vim-markdown"
+github "tpope/vim-rails"
+github "tpope/vim-repeat"
+github "tpope/vim-surround"
+github "tpope/vim-vividchalk"
+
+github "vim-scripts/ack.vim"
+github "vim-scripts/AutoClose"
+github "vim-scripts/AutoTag"
+github "vim-scripts/bufexplorer.zip"
+github "vim-scripts/closetag.vim"
+github "vim-scripts/tComment"
+github "vim-scripts/Gist.vim"
+github "vim-scripts/taglist.vim"
+github "vim-scripts/YankRing.vim"
+
+require 'fileutils'
+require 'open-uri'
+
+bundles_dir = File.join(File.dirname(__FILE__), "bundle")
+
+FileUtils.cd(bundles_dir)
+
+@github_bundles.each do |path|
+  dir = path.split('/').last
+  puts "\nUpdating #{path}"
+  FileUtils.rm_rf(dir)
+  `git clone git://github.com/#{path}.git #{dir}`
+  FileUtils.rm_rf(File.join(dir, ".git"))
+end

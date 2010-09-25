@@ -65,11 +65,6 @@ set backup
 set backupdir=~/.vim_tmp
 set dir=~/.vim_tmp
 
-"set t_Co=256 " 256 colors
-set background=dark
-syntax on " syntax highlighting
-colorscheme railscasts
-
 " toggle nerdtree
 command NT :NERDTreeToggle
 
@@ -88,13 +83,18 @@ nmap yp p:YRPop<CR>
 nmap yP P:YRPop<CR>
 let g:yankring_min_element_length = 2
 
-" pathogen init
-call pathogen#runtime_append_all_bundles()
+" tComment
+let g:tcommentMapLeader1 = ","
 
-" File Stuff ******************************************************************
 filetype off
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 filetype plugin indent on
-" To show current filetype use: set filetype
+
+"set t_Co=256 " 256 colors
+set background=dark
+syntax on " syntax highlighting
+colorscheme railscasts
 
 autocmd FileType html :set filetype=xhtml " we couldn't care less about html
 
@@ -270,8 +270,8 @@ vmap <D-y> y'>p
 nmap <D-y> yyp
 
 " Shift-Cmd-y to duplicate and comment out orig selection
-vmap <D-Y> y'>pgv,cc'>
-nmap <D-Y> yypk,ccj
+vmap <D-Y> y'>pgv,,'>
+nmap <D-Y> yypk,,j
 
 " Cmd-j to jump to last line, Cmd-k to just to first line
 nmap <D-j> G
@@ -368,5 +368,3 @@ if has("cscope")
     nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
     nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 endif
-
-source ~/.vim/autoload/autotag.vim

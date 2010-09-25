@@ -1,0 +1,106 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1173
+
+TComment works like a toggle, i.e., it will comment out text that 
+contains uncommented lines, and it will remove comment markup for 
+already commented text (i.e. text that contains no uncommented lines).
+
+If the file-type is properly defined, TComment will figure out which 
+comment string to use. Otherwise you use |TCommentDefineType()| to 
+override the default choice.
+
+TComment can properly handle an embedded syntax, e.g., ruby/python/perl 
+regions in vim scripts, HTML or JavaScript in php code etc.
+
+Most of the time the default toggle keys will do what you want (or to be 
+more precise: what I think you want it to do ;-).
+
+As operator (the prefix can be customized via g:tcommentMapLeaderOp1 
+and g:tcommentMapLeaderOp2):
+
+    gc{motion}   :: Toggle comments (for small comments within one line 
+                    the &filetype_inline style will be used, if 
+                    defined)
+    gcc          :: Toggle comment for the current line
+    gC{motion}   :: Comment region
+    gCc          :: Comment the current line
+
+By default the cursor stays put. If you want the cursor to the end of 
+the commented text, set g:tcommentOpModeExtra to '>' (but this may not 
+work properly with exclusive motions).
+
+Primary key maps:
+
+    <c-_><c-_>   :: :TComment
+    <c-_><space> :: :TComment <QUERY COMMENT-BEGIN ?COMMENT-END>
+    <c-_>b       :: :TCommentBlock
+    <c-_>a       :: :TCommentAs <QUERY COMMENT TYPE>
+    <c-_>n       :: :TCommentAs &filetype <QUERY COUNT>
+    <c-_>s       :: :TCommentAs &filetype_<QUERY COMMENT SUBTYPE>
+    <c-_>i       :: :TCommentInline
+    <c-_>r       :: :TCommentRight
+    <c-_>p       :: Comment the current inner paragraph
+
+There is also a secondary set of key maps with <Leader>_ as leader (more 
+preferable on terminals).
+
+Alternatively, you can type (? meaning "optional argument"):
+
+    :?<range> TComment ?commentBegin ?commentEnd
+    :?<range> TComment! ?commentBegin ?commentEnd
+    NOTE: If there is a visual selection that begins and ends in the same 
+    line, then TCommentInline is used instead.
+
+    NOTE: The range is optional and defaults to the current line.
+
+    :?<range> TCommentInline ?commentBegin ?commentEnd
+    :?<range> TCommentInline! ?commentBegin ?commentEnd
+    Use the {&ft}_inline comment style.
+
+    :?<range> TCommentBlock ?commentBegin ?commentEnd
+    :?<range> TCommentBlock! ?commentBegin ?commentEnd
+    Comment as "block", e.g. use the {&ft}_block comment style.
+    NOTE: This command is kind of crude. It doesn't indent or reformat 
+    the text.
+
+    :?<range> TCommentAs FILETYPE [COUNT]
+    :?<range> TCommentAs! FILETYPE [COUNT]
+    NOTE: TCommentAs requires g:tcomment_{filetype} to be defined.
+    NOTE: This command supports command line completion. See 'wildmode' 
+    and 'wildmenu' for how to get the most out of it. If a count is 
+    given, the comment leader is repeated, e.g. TCommentAs vim 3 will 
+    use """ as comment leader.
+
+    :?<range> TCommentRight
+    :?<range> TCommentRight!
+    NOTE: This command comments out the text to the right of the cursor. 
+    If a visual selection was made (be it block-wise or not), all lines 
+    are commented out at from the current cursor positon downwards.
+
+    The bang (!) variants always comment out the selected text and don't 
+    work as toggles.
+
+    Using this command you can also use different comment styles with 
+    the TCommentDefineType(name, commentstring) function. This function 
+    takes two arguments:
+        name :: The name is either &filetype or {&filetype}_{style}. 
+            I.e., For block comments the {&filetype}_block and for 
+            inline comments the {&filetype}_inline styles are used.
+        comment string :: a string mostly as described in 
+            'commentstring'.
+    
+    If you want to define, e.g., a fancy block comment style for html 
+    you put something like this into ~/.vim/after/plugin/tComment.vim:
+
+        call TCommentDefineType("html_fancy_block", "<!--%s  -->\n  -- ")
+
+    The part after the newline character is used for marking "middle" 
+    lines.
+
+    This comment style could then be accessed via (this command has 
+    command line completion): >
+
+        '<,'>TCommentAs html_fancy_block
+
+    If you're editing a html file, this could best be done by the <c-_>s     
+    key map.
+
