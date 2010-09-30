@@ -84,7 +84,7 @@ nmap yP P:YRPop<CR>
 let g:yankring_min_element_length = 2
 
 " tComment
-let g:tcommentMapLeader1 = ","
+let g:tcommentMapLeader2 = ","
 
 filetype off
 call pathogen#runtime_append_all_bundles()

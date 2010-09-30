@@ -1,3 +1,5 @@
+export TERM=xterm-256color
+
 ## This file is sourced by all *interactive* bash shells on startup.  This
 ## file *should generate no output* or it will break the scp and rcp commands.
 ############################################################
