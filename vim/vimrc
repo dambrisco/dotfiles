@@ -154,7 +154,7 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete " may require rub
 " -----------------------------------------------------------------------------
 
 " NERDTree ********************************************************************
-:noremap ,n :NERDTreeToggle<CR>
+noremap ,n :NERDTreeToggle<CR>
 
 " User instead of Netrw when doing an edit /foobar
 let NERDTreeHijackNetrw=1
@@ -163,7 +163,7 @@ let NERDTreeHijackNetrw=1
 let NERDTreeMouseMode=1
 
 " Hide javascript files in nerdtree
-:command Nojs :let NERDTreeIgnore=[".js$"]
+command Nojs :let NERDTreeIgnore=[".js$"]
 
 " SnippetsEmu *****************************************************************
 "imap <unique> <C-j> <Plug>Jumper
