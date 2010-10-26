@@ -105,6 +105,12 @@ fi
 # fi
 
 ############################################################
+## RVM
+############################################################
+
+if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+
+############################################################
 ## Terminal behavior
 ############################################################
 
@@ -127,10 +133,29 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\(\1$(parse_git_dirty)\)/"
 }
 
+if [ `which git` ]; then
+  function git_prompt {
+    parse_git_branch
+  }
+else
+  function git_prompt {
+    echo ""
+  }
+fi
+
+if [ `which rvm-prompt` ]; then
+  function rvm_prompt {
+    echo "($(rvm-prompt v g))"
+  }
+else
+  function rvm_prompt {
+    echo ""
+  }
+fi
+
 # Do not set PS1 for dumb terminals
-if [ "$TERM" != 'dumb'  ] && [ -n "$BASH" ]
-then
-  export PS1='\[\033[32m\]\n[\s: \w] $(parse_git_branch)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
+if [ "$TERM" != 'dumb' ] && [ -n "$BASH" ]; then
+  export PS1='\[\033[32m\]\n[\s: \w] $(rvm_prompt) $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
 fi
 
 ############################################################
