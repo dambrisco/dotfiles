@@ -99,6 +99,15 @@ alias dstore-clean='find . -type f -name .DS_Store -print0 | xargs -0 rm'
 alias whotunes='lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689'
 
 ############################################################
+## Bundler
+############################################################
+
+alias b="bundle"
+alias bu="b update"
+alias bi="b install --path vendor"
+alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
+
+############################################################
 ## Ruby
 ############################################################
 
