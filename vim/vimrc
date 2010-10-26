@@ -87,7 +87,13 @@ nmap yP P:YRPop<CR>
 let g:yankring_min_element_length = 2
 
 " tComment
-let g:tcommentMapLeader2 = ","
+" Disable all of the default mappings
+let g:tcommentMapLeader1   = ""
+let g:tcommentMapLeader2   = ""
+let g:tcommentMapLeaderOp1 = ""
+let g:tcommentMapLeaderOp2 = ""
+" Create the only ones that matters
+noremap  <silent> <C-Space> :TComment<cr>
 
 filetype off
 call pathogen#runtime_append_all_bundles()
@@ -273,8 +279,8 @@ vmap <D-y> y'>p
 nmap <D-y> yyp
 
 " Shift-Cmd-y to duplicate and comment out orig selection
-vmap <D-Y> y'>pgv,,'>
-nmap <D-Y> yypk,,j
+noremap <D-Y> y'>pgv<C-Space>'>
+nmap <D-Y> yypk<C-Space>j
 
 " Cmd-j to jump to last line, Cmd-k to just to first line
 nmap <D-j> G
