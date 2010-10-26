@@ -71,6 +71,9 @@ command NT :NERDTreeToggle
 " easily get to vimrc
 command Vimrc :e ~/.vimrc
 
+" easily get to bashrc
+command Bashrc :e ~/.bashrc
+
 " TagList plugin config
 let Tlist_Show_One_File = 1   " Show only one file in the taglist at a time
 let Tlist_Sort_Type = "name"  " Sort tag list by names rather than order they are defined
