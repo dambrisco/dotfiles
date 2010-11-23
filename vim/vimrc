@@ -141,6 +141,12 @@ map j gj
 imap <down> <C-o>gj
 map E ge
 
+" Override these cursor movements to make them more useful
+" since ^ and $ are needed all the time but require leaving
+" home row, and I never use H/M/L
+map H ^
+map L $
+
 " Ruby stuff ******************************************************************
 "compiler ruby         " Enable compiler support for ruby
 "map <F5> :!ruby %<CR>
