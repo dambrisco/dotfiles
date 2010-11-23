@@ -104,6 +104,7 @@ alias whotunes='lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689'
 
 alias b="bundle"
 alias bu="b update"
+alias be="b exec"
 alias bi="b install --path vendor"
 alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
 
