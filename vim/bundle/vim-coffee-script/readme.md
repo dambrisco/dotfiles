@@ -1,5 +1,5 @@
 This project adds [CoffeeScript] support to the vim editor. Currently, it
-supports [almost][todo] all of CoffeeScript 0.9.2's syntax and indentation style.
+supports [almost][todo] all of CoffeeScript's syntax and indentation style.
 
 ![Screenshot][screenshot]
 
@@ -23,7 +23,7 @@ supports [almost][todo] all of CoffeeScript 0.9.2's syntax and indentation style
      > so you actually need to "filetype off" before "filetype plugin indent on"
      > to force reloading.
 
-[pathogen]: http://vim.org/scripts/script.php?script_id=2332
+[pathogen]: http://www.vim.org/scripts/script.php?script_id=2332
 
 2. Create, and change into, the `~/.vim/bundle/` directory:
 
@@ -50,7 +50,7 @@ extension or a `Cakefile` will load all the CoffeeScript stuff.
 
         $ git pull
 
-Everything will then be brought up to date!
+Everything will then be brought up to date.
 
 ### Customizing
 
