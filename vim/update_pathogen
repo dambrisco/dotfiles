@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd autoload
+curl -O https://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim
