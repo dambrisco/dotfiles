@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require './vim_bundler.rb'
+
+$bundler = VimBundler.new
+
+def github(path);
+  $bundler.github_bundles << path
+end
+
+load 'Bundles'
+
+CLI.new($bundler).run!

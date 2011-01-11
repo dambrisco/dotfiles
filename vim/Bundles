@@ -1,13 +1,9 @@
-#!/usr/bin/env ruby
-
-@github_bundles = []
-def github(path); @github_bundles << path; end
-
 github "scrooloose/nerdtree"
 github "msanders/snipmate.vim"
 github "timcharper/textile.vim"
 github "vim-ruby/vim-ruby"
 github "kchmck/vim-coffee-script"
+github "nathanaelkane/vim-indent-guides"
 
 github "tsaleh/vim-align"
 github "tsaleh/vim-shoulda"
@@ -31,18 +27,4 @@ github "vim-scripts/tComment"
 github "vim-scripts/Gist.vim"
 github "vim-scripts/taglist.vim"
 github "vim-scripts/YankRing.vim"
-
-require 'fileutils'
-require 'open-uri'
-
-bundles_dir = File.join(File.dirname(__FILE__), "bundle")
-
-FileUtils.cd(bundles_dir)
-
-@github_bundles.each do |path|
-  dir = path.split('/').last
-  puts "\nUpdating #{path}"
-  FileUtils.rm_rf(dir)
-  `git clone git://github.com/#{path}.git #{dir}`
-  FileUtils.rm_rf(File.join(dir, ".git"))
-end
+github "vim-scripts/ReplaceWithRegister"
