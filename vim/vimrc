@@ -74,6 +74,11 @@ command Vimrc :e ~/.vimrc
 " easily get to bashrc
 command Bashrc :e ~/.bashrc
 
+" IndentGuides plugin config
+let g:indent_guides_guide_size  = 1
+let g:indent_guides_start_level = 2
+autocmd VimEnter * IndentGuidesEnable
+
 " TagList plugin config
 let Tlist_Show_One_File = 1   " Show only one file in the taglist at a time
 let Tlist_Sort_Type = "name"  " Sort tag list by names rather than order they are defined
