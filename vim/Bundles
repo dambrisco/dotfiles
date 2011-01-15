@@ -4,6 +4,8 @@ github "timcharper/textile.vim"
 github "vim-ruby/vim-ruby"
 github "kchmck/vim-coffee-script"
 github "nathanaelkane/vim-indent-guides"
+github "kana/vim-textobj-user"
+github "nelstrom/vim-textobj-rubyblock"
 
 github "tsaleh/vim-align"
 github "tsaleh/vim-shoulda"
