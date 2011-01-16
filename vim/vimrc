@@ -35,9 +35,11 @@ set splitbelow splitright
 
 set shellcmdflag=-lc            " Force shell commands to load personal bash init scripts
 
+let mapleader=","
+
 "Vertical split then hop to new buffer
-noremap ,v :vsp^M^W^W<cr>
-noremap ,h :split^M^W^W<cr>
+noremap <Leader>v :vsp^M^W^W<cr>
+noremap <Leader>h :split^M^W^W<cr>
 
 " Navigating tags now just like moving forward and back through pages in a web browser
 " use Apple+] to jump to a tag
@@ -171,7 +173,7 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete " may require rub
 " -----------------------------------------------------------------------------
 
 " NERDTree ********************************************************************
-noremap ,n :NERDTreeToggle<CR>
+noremap <Leader>n :NERDTreeToggle<CR>
 
 " User instead of Netrw when doing an edit /foobar
 let NERDTreeHijackNetrw=1
@@ -190,22 +192,9 @@ command Nojs :let NERDTreeIgnore=[".js$"]
 "let g:snip_set_textmate_cp = '1'  " Tab to expand snippets, not automatically.
 
 " peep open ********************************************************
-map <unique> <silent> ,f <Plug>PeepOpen
+map <unique> <silent> <Leader>f <Plug>PeepOpen
 
-" fuzzyfinder_textmate ********************************************************
-" map ,f :FuzzyFinderTextMate<CR>
-map ,b :FuzzyFinderBuffer<CR>
-let g:fuzzy_ignore = '.git/*;*.swp;public/backend/*'
-
-" Fuzzyfinder *****************************************************************
-" Fuzzy finder rocks, like Command-T in TextMate (buggy at moment, fix!!)
-"let g:FuzzyFinderOptions = { 'Base':{}, 'Buffer':{}, 'File':{}, 'MruFile':{}, 'FavFile':{}, 'Dir':{}, 'Tag':{}, 'TaggedFile':{}}
-"let gf:FuzzyFinderOptions.Base.abbrev_map = { "^Project-" : ["**/"], }
-"let g:FuzzyFinderOptions.Base.migemo_support = 0
-"let g:FuzzyFinderOptions.File.excluded_path = '\v\~$|\.o$|\.git/|\.DS_Store|\.exe$|\.bak$|\.swp$|((^|[/\\])\.[/\\]$)'
-"map ,f :FuzzyFinderFile Project-<CR>
-"map ,b :FuzzyFinderBuffer<CR>
-
+" Buffer Explorer
 map <S-b> \be
 
 " autocomplpop ***************************************************************
