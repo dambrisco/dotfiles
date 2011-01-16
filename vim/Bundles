@@ -6,6 +6,7 @@ github "kchmck/vim-coffee-script"
 github "nathanaelkane/vim-indent-guides"
 github "kana/vim-textobj-user"
 github "nelstrom/vim-textobj-rubyblock"
+github "ecomba/vim-ruby-refactoring"
 
 github "tsaleh/vim-align"
 github "tsaleh/vim-shoulda"
