@@ -44,7 +44,7 @@ hi link htmlTag                     xmlTag
 hi link htmlTagName                 xmlTagName
 hi link htmlEndTag                  xmlEndTag
 
-highlight Normal                    guifg=#E6E1DC guibg=#111111
+highlight Normal                    guifg=#E6E1DC guibg=#080808
 highlight Cursor                    guifg=#000000 ctermfg=0 guibg=#FFFFFF ctermbg=15
 highlight CursorLine                guibg=#222222 ctermbg=233 cterm=NONE
 
@@ -67,7 +67,7 @@ highlight Title                     guifg=#FFFFFF ctermfg=15
 highlight Type                      guifg=#DA4939 ctermfg=167 gui=NONE cterm=NONE
 highlight Visual                    guibg=#5A647E ctermbg=60
 
-highlight Folded       guifg=#2B2B2B ctermfg=159 guibg=#C0C0FF
+highlight Folded       guifg=#444444 ctermfg=159 guibg=#111111
 highlight FoldColumn   gui=NONE guifg=#2B2B2B guibg=#5A647E
 
 highlight DiffAdd                   guifg=#E6E1DC ctermfg=7 guibg=#519F50 ctermbg=71
