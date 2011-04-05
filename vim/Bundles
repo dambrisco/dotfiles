@@ -1,3 +1,5 @@
+strategy :git_clone
+
 github "scrooloose/nerdtree"
 github "msanders/snipmate.vim"
 github "timcharper/textile.vim"
