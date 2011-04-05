@@ -7,6 +7,7 @@ github "nathanaelkane/vim-indent-guides"
 github "kana/vim-textobj-user"
 github "nelstrom/vim-textobj-rubyblock"
 github "ecomba/vim-ruby-refactoring"
+github "csexton/jekyll.vim"
 
 github "tsaleh/vim-align"
 github "tsaleh/vim-shoulda"

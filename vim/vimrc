@@ -76,6 +76,9 @@ command Vimrc :e ~/.vimrc
 " easily get to bashrc
 command Bashrc :e ~/.bashrc
 
+" Jekyll plugin config
+let g:jekyll_path = "~/Projects/coderifous.github.com"
+
 " IndentGuides plugin config
 let g:indent_guides_guide_size  = 1
 let g:indent_guides_start_level = 2
