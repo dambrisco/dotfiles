@@ -13,11 +13,9 @@ if has("gui_macvim")
   " Unmap Apple+T and Shift+Apple+T
   macmenu &File.Open\ Tab\.\.\. key=<nop>
 
-  " FuzzyFinder
-  nnoremap <D-T> :FuzzyFinderTextMate<CR>
-
-  " NerdTree
-  nnoremap <D-e> :NERDTreeToggle<CR>
+  " Lusty
+  nnoremap <D-e> :LustyFilesystemExplorer<CR>
+  nnoremap <D-b> :LustyBufferExplorer<CR>
 
   " Tab navigation like FF and TM
   nnoremap <D-M-right> :tabnext<CR>

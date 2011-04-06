@@ -76,6 +76,14 @@ command Vimrc :e ~/.vimrc
 " easily get to bashrc
 command Bashrc :e ~/.bashrc
 
+" Lusty plugin
+set hidden
+let g:LustyExplorerSuppressRubyWarning = 1
+map <Leader>e :LustyFilesystemExplorer<CR>
+map <Leader>f :LustyFilesystemExplorerFromHere<CR>
+map <Leader>b :LustyBufferExplorer<CR>
+map <Leader>g :LustyBufferGrep<CR>
+
 " Jekyll plugin config
 let g:jekyll_path = "~/Projects/coderifous.github.com"
 
@@ -195,7 +203,7 @@ command Nojs :let NERDTreeIgnore=[".js$"]
 "let g:snip_set_textmate_cp = '1'  " Tab to expand snippets, not automatically.
 
 " peep open ********************************************************
-map <unique> <silent> <Leader>f <Plug>PeepOpen
+" map <unique> <silent> <Leader>f <Plug>PeepOpen
 
 " Buffer Explorer
 map <S-b> \be
