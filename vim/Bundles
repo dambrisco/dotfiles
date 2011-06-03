@@ -11,6 +11,7 @@ github "nelstrom/vim-textobj-rubyblock"
 github "ecomba/vim-ruby-refactoring"
 github "csexton/jekyll.vim"
 github "sjbach/lusty"
+github "gregsexton/gitv"
 
 github "tsaleh/vim-align"
 github "tsaleh/vim-shoulda"
