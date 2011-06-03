@@ -9,6 +9,9 @@ set history=50                  " (hi) keep 50 lines of command history
 set number                      " (nu) show line numbers
 set showmatch                   " (sm) briefly jump to matching bracket when inserting one
 
+set lazyredraw                  " screen not redrawn while executing macros, registers, and other command not typed
+                                " - recommended by Gitv plugin creator, Greg Sexton
+
 set autoindent                  " (ai) turn on auto-indenting (great for programers)
 set copyindent                  " (ci) when auto-indenting, use the indenting format of the previous line
 set smartindent                 " smartindent	(local to buffer)
