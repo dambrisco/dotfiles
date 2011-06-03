@@ -5,6 +5,7 @@ if has("gui_macvim")
   set fuoptions=maxvert,maxhorz " fullscreen options (MacVim only), resized window when changed to fullscreen
   set guifont=Monaco:h12
   set guioptions-=T  " remove toolbar
+  set guioptions+=c  " use text console instead of modal popup for confirmation dialogues
   set guicursor=a:blinkon0
   set lcs=tab:¬¬,trail:·    " (lcs) strings used in 'list' mode to show hidden characters (default=eol:$)
   set listchars+=precedes:→ " (lcs) when 'nowrap', character to indicate that line continues off the page
