@@ -90,10 +90,10 @@ map <Leader>g :LustyBufferGrep<CR>
 " Git interaction
 nmap gs :Gstatus<CR>
 " Gitv browser mode (shows git log for repo)
-nmap gv :Gitv --all<CR>
+nmap gl :Gitv --all<CR>
 " Gitv file mode (shows git history for current file)
-nmap gV :Gitv! --all<CR>
-vmap gV :Gitv! --all<CR>
+nmap gL :Gitv! --all<CR>
+vmap gL :Gitv! --all<CR>
 
 " Jekyll plugin config
 let g:jekyll_path = "~/Projects/coderifous.github.com"
