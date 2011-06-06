@@ -89,6 +89,7 @@ map <Leader>g :LustyBufferGrep<CR>
 
 " Git interaction
 nmap gs :Gstatus<CR>
+nmap gb :Gblame<CR>
 " Gitv browser mode (shows git log for repo)
 nmap gl :Gitv --all<CR>
 " Gitv file mode (shows git history for current file)
