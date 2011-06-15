@@ -12,6 +12,9 @@ set showmatch                   " (sm) briefly jump to matching bracket when ins
 set lazyredraw                  " screen not redrawn while executing macros, registers, and other command not typed
                                 " - recommended by Gitv plugin creator, Greg Sexton
 
+set wildmenu                    " better tab completion behavior in ex
+set wildmode=list:longest
+
 set autoindent                  " (ai) turn on auto-indenting (great for programers)
 set copyindent                  " (ci) when auto-indenting, use the indenting format of the previous line
 set smartindent                 " smartindent	(local to buffer)
@@ -43,6 +46,14 @@ let mapleader=","
 "Vertical split then hop to new buffer
 noremap <Leader>v :vsp^M^W^W<cr>
 noremap <Leader>h :split^M^W^W<cr>
+
+" make scrolling the viewport a bit faster
+nnoremap <C-e> 5<C-e>
+nnoremap <C-y> 5<C-y>
+
+" swap ' and ` keys. ` is more useful than ', but less convenient. FIXED.
+nnoremap ' `
+nnoremap ` '
 
 " Navigating tags now just like moving forward and back through pages in a web browser
 " use Apple+] to jump to a tag
