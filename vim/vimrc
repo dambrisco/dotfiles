@@ -90,6 +90,9 @@ command Vimrc :e ~/.vimrc
 " easily get to bashrc
 command Bashrc :e ~/.bashrc
 
+" pretty format an xml snippet
+command Tidy -range=% :<line1>,<line2>!tidy -xml -i -q -w 0<CR>
+
 " Lusty plugin
 set hidden
 let g:LustyExplorerSuppressRubyWarning = 1
