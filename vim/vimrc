@@ -6,7 +6,6 @@ syntax on                       " turns syntax highlighting on
 set ruler                       " (ru) show the cursor position at all times
 set showcmd                     " (sc) display an incomplete command in the lower right
 set history=200                 " (hi) keep 200 lines of command history
-set number                      " (nu) show line numbers
 set showmatch                   " (sm) briefly jump to matching bracket when inserting one
 
 set lazyredraw                  " screen not redrawn while executing macros, registers, and other command not typed
