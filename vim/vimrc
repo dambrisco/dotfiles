@@ -34,6 +34,7 @@ set nowrap                      " allows text to continue off the window (need h
 set numberwidth=4
 set sidescrolloff=2
 set scrolloff=2
+set laststatus=2                " always show status line
 
 set equalalways                 " Multiple windows, when created, are equal in size
 set splitbelow splitright
