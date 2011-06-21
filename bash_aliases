@@ -106,6 +106,7 @@ alias b="bundle"
 alias bu="b update"
 alias be="b exec"
 alias bi="b install --path vendor"
+alias bil='bi --local'
 alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
 
 ############################################################
