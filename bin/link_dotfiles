@@ -2,8 +2,8 @@
 # ./bin/link_dotfiles
 
 function link_dotfile {
-  echo ln -s $1 ~/.$1
-  ln -s $1 ~/.$1
+  echo ln -s $PWD/$1 ~/.$1
+  ln -s $PWD/$1 ~/.$1
 }
 
 # Bash scripts
@@ -25,4 +25,4 @@ ln -s ~/.gvimrc ~/.vim/gvimrc
 link_dotfile gitconfig
 link_dotfile tmux.conf
 
-ln -s bin ~/bin
+ln -s $PWD/bin ~/bin
