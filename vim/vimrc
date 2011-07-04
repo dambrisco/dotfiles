@@ -198,6 +198,10 @@ map L $
 "compiler ruby         " Enable compiler support for ruby
 "map <F5> :!ruby %<CR>
 
+" let's me type a ruby method name, then hit shift-enter to add the def/end
+" and leave the cursor positioned in the body of the method.
+imap <S-Enter> <ESC>Idef <ESC>oend<ESC>O
+
 " Omni Completion *************************************************************
 autocmd FileType html :set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType python set omnifunc=pythoncomplete#Complete
