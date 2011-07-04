@@ -9,13 +9,25 @@
 [apply]
   whitespace = nowarn
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = auto
-  ui = true
+  ui = auto
   pager = true
+  interactive = auto
+  [color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+  [color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+  [color "status"]
+    added = green
+    changed = yellow
+    untracked = cyan
 [merge]
   summary = true
 [push]
   default = tracking
+[core]
+	excludesfile = /Users/jgarvin/.gitignore
