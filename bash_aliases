@@ -142,6 +142,7 @@ alias ss="script/server"
 alias sg="script/generate"
 alias sc="script/console"
 alias tl='tail -f log/development.log'
+alias rtags='ctags -e -R app lib vendor tasks'
 
 ############################################################
 ## Miscellaneous
