@@ -1,3 +1,6 @@
+[submodule "vim/bundle/vim-shoulda"]
+	path = vim/bundle/vim-shoulda
+	url = git://github.com/tsaleh/vim-shoulda.git
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
@@ -37,9 +40,6 @@
 [submodule "vim/bundle/vim-align"]
 	path = vim/bundle/vim-align
 	url = git://github.com/tsaleh/vim-align.git
-[submodule "vim/bundle/vim-shoulda"]
-	path = vim/bundle/vim-shoulda
-	url = git://github.com/tsaleh/vim-shoulda.git
 [submodule "vim/bundle/vim-matchit"]
 	path = vim/bundle/vim-matchit
 	url = git://github.com/tsaleh/vim-matchit.git
