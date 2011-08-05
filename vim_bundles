@@ -1,4 +1,6 @@
 use_git_submodules true
+vimrc_file  "vim/vimrc"
+bundles_dir "vim/bundle"
 
 bundle "nerdtree",              :git => "git://github.com/scrooloose/nerdtree.git"
 bundle "snipmate.vim",          :git => "git://github.com/msanders/snipmate.vim.git"
