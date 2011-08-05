@@ -38,7 +38,7 @@ Vim.
 
 ### vimrc Organization
 
-The vim config (loaded from .vimrc) is broken up across several files that are
+This Vim config (loaded from .vimrc) is broken up across several files that are
 sourced.  Each file performs a different kind of customization.  For instance
 one file is responsible for customizing vim settings, while another file
 is responsible for defining custom key mappings.  All plugin-related
@@ -47,14 +47,15 @@ on whether the --noplugins flag was used.
 
 ### vim-bundler for plugin management
 
-This Vim config is uses the
+This Vim config uses the
 [vim-bundler](https://github.com/vintikzzz/vim-bundler) ruby gem to manage the
 plugins.  Each plugin is listed in the `vim_bundles` manifest file and is
 configured to use the git submodule installation strategy.
 
 vim-bundler relies on pathogen for load path management.
 
-Read more about it in vim-bundler's README.
+Read more about it in [vim-bundler's
+README](https://github.com/vintikzzz/vim-bundler/blob/master/README.rdoc).
 
 ### Plugins
 
@@ -62,16 +63,21 @@ Take a look at the vim_bundles file to see all of the included plugins.
 
 Here's a few faves:
 
-* NerdTree  - The missing file drawer for Vim.
-* lusty     - super fast file navigation
-* fugitive  - killer git plugin for vim
-* surround  - quoting/parenthesizing made simple
-* AutoClose - inserts matching bracket, paren, brace or quote
-* ack       - grep for code
-* tComment  - comment plugin
+* [NerdTree](http://github.com/scrooloose/nerdtree) - The missing file drawer for Vim.
+* [lusty](http://github.com/sjbach/lusty) - super fast file navigation
+* [fugitive](http://github.com/tpope/vim-fugitive) - killer git plugin for vim
+* [surround](http://github.com/tpope/vim-surround) - quoting/parenthesizing made simple
+* [AutoClose](http://github.com/vim-scripts/AutoClose) - inserts matching bracket, paren, brace or quote
+* [ack](http://github.com/vim-scripts/ack.vim) - grep for code
+* [tComment](http://github.com/vim-scripts/tComment) - comment plugin
 
 Since I write a lot of Ruby, and Ruby on Rails there's a few useful plugins for
 that as well.
 
-
+* [rails](http://github.com/tpope/vim-rails) - Ruby on Rails power tools
+* [ruby](http://github.com/vim-ruby/vim-ruby) - ruby omnicompletion and syntax highlighting
+* [textobj-rubyblock](http://github.com/nelstrom/vim-textobj-rubyblock) - custom text object for selecting ruby blocks.
+* [ruby-refactoring](http://github.com/ecomba/vim-ruby-refactoring) - Refactoring tool for ruby
+* [coffee-script](http://github.com/kchmck/vim-coffee-script) coffee-script syntax, indenting and compiling
+* [haml](http://github.com/tpope/vim-haml) - runtime files for Haml, Sass, and SCSS
 
