@@ -1,0 +1,33 @@
+" Auto commands
+" ------------------------------------------------------------
+
+" unfold all folds when a file is opened
+autocmd  BufWinEnter * normal zR
+
+autocmd FileType html :set filetype=xhtml " we couldn't care less about html
+
+" Markdown files get autowrap for text
+autocmd FileType markdown :set formatoptions=tcoq
+
+" Omni Completion *************************************************************
+autocmd FileType html :set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete " may require ruby compiled in
+
+" File Specific Settings
+au FileType xhtml,html,htm,php,xml setlocal tabstop=2
+au FileType xhtml,html,htm,php,xml setlocal shiftwidth=2
+"au FileType xhtml,html,htm,php,xml setlocal expandtab      " (et) expand tabs to spaces (use :retab to redo entire file)
+au FileType xhtml,html,htm,php,xml setlocal softtabstop=2   " (sts) makes spaces feel like tabs (like deleting)
+au FileType c,h,java,js setlocal mps+==:;                   " allow the match pairs operation (%) to work with '=' and ';'
+au FileType c,h setlocal cindent                            " enable the intelligent cindent (cin) feature for the following files
+au FileType java,js setlocal smartindent                    " enable the smartindenting (si) feature for the following files
+au FileType txt setlocal fo+=tn
+
+" before writing to any file, this function call will remove any extra white space at the end of a line
+au! BufWrite,FileWritePre * call RemoveWhiteSpace()

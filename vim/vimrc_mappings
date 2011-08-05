@@ -1,0 +1,80 @@
+" Key Mappings
+" ------------------------------------------------------------
+
+"Vertical split then hop to new buffer
+noremap <Leader>v :vsp^M^W^W<cr>
+noremap <Leader>h :split^M^W^W<cr>
+
+" make scrolling the viewport a bit faster
+nnoremap <C-e> 5<C-e>
+nnoremap <C-y> 5<C-y>
+
+" swap ' and ` keys. ` is more useful than ', but less convenient. FIXED.
+nnoremap ' `
+nnoremap ` '
+
+" Navigating tags now just like moving forward and back through pages in a web browser
+" use Apple+] to jump to a tag
+map <D-]> <C-]>
+" use Apple+[ to jump back up the tag stack
+map <D-[> <C-t>
+
+" Cursor Movement *************************************************************
+" Make cursor move by visual lines instead of file lines (when wrapping)
+map <up> gk
+map k gk
+imap <up> <C-o>gk
+map <down> gj
+map j gj
+imap <down> <C-o>gj
+map E ge
+
+" Override these cursor movements to make them more useful
+" since ^ and $ are needed all the time but require leaving
+" home row, and I never use H/M/L
+map H ^
+map L $
+
+" Ruby stuff ******************************************************************
+"compiler ruby         " Enable compiler support for ruby
+"map <F5> :!ruby %<CR>
+
+" let's me type a ruby method name, then hit shift-enter to add the def/end
+" and leave the cursor positioned in the body of the method.
+imap <S-Enter> <ESC>Idef <ESC>oend<ESC>O
+
+" allows moving between split windows much faster and more intuitive
+map <C-up>    <C-W><up>
+map <C-down>  <C-W><down>
+map <C-left>  <C-W><left>
+map <C-right> <C-W><right>
+
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-H> <C-W>h
+map <C-L> <C-W>l
+
+" <F7> toggles hidden characters
+map  <F7> :set list!<CR>
+imap <F7> <ESC>:set list!<CR>a
+
+" <F9> toggles word wrap
+map  <F9> :set wrap!<CR>
+imap <F9> <ESC>:set wrap!<CR>a
+
+" <F8> toggles whether the last searched string is highlighted
+map  <F8> :set hls!<CR>
+imap <F8> <ESC>:set hls!<CR>a
+
+" Cmd-y to duplicate visual selection beneath
+vmap <D-y> y'>p
+nmap <D-y> yyp
+
+" Shift-Cmd-y to duplicate and comment out orig selection
+noremap <D-Y> y'>pgv<C-Space>'>
+nmap <D-Y> yypk<C-Space>j
+
+" Cmd-j to jump to last line, Cmd-k to just to first line
+nmap <D-j> G
+nmap <D-k> gg
+
