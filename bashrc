@@ -28,6 +28,7 @@ fi
 
 # Node Package Manager
 if [ -d /usr/local/share/npm/bin ] ; then
+  NODE_PATH="/usr/local/lib/node"
   PATH="${PATH}:/usr/local/share/npm/bin"
 fi
 
@@ -165,7 +166,7 @@ shopt -s extglob
 shopt -s checkwinsize
 
 export PAGER="less"
-export EDITOR="vi"
+export EDITOR="vim --noplugins"
 
 ############################################################
 ## History
@@ -205,6 +206,10 @@ fi
 # http://onrails.org/articles/2006/11/17/rake-command-completion-using-rake
 if [ -f ~/bin/rake_completion ]; then
   complete -C ~/bin/rake_completion -o default rake
+fi
+
+if [ -f ~/bin/thor_completion ]; then
+  . ~/bin/thor_completion
 fi
 
 if [ -f ~/bin/git_completion ]; then

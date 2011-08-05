@@ -81,8 +81,11 @@ set backup
 set backupdir=~/.vim_tmp
 set dir=~/.vim_tmp
 
-" toggle nerdtree
-command NT :NERDTreeToggle
+" Pathogen set up
+filetype off
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+filetype plugin indent on
 
 " easily get to vimrc
 command Vimrc :e ~/.vimrc
@@ -95,57 +98,6 @@ command Tidy -range=% :<line1>,<line2>!tidy -xml -i -q -w 0<CR>
 
 " powder helpers
 command PR :!powder restart<CR>
-
-" Lusty plugin
-set hidden
-let g:LustyExplorerSuppressRubyWarning = 1
-map <Leader>e :LustyFilesystemExplorer<CR>
-map <Leader>f :LustyFilesystemExplorerFromHere<CR>
-map <Leader>b :LustyBufferExplorer<CR>
-map <Leader>g :LustyBufferGrep<CR>
-
-" Git interaction
-nmap gs :Gstatus<CR>
-nmap gb :Gblame<CR>
-" Gitv browser mode (shows git log for repo)
-nmap gl :Gitv --all<CR>
-" Gitv file mode (shows git history for current file)
-nmap gL :Gitv! --all<CR>
-vmap gL :Gitv! --all<CR>
-
-" Jekyll plugin config
-let g:jekyll_path = "~/Projects/coderifous.github.com"
-
-" IndentGuides plugin config
-let g:indent_guides_guide_size  = 1
-let g:indent_guides_start_level = 2
-autocmd VimEnter * IndentGuidesEnable
-
-" TagList plugin config
-let Tlist_Show_One_File = 1   " Show only one file in the taglist at a time
-let Tlist_Sort_Type = "name"  " Sort tag list by names rather than order they are defined
-map <D-i> :TlistToggle<CR>
-
-" YankRing plugin config
-nmap yr :YRShow<CR>
-nmap yc :YRClear<CR>
-nmap yp p:YRPop<CR>
-nmap yP P:YRPop<CR>
-let g:yankring_min_element_length = 2
-
-" tComment
-" Disable all of the default mappings
-let g:tcommentMapLeader1   = ""
-let g:tcommentMapLeader2   = ""
-let g:tcommentMapLeaderOp1 = ""
-let g:tcommentMapLeaderOp2 = ""
-" Create the only ones that matters
-noremap  <silent> <C-Space> :TComment<cr>
-
-filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-filetype plugin indent on
 
 "set t_Co=256 " 256 colors
 set background=dark
@@ -164,19 +116,8 @@ autocmd FileType markdown :set formatoptions=tcoq
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 
 " Misc ************************************************************************
-set backspace=indent,eol,start
 set matchpairs+=<:>
 set vb t_vb= " Turn off the bell, this could be more annoying, but I'm not sure how
-
-" Set list Chars - for showing characters that are not
-" normally displayed i.e. whitespace, tabs, EOL
-"set listchars=trail:.,tab:>-,eol:$
-"set nolist
-
-" Mouse ***********************************************************************
-"set mouse=a " Enable the mouse
-"behave xterm
-"set selectmode=mouse
 
 " Cursor Movement *************************************************************
 " Make cursor move by visual lines instead of file lines (when wrapping)
@@ -211,56 +152,6 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete " may require ruby compiled in
-
-" -----------------------------------------------------------------------------
-" |                              Pluggins                                     |
-" -----------------------------------------------------------------------------
-
-" NERDTree ********************************************************************
-noremap <Leader>n :NERDTreeToggle<CR>
-
-" User instead of Netrw when doing an edit /foobar
-let NERDTreeHijackNetrw=1
-
-" Single click for everything
-let NERDTreeMouseMode=1
-
-" Hide javascript files in nerdtree
-command Nojs :let NERDTreeIgnore=[".js$"]
-
-" SnippetsEmu *****************************************************************
-"imap <unique> <C-j> <Plug>Jumper
-"let g:snip_start_tag = "_\."
-"let g:snip_end_tag = "\._"
-"let g:snip_elem_delim = ":"
-"let g:snip_set_textmate_cp = '1'  " Tab to expand snippets, not automatically.
-
-" peep open ********************************************************
-" map <unique> <silent> <Leader>f <Plug>PeepOpen
-
-" Buffer Explorer
-map <S-b> \be
-
-" autocomplpop ***************************************************************
-" complete option
-"set complete=.,w,b,u,t,k
-"let g:AutoComplPop_CompleteOption = '.,w,b,u,t,k'
-"set complete=.
-let g:AutoComplPop_IgnoreCaseOption = 0
-let g:AutoComplPop_BehaviorKeywordLength = -1
-let g:AutoComplPop_MappingDriven=1
-
-
-" AutoClose config
-let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"'}
-
-" make p in Visual mode overwrite the selected text with the previously yanked text
-"vnoremap p <Esc>:let current_reg = @"<CR>gvs<C-R>=current_reg<CR><Esc>
-
-"This makes Vim break text to avoid lines getting longer than 78 characters.
-"But only for files that have been detected to be plain text
-"autocmd FileType text setlocal textwidth=78
-"
 
 " File Specific Settings
 " ------------------------------------------------------------
@@ -420,4 +311,8 @@ if has("cscope")
     nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
     nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
     nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+endif
+
+if &loadplugins
+  source $HOME/.vim/plugin_vimrc
 endif

@@ -1,0 +1,77 @@
+" Configuration related to plugins
+" --------------------------------
+"
+" This file should be loaded only if the &loadplugins options is set
+" If we start up vim with --noplugins then we get faster startup, but some of
+" the commands in this file might error if the plugins aren't loaded.
+
+" NerdTree Plugin
+command NT :NERDTreeToggle
+" Use instead of Netrw when doing an edit /foobar
+let NERDTreeHijackNetrw=1
+" Single click for everything
+let NERDTreeMouseMode=1
+" Hide javascript files in nerdtree
+command Nojs :let NERDTreeIgnore=[".js$"]
+
+" Lusty plugin
+set hidden
+let g:LustyExplorerSuppressRubyWarning = 1
+map <Leader>e :LustyFilesystemExplorer<CR>
+map <Leader>f :LustyFilesystemExplorerFromHere<CR>
+map <Leader>b :LustyBufferExplorer<CR>
+map <Leader>g :LustyBufferGrep<CR>
+
+" Git interaction
+nmap gs :Gstatus<CR>
+nmap gb :Gblame<CR>
+" Gitv browser mode (shows git log for repo)
+nmap gl :Gitv --all<CR>
+" Gitv file mode (shows git history for current file)
+nmap gL :Gitv! --all<CR>
+vmap gL :Gitv! --all<CR>
+
+" Jekyll plugin config
+let g:jekyll_path = "~/Projects/coderifous.github.com"
+
+" IndentGuides plugin config
+let g:indent_guides_guide_size  = 1
+let g:indent_guides_start_level = 2
+autocmd VimEnter * IndentGuidesEnable
+
+" TagList plugin config
+let Tlist_Show_One_File = 1   " Show only one file in the taglist at a time
+let Tlist_Sort_Type = "name"  " Sort tag list by names rather than order they are defined
+map <D-i> :TlistToggle<CR>
+
+" YankRing plugin config
+nmap yr :YRShow<CR>
+nmap yc :YRClear<CR>
+nmap yp p:YRPop<CR>
+nmap yP P:YRPop<CR>
+let g:yankring_min_element_length = 2
+
+" tComment
+" Disable all of the default mappings
+let g:tcommentMapLeader1   = ""
+let g:tcommentMapLeader2   = ""
+let g:tcommentMapLeaderOp1 = ""
+let g:tcommentMapLeaderOp2 = ""
+" Create the only ones that matters
+noremap  <silent> <C-Space> :TComment<cr>
+
+" peep open ********************************************************
+" map <unique> <silent> <Leader>f <Plug>PeepOpen
+
+" autocomplpop ***************************************************************
+" complete option
+"set complete=.,w,b,u,t,k
+"let g:AutoComplPop_CompleteOption = '.,w,b,u,t,k'
+"set complete=.
+let g:AutoComplPop_IgnoreCaseOption = 0
+let g:AutoComplPop_BehaviorKeywordLength = -1
+let g:AutoComplPop_MappingDriven=1
+
+" AutoClose config
+let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"'}
+
