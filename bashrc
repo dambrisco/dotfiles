@@ -14,10 +14,6 @@ if [ -d ~/bin ] ; then
   PATH="~/bin:${PATH}"
 fi
 
-if [ -d ~/bin/private ] ; then
-  PATH="~/bin/private:${PATH}"
-fi
-
 if [ -d /usr/local/bin ] ; then
   PATH="/usr/local/bin:${PATH}"
 fi
@@ -32,14 +28,6 @@ if [ -d /usr/local/share/npm/bin ] ; then
   PATH="${PATH}:/usr/local/share/npm/bin"
 fi
 
-# MacPorts
-if [ -d /opt/local/bin ] ; then
-  PATH="/opt/local/bin:${PATH}"
-fi
-if [ -d /opt/local/sbin ] ; then
-  PATH="/opt/local/sbin:${PATH}"
-fi
-
 # MySql
 if [ -d /usr/local/mysql/bin ] ; then
   PATH="${PATH}:/usr/local/mysql/bin"
@@ -48,16 +36,6 @@ fi
 # PostgreSQL
 if [ -d /opt/local/lib/postgresql83/bin ] ; then
   PATH="${PATH}:/opt/local/lib/postgresql83/bin"
-fi
-
-# Subversion
-# if [ -d /opt/subversion/bin ] ; then
-#   PATH="/opt/subversion/bin:${PATH}"
-# fi
-
-# MacTex
-if [ -d /usr/texbin ] ; then
-  PATH="/usr/texbin:${PATH}"
 fi
 
 PATH=.:${PATH}
@@ -69,39 +47,6 @@ PATH=.:${PATH}
 if [ -d /usr/local/man ] ; then
   MANPATH="/usr/local/man:${MANPATH}"
 fi
-
-# MacPorts
-if [ -d /opt/local/share/man ] ; then
-  MANPATH="/opt/local/share/man:${MANPATH}"
-fi
-
-# Set MANPATH so it includes users' private man if it exists
-# if [ -d ~/man ]; then
-#   MANPATH="~/man:${MANPATH}"
-# fi
-
-############################################################
-## Other paths
-############################################################
-
-if [ -d ~/work ] ; then
-  CDPATH=".:~/work:${CDPATH}"
-fi
-
-# Set INFOPATH so it includes users' private info if it exists
-# if [ -d ~/info ]; then
-#   INFOPATH="~/info:${INFOPATH}"
-# fi
-
-# DYLD_LIBRARY_PATH
-# if [[ `uname` == 'Darwin' ]]; then
-#   if [ -d /opt/local/lib ] ; then
-#     DYLD_LIBRARY_PATH="/opt/local/lib:${DYLD_LIBRARY_PATH}"
-#   fi
-#   if [ -d /opt/subversion/lib ] ; then
-#     DYLD_LIBRARY_PATH="/opt/subversion/lib:${DYLD_LIBRARY_PATH}"
-#   fi
-# fi
 
 ############################################################
 ## RVM
@@ -225,11 +170,6 @@ source /usr/local/etc/bash_completion.d/cdargs-bash.sh
 if [[ "$USER" == '' ]]; then
   # mainly for cygwin terminals. set USER env var if not already set
   USER=$USERNAME
-fi
-
-# MacPorts OpenSSL doesn't have a ca bundle, so piggy back on Curl's
-if [ -f /opt/local/share/curl/curl-ca-bundle.crt ] ; then
-  export SSL_CERT_FILE="/opt/local/share/curl/curl-ca-bundle.crt"
 fi
 
 ############################################################
