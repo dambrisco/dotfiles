@@ -67,11 +67,11 @@ map  <F8> :set hls!<CR>
 imap <F8> <ESC>:set hls!<CR>a
 
 " Cmd-y to duplicate visual selection beneath
-vmap <D-y> y'>p
 nmap <D-y> yyp
+vmap <D-y> y'>p
 
 " Shift-Cmd-y to duplicate and comment out orig selection
-noremap <D-Y> y'>pgv<C-Space>'>
+vmap <D-Y> y'>pgv<C-Space>'><CR>
 nmap <D-Y> yypk<C-Space>j
 
 " Cmd-j to jump to last line, Cmd-k to just to first line
