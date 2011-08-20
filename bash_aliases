@@ -117,22 +117,27 @@ alias r="rake"
 alias a="rake db:test:clone && autotest -q"
 alias smp="staticmatic preview ."
 
-export GEMS=`gem env gemdir`/gems
-function gemfind {
-  echo `ls $GEMS | grep -i $1 | sort | tail -1`
-}
+# export GEMS=`gem env gemdir`/gems
+# function gemfind {
+#   echo `ls $GEMS | grep -i $1 | sort | tail -1`
+# }
 
 # Use: gemcd <name>, cd's into your gems directory
 # that best matches the name provided.
-function gemcd {
-  cd $GEMS/`gemfind $1`
-}
+# function gemcd {
+#   cd $GEMS/`gemfind $1`
+# }
 
 # Use: gemdoc <gem name>, opens the rdoc of the gem
 # that best matches the name provided.
-function gemdoc {
-  open $GEMS/../doc/`gemfind $1`/rdoc/index.html
+# function gemdoc {
+#   open $GEMS/../doc/`gemfind $1`/rdoc/index.html
+# }
+
+function rinstall {
+  ruby-build $1 ~/.rbenv/versions/$1
 }
+alias rhash="rbenv rehash"
 
 ############################################################
 ## Rails
