@@ -22,6 +22,10 @@ if [ -d /usr/local/sbin ] ; then
   PATH="${PATH}:/usr/local/sbin"
 fi
 
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="${HOME}/.rbenv/shims:${PATH}"
+
 # Node Package Manager
 if [ -d /usr/local/share/npm/bin ] ; then
   NODE_PATH="/usr/local/lib/node"
@@ -52,7 +56,7 @@ fi
 ## RVM
 ############################################################
 
-if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+# if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 
 ############################################################
 ## Terminal behavior
@@ -99,7 +103,8 @@ fi
 
 # Do not set PS1 for dumb terminals
 if [ "$TERM" != 'dumb' ] && [ -n "$BASH" ]; then
-  export PS1='\[\033[32m\]\n[\s: \w] $(rvm_prompt) $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
+  # export PS1='\[\033[32m\]\n[\s: \w] $(rvm_prompt) $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
+  export PS1='\[\033[32m\]\n[\s: \w] $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
 fi
 
 ############################################################
@@ -160,6 +165,10 @@ fi
 if [ -f ~/bin/git_completion ]; then
   . ~/bin/git_completion
 fi
+
+# if [ -f ~/.rbenv/completions/rbenv.bash ]; then
+#   . ~/.rbenv/completions/rbenv.bash
+# fi
 
 ############################################################
 ## Other
