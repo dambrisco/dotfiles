@@ -29,6 +29,13 @@ map <Leader>f :LustyFilesystemExplorerFromHere<CR>
 map <Leader>b :LustyBufferExplorer<CR>
 map <Leader>g :LustyBufferGrep<CR>
 
+" unmap lusty's default mappings.  sigh.
+autocmd VimEnter * nunmap <Leader>lf
+autocmd VimEnter * nunmap <Leader>lr
+autocmd VimEnter * nunmap <Leader>lb
+autocmd VimEnter * nunmap <Leader>lg
+autocmd VimEnter * nunmap <Leader>lj
+
 " Git interaction
 nmap gs :Gstatus<CR>
 nmap gb :Gblame<CR>
