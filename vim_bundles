@@ -32,7 +32,6 @@ bundle "vim-vividchalk",        :git => "git://github.com/tpope/vim-vividchalk.g
 bundle "ack.vim",               :git => "git://github.com/vim-scripts/ack.vim.git"
 bundle "AutoClose",             :git => "git://github.com/vim-scripts/AutoClose.git"
 bundle "AutoTag",               :git => "git://github.com/vim-scripts/AutoTag.git"
-bundle "bufexplorer.zip",       :git => "git://github.com/vim-scripts/bufexplorer.zip.git"
 bundle "closetag.vim",          :git => "git://github.com/vim-scripts/closetag.vim.git"
 bundle "tComment",              :git => "git://github.com/vim-scripts/tComment.git"
 bundle "Gist.vim",              :git => "git://github.com/vim-scripts/Gist.vim.git"

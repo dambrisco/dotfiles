@@ -14,13 +14,6 @@ let NERDTreeMouseMode=1
 " Hide javascript files in nerdtree
 command Nojs :let NERDTreeIgnore=[".js$"]
 
-" BufExplorer
-" Get rid of the default mappings.  I do not enjoy them.
-" Have to hook them into VimEnter so it happens after plugins are loaded.
-autocmd VimEnter * nunmap <Leader>be
-autocmd VimEnter * nunmap <Leader>bs
-autocmd VimEnter * nunmap <Leader>bv
-
 " Lusty plugin
 set hidden
 let g:LustyExplorerSuppressRubyWarning = 1

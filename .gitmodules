@@ -76,9 +76,6 @@
 [submodule "vim/bundle/AutoTag"]
 	path = vim/bundle/AutoTag
 	url = git://github.com/vim-scripts/AutoTag.git
-[submodule "vim/bundle/bufexplorer.zip"]
-	path = vim/bundle/bufexplorer.zip
-	url = git://github.com/vim-scripts/bufexplorer.zip.git
 [submodule "vim/bundle/closetag.vim"]
 	path = vim/bundle/closetag.vim
 	url = git://github.com/vim-scripts/closetag.vim.git
@@ -106,3 +103,6 @@
 [submodule "vim/bundle/vim-pathogen"]
 	path = vim/bundle/vim-pathogen
 	url = git://github.com/tpope/vim-pathogen.git
+[submodule "vim/bundle/vim-session"]
+	path = vim/bundle/vim-session
+	url = git://github.com/xolox/vim-session.git
