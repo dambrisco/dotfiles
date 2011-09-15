@@ -82,3 +82,8 @@ let g:AutoComplPop_MappingDriven=1
 " AutoClose config
 let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"'}
 
+" session plugin
+let g:session_directory = "~/.vim_sessions"
+let g:session_default_to_last = 1
+
+nmap <F2> :OpenSession<CR>
