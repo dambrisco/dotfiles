@@ -100,3 +100,7 @@ highlight MatchParen                guifg=#FFFFFF ctermfg=15 guibg=#005f5f cterm
 
 highlight Pmenu                     guifg=#6D9CBE guibg=#111111
 highlight PmenuSel                  guifg=#FFC66D guibg=#000000 gui=bold
+
+highlight StatusLine                guifg=#444444 guibg=#bbbbbb
+highlight StatusLineNC              guifg=#333333 guibg=#555555
+highlight VertSplit                 guifg=#333333 guibg=#333333
