@@ -1,8 +1,10 @@
 " Commands
 " ------------------------------------------------------------
 
-" easily get to vimrc
+" easily get to vim config
 command Vimrc :e ~/.vimrc
+command VimBundles :e ~/dev/dotfiles/vim_bundles
+command VimNT :NERDTree ~/.vim
 
 " easily get to bashrc
 command Bashrc :e ~/.bashrc
