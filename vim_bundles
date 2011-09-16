@@ -17,6 +17,7 @@ bundle "jekyll.vim",            :git => "git://github.com/csexton/jekyll.vim.git
 bundle "lusty",                 :git => "git://github.com/sjbach/lusty.git"
 bundle "gitv",                  :git => "git://github.com/gregsexton/gitv.git"
 bundle "vim-session",           :git => "git://github.com/xolox/vim-session.git"
+bundle "Command-T",             :git => "git://github.com/wincent/Command-T.git"
 
 bundle "vim-align",             :git => "git://github.com/tsaleh/vim-align.git"
 bundle "vim-matchit",           :git => "git://github.com/tsaleh/vim-matchit.git"
