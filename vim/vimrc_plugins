@@ -29,6 +29,9 @@ autocmd VimEnter * nunmap <Leader>lb
 autocmd VimEnter * nunmap <Leader>lg
 autocmd VimEnter * nunmap <Leader>lj
 
+" skip AlignMaps default mappings
+let g:loaded_AlignMapsPlugin = 1
+
 " Git interaction
 nmap gs :Gstatus<CR>
 nmap gb :Gblame<CR>
