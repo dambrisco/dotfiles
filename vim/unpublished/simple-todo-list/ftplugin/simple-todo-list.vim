@@ -74,4 +74,7 @@ nnoremap <buffer> <silent> <Leader>m :call ToggleTodoDone()<CR>
 nnoremap <buffer> <silent> <Leader>l :call ToggleTodoLogged()<CR>
 nnoremap <buffer> <silent> <Leader>d :call ToggleTodoDoneAndLogged()<CR>
 
+nnoremap <buffer> <C-n> /^----<CR><CR>
+nnoremap <buffer> <C-p> ?^----<CR>n<CR>
+
 let b:loaded_simpletodolugin = 1
