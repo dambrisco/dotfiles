@@ -7,7 +7,12 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn region simpleTodoTitle start=/^[A-Z ]\+$/ end=/^---\+$/
+syntax sync fromstart
+set foldmethod=syntax
+
+syn region simpleTodoTitle   start=/^[A-Z ]\+$/ end=/^---\+$/
+syn region simpleTodoSection start=/^\(---\+\n\)\@<=./ end=/\ze\n\n[A-Z ]\+\n---\+$/ fold containedin=simpleTodoTitle
+
 hi def link simpleTodoTitle Special
 
 let b:current_syntax = "simple-todo"
