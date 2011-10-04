@@ -17,7 +17,9 @@ if has("gui_macvim")
   macmenu &File.Open\ Tab\.\.\. key=<nop>
 
   " NerdTree
+  macmenu &Edit.Find.Find\.\.\. key=<nop>
   nnoremap <D-e> :NERDTreeToggle<CR>
+  nnoremap <D-f> :NERDTreeFind<CR>
 
   " Tab navigation like FF and TM
   nnoremap <D-M-right> :tabnext<CR>

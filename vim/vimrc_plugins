@@ -7,6 +7,8 @@
 
 " NerdTree Plugin
 command NT :NERDTreeToggle
+command NTF :NERDTreeFind
+
 " Use instead of Netrw when doing an edit /foobar
 let NERDTreeHijackNetrw=1
 " Single click for everything
