@@ -168,4 +168,6 @@ alias b64="openssl enc -base64"
 
 alias flushdns='dscacheutil -flushcache'
 
+alias repair-mongo='rm /usr/local/var/mongodb/mongod.lock && mongod --repair'
+
 ############################################################
