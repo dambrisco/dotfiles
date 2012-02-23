@@ -23,8 +23,9 @@ if [ -d /usr/local/sbin ] ; then
 fi
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="${HOME}/.rbenv/shims:${PATH}"
+if [ `which rbenv 2> /dev/null` ]; then
+  eval "$(rbenv init -)"
+fi
 
 # Node Package Manager
 if [ -d /usr/local/share/npm/bin ] ; then
