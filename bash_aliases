@@ -143,6 +143,18 @@ function rinstall {
 alias rhash="rbenv rehash"
 
 ############################################################
+## Heroku
+############################################################
+
+function hstaging {
+  be heroku $* --remote staging
+}
+
+function hproduction {
+  be heroku $* --remote production
+}
+
+############################################################
 ## Rails
 ############################################################
 
