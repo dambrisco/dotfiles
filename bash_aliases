@@ -117,6 +117,8 @@ alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
 alias r="rake"
 alias a="rake db:test:clone && autotest -q"
 alias smp="staticmatic preview ."
+alias irb="echo Don\\'t you really want pry? or type irbirb."
+alias irbirb="\\irb"
 
 # export GEMS=`gem env gemdir`/gems
 # function gemfind {
