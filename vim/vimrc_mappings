@@ -2,8 +2,8 @@
 " ------------------------------------------------------------
 
 "Vertical split then hop to new buffer
-noremap <Leader>v :vsp^M^W^W<cr>
-noremap <Leader>h :split^M^W^W<cr>
+noremap <Leader>v :vert new<cr>
+noremap <Leader>h :new<cr>
 
 " make scrolling the viewport a bit faster
 nnoremap <C-e> 5<C-e>
