@@ -5,6 +5,9 @@
 " If we start up vim with --noplugins then we get faster startup, but some of
 " the commands in this file might error if the plugins aren't loaded.
 
+" Blockle Plugin
+let g:blockle_mapping = '<Leader>d'
+
 " NerdTree Plugin
 command NT :NERDTreeToggle
 command NTF :NERDTreeFind
@@ -96,3 +99,7 @@ let g:session_autoload = 'no'
 let g:session_autosave = 'no'
 
 nmap <F2> :OpenSession<CR>
+
+" Universal Text Linking plugin
+" let g:utl_cfg_hdl_scm_http_system = "silent !open -a Choosy '%u#%f'"
+let g:utl_cfg_hdl_scm_http_system = "silent !open -a Choosy '%u'"

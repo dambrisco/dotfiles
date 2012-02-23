@@ -25,6 +25,9 @@ if has("gui_macvim")
   nnoremap <D-M-right> :tabnext<CR>
   nnoremap <D-M-left> :tabprev<CR>
 
+  " Gundo
+  nnoremap <D-u> :GundoToggle<CR>
+
 elseif has("gui_gtk2")
 
   set guifont=Monaco

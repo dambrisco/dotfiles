@@ -106,6 +106,27 @@
 [submodule "vim/bundle/vim-session"]
 	path = vim/bundle/vim-session
 	url = git://github.com/xolox/vim-session.git
+[submodule "vim/bundle/vim-rename"]
+	path = vim/bundle/vim-rename
+	url = git://github.com/wojtekmach/vim-rename.git
+[submodule "vim/bundle/renamer.vim"]
+	path = vim/bundle/renamer.vim
+	url = git://github.com/vim-scripts/renamer.vim.git
+[submodule "vim/bundle/rename.vim"]
+	path = vim/bundle/rename.vim
+	url = git://github.com/danro/rename.vim.git
+[submodule "vim/bundle/blockle.vim"]
+	path = vim/bundle/blockle.vim
+	url = git://github.com/vim-scripts/blockle.vim.git
+[submodule "vim/bundle/vim-orgmode"]
+	path = vim/bundle/vim-orgmode
+	url = git://github.com/jceb/vim-orgmode.git
+[submodule "vim/bundle/utl.vim"]
+	path = vim/bundle/utl.vim
+	url = git://github.com/vim-scripts/utl.vim.git
+[submodule "vim/bundle/gundo.vim"]
+	path = vim/bundle/gundo.vim
+	url = git://github.com/sjl/gundo.vim.git
 [submodule "vim/bundle/Command-T"]
 	path = vim/bundle/Command-T
 	url = git://github.com/wincent/Command-T.git

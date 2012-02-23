@@ -98,9 +98,9 @@ highlight SpellRare                 guifg=#D75F87 ctermfg=168 guibg=NONE ctermbg
 highlight SpellCap                  guifg=#D0D0FF ctermfg=189 guibg=NONE ctermbg=NONE gui=underline cterm=underline
 highlight MatchParen                guifg=#FFFFFF ctermfg=15 guibg=#005f5f ctermbg=23
 
-highlight Pmenu                     guifg=#6D9CBE guibg=#111111
-highlight PmenuSel                  guifg=#FFC66D guibg=#000000 gui=bold
+highlight Pmenu                     guifg=#6D9CBE guibg=#111111 ctermfg=33 ctermbg=233
+highlight PmenuSel                  guifg=#FFC66D guibg=#000000 ctermfg=215 ctermbg=0 gui=bold
 
-highlight StatusLine                guifg=#444444 guibg=#bbbbbb
-highlight StatusLineNC              guifg=#333333 guibg=#555555
-highlight VertSplit                 guifg=#333333 guibg=#333333
+highlight StatusLine                guifg=#444444 guibg=#bbbbbb ctermfg=236 ctermbg=249
+highlight StatusLineNC              guifg=#333333 guibg=#555555 ctermfg=235 ctermbg=237
+highlight VertSplit                 guifg=#333333 guibg=#333333 ctermfg=235 ctermbg=235
