@@ -34,4 +34,8 @@ function! RemoveWhiteSpace()
     call setpos('.', save_cursor)
 endfunction
 
+function! IgnoreWhiteSpace()
+  set nolist
+  autocmd! whitespace
+endfunction
 

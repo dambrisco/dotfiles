@@ -1,8 +1,10 @@
 " Auto commands
 " ------------------------------------------------------------
 
-" before writing to any file, this function call will remove any extra white space at the end of a line
-autocmd BufWrite,FileWritePre * call RemoveWhiteSpace()
+augroup whitespace
+  " before writing to any file, this function call will remove any extra white space at the end of a line
+  autocmd BufWrite,FileWritePre * call RemoveWhiteSpace()
+augroup end
 
 " unfold all folds when a file is opened
 autocmd BufWinEnter * normal zR
