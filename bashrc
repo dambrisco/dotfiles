@@ -167,6 +167,11 @@ if [ -f ~/bin/git_completion ]; then
   . ~/bin/git_completion
 fi
 
+function _ssh_completion() {
+  perl -ne 'print "$1 " if /^Host (.+)$/' ~/.ssh/config
+}
+complete -W "$(_ssh_completion)" ssh
+
 # if [ -f ~/.rbenv/completions/rbenv.bash ]; then
 #   . ~/.rbenv/completions/rbenv.bash
 # fi
