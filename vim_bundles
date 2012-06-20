@@ -31,6 +31,7 @@ bundle "vim-repeat",            :git => "git://github.com/tpope/vim-repeat.git"
 bundle "vim-surround",          :git => "git://github.com/tpope/vim-surround.git"
 bundle "vim-vividchalk",        :git => "git://github.com/tpope/vim-vividchalk.git"
 bundle "vim-endwise",           :git => "git://github.com/tpope/vim-endwise.git"
+bundle "vim-powerline",         :git => "git://github.com/Lokaltog/vim-powerline.git"
 
 bundle "ack.vim",               :git => "git://github.com/vim-scripts/ack.vim.git"
 bundle "AutoClose",             :git => "git://github.com/vim-scripts/AutoClose.git"
