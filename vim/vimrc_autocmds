@@ -35,3 +35,9 @@ autocmd FileType c,h            setlocal cindent       " enable the intelligent 
 autocmd FileType js             setlocal smartindent   " enable the smartindenting (si) feature for the following files
 autocmd FileType txt            setlocal fo+=tn
 
+" Create directories on demand when saving files.
+" From http://stackoverflow.com/questions/4292733/vim-creating-parent-directories-on-save
+augroup BWCCreateDir
+    au!
+    autocmd BufWritePre * if expand("<afile>")!~#'^\w\+:/' && !isdirectory(expand("%:h")) | execute "silent! !mkdir -p ".shellescape(expand('%:h'), 1) | redraw! | endif
+augroup END
