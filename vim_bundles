@@ -49,3 +49,4 @@ bundle "blockle.vim",           :git => "git://github.com/vim-scripts/blockle.vi
 bundle "utl.vim",               :git => "git://github.com/vim-scripts/utl.vim.git"
 bundle "vim-orgmode",           :git => "git://github.com/jceb/vim-orgmode.git"
 bundle "gundo.vim",             :git => "git://github.com/sjl/gundo.vim.git"
+bundle "vim-javascript-syntax", :git => "https://github.com/jelera/vim-javascript-syntax.git"
