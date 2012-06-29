@@ -3,6 +3,7 @@
 
 " easily get to vim config
 command Vimrc :e ~/.vimrc
+command Vmap :e ~/.vim/vimrc_mappings
 command VimBundles :e ~/dev/dotfiles/vim_bundles
 command VimNT :NERDTree ~/.vim
 
