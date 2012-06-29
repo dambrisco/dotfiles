@@ -16,6 +16,10 @@ onoremap <silent> iC :normal viC<cr>
 noremap <Leader>v :vert new<cr>
 noremap <Leader>h :new<cr>
 
+" My Shortcuts
+vnoremap <Leader>ah :Align =><cr>
+vnoremap <Leader>ae :Align =<cr>
+
 " make scrolling the viewport a bit faster
 nnoremap <C-e> 5<C-e>
 nnoremap <C-y> 5<C-y>
