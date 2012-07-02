@@ -17,6 +17,7 @@ noremap <Leader>v :vert new<cr>
 noremap <Leader>h :new<cr>
 
 " My Shortcuts
+vnoremap <Leader>a :Align
 vnoremap <Leader>ah :Align =><cr>
 vnoremap <Leader>ae :Align =<cr>
 
