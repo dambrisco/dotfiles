@@ -1,6 +1,12 @@
 " Functions
 " ------------------------------------------------------------
 
+function! VisualBlockSelectColumn()
+  let startcol = col("'<")
+  let endcol   = col("'>")
+  exec "silent normal!" "{j" . startcol . "|}k" . endcol . "|"
+endfunction
+
 " Renames param1 tags to be param2 tags
 function! RenameTag(param1, param2)
     :%s/<\(\/\?\)a:param1\(\_s*\)/<\1a:param2\2/gci
