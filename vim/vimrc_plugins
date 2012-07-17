@@ -11,6 +11,7 @@ let g:blockle_mapping = '<Leader>d'
 " NerdTree Plugin
 command NT :NERDTreeToggle
 command NTF :NERDTreeFind
+nnoremap <silent> <Leader>n :NT<cr>
 
 " Use instead of Netrw when doing an edit /foobar
 let NERDTreeHijackNetrw=1
