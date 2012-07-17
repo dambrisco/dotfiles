@@ -107,4 +107,4 @@ let g:utl_cfg_hdl_scm_http_system = "silent !open -a Choosy '%u'"
 " Powerline
 " Need the monaco font w/ powerline enhancements?
 "   http://gist.github.com/1634235
-" let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'fancy'
