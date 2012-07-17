@@ -2,9 +2,28 @@
 " ------------------------------------------------------------
 
 function! VisualBlockSelectColumn()
-  let startcol = col("'<")
-  let endcol   = col("'>")
-  exec "silent normal!" "{j" . startcol . "|}k" . endcol . "|"
+  let startcol    = col("'<")
+  let stopcol     = col("'>")
+  let linenum     = line(".")
+  let indentlevel = s:IndentLevel(".")
+  let startline   = s:VBSCRow(linenum, indentlevel, -1)
+  let stopline    = s:VBSCRow(linenum, indentlevel, 1)
+  exec "silent normal!" startline . "gg" . startcol . "|" stopline . "gg" . stopcol . "|"
+endfunction
+
+function! s:VBSCRow(linenum, indentlevel, step)
+  let sameindent = s:IndentLevel(a:linenum + a:step) == a:indentlevel
+  let nonblank   = getline(a:linenum + a:step) =~ "[^ \t]"
+  if sameindent && nonblank
+    return s:VBSCRow(a:linenum + a:step, a:indentlevel, a:step)
+  else
+    return a:linenum
+  endif
+endfunction
+
+function! s:IndentLevel(linenum)
+  let line = getline(a:linenum)
+  return match(line, "[^ \t]")
 endfunction
 
 " Renames param1 tags to be param2 tags
