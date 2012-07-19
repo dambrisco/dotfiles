@@ -18,6 +18,12 @@ nnoremap <C-y> 5<C-y>
 nnoremap ' `
 nnoremap ` '
 
+" tabs
+nnoremap <Leader>tt :tabnew<cr>
+nnoremap <Leader>tn :tabnext<cr>
+nnoremap <Leader>tp :tabprev<cr>
+nnoremap <Leader>tc :tabclose<cr>
+
 " Cursor Movement *************************************************************
 " Make cursor move by visual lines instead of file lines (when wrapping)
 map <up> gk
