@@ -18,12 +18,6 @@ nnoremap <C-y> 5<C-y>
 nnoremap ' `
 nnoremap ` '
 
-" Navigating tags now just like moving forward and back through pages in a web browser
-" use Apple+] to jump to a tag
-map <D-]> <C-]>
-" use Apple+[ to jump back up the tag stack
-map <D-[> <C-t>
-
 " Cursor Movement *************************************************************
 " Make cursor move by visual lines instead of file lines (when wrapping)
 map <up> gk
@@ -71,15 +65,10 @@ imap <F9> <ESC>:set wrap!<CR>a
 map  <F8> :set hls!<CR>
 imap <F8> <ESC>:set hls!<CR>a
 
-" Cmd-y to duplicate visual selection beneath
-nmap <D-y> yyp
-vmap <D-y> y'>p
+" duplicate visual selection, or current line
+nmap <Leader>d yyp
+vmap <Leader>d y'>p
 
-" Shift-Cmd-y to duplicate and comment out orig selection
-vmap <D-Y> y'>pgv<C-Space>'><CR>
-nmap <D-Y> yypk<C-Space>j
-
-" Cmd-j to jump to last line, Cmd-k to just to first line
-nmap <D-j> G
-nmap <D-k> gg
-
+" duplicate and comment out selection, or current line
+vmap <Leader>D y'>pgv:TComment<cr>'><CR>
+nmap <Leader>D yypk:TComment<cr>j

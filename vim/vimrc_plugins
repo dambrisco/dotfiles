@@ -60,7 +60,7 @@ autocmd VimEnter * IndentGuidesEnable
 " TagList plugin config
 let Tlist_Show_One_File = 1   " Show only one file in the taglist at a time
 let Tlist_Sort_Type = "name"  " Sort tag list by names rather than order they are defined
-map <D-i> :TlistToggle<CR>
+nnoremap <Leader>i :TagbarToggle<CR>
 
 " YankRing plugin config
 nmap yr :YRShow<CR>
