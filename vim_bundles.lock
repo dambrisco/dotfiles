@@ -98,15 +98,6 @@ jekyll.vim:
     :bundles_dir: vim/bundle
     :use_git_submodules: false
     :git_bin: git
-lusty: 
-  :git: https://github.com/sjbach/lusty.git
-  :type: :git
-  :opts: 
-    :vimrc_file: vim/vimrc
-    :vim_bin_path: /usr/bin/vim
-    :bundles_dir: vim/bundle
-    :use_git_submodules: false
-    :git_bin: git
 gitv: 
   :git: https://github.com/gregsexton/gitv.git
   :type: :git
@@ -118,15 +109,6 @@ gitv:
     :git_bin: git
 vim-session: 
   :git: https://github.com/xolox/vim-session.git
-  :type: :git
-  :opts: 
-    :vimrc_file: vim/vimrc
-    :vim_bin_path: /usr/bin/vim
-    :bundles_dir: vim/bundle
-    :use_git_submodules: false
-    :git_bin: git
-Command-T: 
-  :git: https://github.com/wincent/Command-T.git
   :type: :git
   :opts: 
     :vimrc_file: vim/vimrc
@@ -397,6 +379,15 @@ textobj-word-column.vim:
     :git_bin: git
 tagbar: 
   :git: https://github.com/majutsushi/tagbar.git
+  :type: :git
+  :opts: 
+    :vimrc_file: vim/vimrc
+    :vim_bin_path: /usr/bin/vim
+    :bundles_dir: vim/bundle
+    :use_git_submodules: false
+    :git_bin: git
+ctrlp.vim.git: 
+  :git: https://github.com/kien/ctrlp.vim.git
   :type: :git
   :opts: 
     :vimrc_file: vim/vimrc

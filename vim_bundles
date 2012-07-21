@@ -14,10 +14,8 @@ bundle "vim-textobj-user",      :git => "https://github.com/kana/vim-textobj-use
 bundle "vim-textobj-rubyblock", :git => "https://github.com/nelstrom/vim-textobj-rubyblock.git"
 bundle "vim-ruby-refactoring",  :git => "https://github.com/ecomba/vim-ruby-refactoring.git"
 bundle "jekyll.vim",            :git => "https://github.com/csexton/jekyll.vim.git"
-bundle "lusty",                 :git => "https://github.com/sjbach/lusty.git"
 bundle "gitv",                  :git => "https://github.com/gregsexton/gitv.git"
 bundle "vim-session",           :git => "https://github.com/xolox/vim-session.git"
-bundle "Command-T",             :git => "https://github.com/wincent/Command-T.git"
 
 bundle "vim-align",             :git => "https://github.com/tsaleh/vim-align.git"
 bundle "vim-matchit",           :git => "https://github.com/tsaleh/vim-matchit.git"
@@ -31,6 +29,7 @@ bundle "vim-repeat",            :git => "https://github.com/tpope/vim-repeat.git
 bundle "vim-surround",          :git => "https://github.com/tpope/vim-surround.git"
 bundle "vim-vividchalk",        :git => "https://github.com/tpope/vim-vividchalk.git"
 bundle "vim-endwise",           :git => "https://github.com/tpope/vim-endwise.git"
+
 bundle "vim-powerline",         :git => "https://github.com/Lokaltog/vim-powerline.git"
 
 bundle "ack.vim",               :git => "https://github.com/vim-scripts/ack.vim.git"
@@ -52,3 +51,5 @@ bundle "vim-javascript-syntax", :git => "https://github.com/jelera/vim-javascrip
 bundle "vim-colors-solarized",  :git => "https://github.com/altercation/vim-colors-solarized.git"
 bundle "textobj-word-column.vim", :git => "https://github.com/coderifous/textobj-word-column.vim.git"
 bundle "tagbar",                :git => "https://github.com/majutsushi/tagbar.git"
+bundle "ctrlp.vim.git",         :git => "https://github.com/kien/ctrlp.vim.git"
+
