@@ -187,4 +187,6 @@ alias repair-mongo='rm /usr/local/var/mongodb/mongod.lock && mongod --repair'
 alias ring='open -a Terminal; growlnotify -m "Terminal process is done."; afplay /System/Library/Sounds/Glass.aiff'
 alias top=htop
 
+alias tmux='TERM=screen-256color tmux'
+
 ############################################################
