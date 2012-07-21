@@ -39,7 +39,6 @@ bundle "AutoTag",               :git => "https://github.com/vim-scripts/AutoTag.
 bundle "closetag.vim",          :git => "https://github.com/vim-scripts/closetag.vim.git"
 bundle "tComment",              :git => "https://github.com/vim-scripts/tComment.git"
 bundle "Gist.vim",              :git => "https://github.com/vim-scripts/Gist.vim.git"
-bundle "taglist.vim",           :git => "https://github.com/vim-scripts/taglist.vim.git"
 bundle "YankRing.vim",          :git => "https://github.com/vim-scripts/YankRing.vim.git"
 bundle "ReplaceWithRegister",   :git => "https://github.com/vim-scripts/ReplaceWithRegister.git"
 bundle "ZoomWin",               :git => "https://github.com/vim-scripts/ZoomWin.git"
@@ -47,7 +46,9 @@ bundle "xml.vim",               :git => "https://github.com/vim-scripts/xml.vim.
 bundle "rename.vim",            :git => "https://github.com/danro/rename.vim.git"
 bundle "blockle.vim",           :git => "https://github.com/vim-scripts/blockle.vim.git"
 bundle "utl.vim",               :git => "https://github.com/vim-scripts/utl.vim.git"
+
 bundle "gundo.vim",             :git => "https://github.com/sjl/gundo.vim.git"
 bundle "vim-javascript-syntax", :git => "https://github.com/jelera/vim-javascript-syntax.git"
 bundle "vim-colors-solarized",  :git => "https://github.com/altercation/vim-colors-solarized.git"
 bundle "textobj-word-column.vim", :git => "https://github.com/coderifous/textobj-word-column.vim.git"
+bundle "tagbar",                :git => "https://github.com/majutsushi/tagbar.git"

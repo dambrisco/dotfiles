@@ -296,15 +296,6 @@ Gist.vim:
     :bundles_dir: vim/bundle
     :use_git_submodules: false
     :git_bin: git
-taglist.vim: 
-  :git: https://github.com/vim-scripts/taglist.vim.git
-  :type: :git
-  :opts: 
-    :vimrc_file: vim/vimrc
-    :vim_bin_path: /usr/bin/vim
-    :bundles_dir: vim/bundle
-    :use_git_submodules: false
-    :git_bin: git
 YankRing.vim: 
   :git: https://github.com/vim-scripts/YankRing.vim.git
   :type: :git
@@ -397,6 +388,15 @@ vim-colors-solarized:
     :git_bin: git
 textobj-word-column.vim: 
   :git: https://github.com/coderifous/textobj-word-column.vim.git
+  :type: :git
+  :opts: 
+    :vimrc_file: vim/vimrc
+    :vim_bin_path: /usr/bin/vim
+    :bundles_dir: vim/bundle
+    :use_git_submodules: false
+    :git_bin: git
+tagbar: 
+  :git: https://github.com/majutsushi/tagbar.git
   :type: :git
   :opts: 
     :vimrc_file: vim/vimrc
