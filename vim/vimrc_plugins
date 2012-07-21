@@ -55,7 +55,10 @@ let g:jekyll_path = "~/Projects/coderifous.github.com"
 " IndentGuides plugin config
 let g:indent_guides_guide_size  = 1
 let g:indent_guides_start_level = 2
+let g:indent_guides_auto_colors = 0
 autocmd VimEnter * IndentGuidesEnable
+hi IndentGuidesOdd  guibg=#003540  ctermbg=0
+hi IndentGuidesEven guibg=#003540  ctermbg=0
 
 " TagList plugin config
 let Tlist_Show_One_File = 1   " Show only one file in the taglist at a time
