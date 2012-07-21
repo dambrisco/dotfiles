@@ -395,3 +395,12 @@ vim-colors-solarized:
     :bundles_dir: vim/bundle
     :use_git_submodules: false
     :git_bin: git
+textobj-word-column.vim: 
+  :git: https://github.com/coderifous/textobj-word-column.vim.git
+  :type: :git
+  :opts: 
+    :vimrc_file: vim/vimrc
+    :vim_bin_path: /usr/bin/vim
+    :bundles_dir: vim/bundle
+    :use_git_submodules: false
+    :git_bin: git

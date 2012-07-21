@@ -1,17 +1,6 @@
 " Key Mappings
 " ------------------------------------------------------------
 
-" Custom text-object: word-column
-vnoremap <silent> ac <Esc>vaw:call VisualBlockSelectColumn()<cr>
-vnoremap <silent> aC <Esc>vaW:call VisualBlockSelectColumn()<cr>
-vnoremap <silent> ic <Esc>viw:call VisualBlockSelectColumn()<cr>
-vnoremap <silent> iC <Esc>viW:call VisualBlockSelectColumn()<cr>
-
-onoremap <silent> ac :normal vac<cr>
-onoremap <silent> aC :normal vaC<cr>
-onoremap <silent> ic :normal vic<cr>
-onoremap <silent> iC :normal viC<cr>
-
 "Vertical split then hop to new buffer
 noremap <Leader>v :vert new<cr>
 noremap <Leader>h :new<cr>
