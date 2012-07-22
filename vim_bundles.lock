@@ -395,3 +395,12 @@ ctrlp.vim.git:
     :bundles_dir: vim/bundle
     :use_git_submodules: false
     :git_bin: git
+vim-easymotion: 
+  :git: https://github.com/Lokaltog/vim-easymotion.git
+  :type: :git
+  :opts: 
+    :vimrc_file: vim/vimrc
+    :vim_bin_path: /usr/bin/vim
+    :bundles_dir: vim/bundle
+    :use_git_submodules: false
+    :git_bin: git
