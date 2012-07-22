@@ -37,8 +37,8 @@ map <Leader>b :CtrlPBuffer<CR>
 map <Leader>g :CtrlPLine<CR>
 map <Leader>t :CtrlPBufTag<CR>
 map <Leader>T :CtrlPBufTagAll<CR>
-map <Leader>c :CtrlPChange<CR>
-map <Leader>C :CtrlPChangeAll<CR>
+" map <Leader>c :CtrlPChange<CR>
+" map <Leader>C :CtrlPChangeAll<CR>
 
 " skip AlignMaps default mappings
 let g:loaded_AlignMapsPlugin = 1
@@ -80,7 +80,7 @@ let g:tcommentMapLeader2   = ""
 let g:tcommentMapLeaderOp1 = ""
 let g:tcommentMapLeaderOp2 = ""
 " Create the only ones that matters
-noremap  <silent> <C-Space> :TComment<cr>
+noremap <silent> <Leader>c :TComment<cr>
 
 " peep open ********************************************************
 " map <unique> <silent> <Leader>f <Plug>PeepOpen
