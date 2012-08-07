@@ -78,3 +78,7 @@ vmap <Leader>y y'>p
 " duplicate and comment out orig selection
 vmap <Leader>Y y'>pgv<C-Space>'><CR>
 nmap <Leader>Y yypk<C-Space>j
+
+" Run macro (in q)
+nnoremap <Leader>q @q
+vnoremap <Leader>q :normal @q<cr>
