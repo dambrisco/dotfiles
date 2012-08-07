@@ -134,3 +134,7 @@ vnoremap <Leader>k :<C-u>call EasyMotion#JK(1,1)<cr>
 
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade  Comment
+
+" signature plugin
+" Not config for the plugin, just coloring for it.
+hi! link SignColumn LineNr
