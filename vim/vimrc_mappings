@@ -10,6 +10,11 @@ vnoremap <Leader>a :Align
 vnoremap <Leader>ah :Align =><cr>
 vnoremap <Leader>ae :Align =<cr>
 
+" Bounce on (m)atching pairs without the awkward Shift-5 reach
+vmap m %
+nmap <Leader>m %
+omap <Leader>m %
+
 " make scrolling the viewport a bit faster
 nnoremap <C-e> 5<C-e>
 nnoremap <C-y> 5<C-y>
@@ -82,3 +87,5 @@ nmap <Leader>Y yypk<C-Space>j
 " Run macro (in q)
 nnoremap <Leader>q @q
 vnoremap <Leader>q :normal @q<cr>
+
+nnoremap <silent> <Space> :nohlsearch<cr>
