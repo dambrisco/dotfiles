@@ -7,6 +7,7 @@ nnoremap <Leader>V 0v$hy:<C-r>"<cr>
 "Vertical split then hop to new buffer
 noremap <Leader>v :vert new<cr>
 noremap <Leader>h :new<cr>
+nnoremap <Leader>gf :vs\|normal gf<cr>
 
 " My Shortcuts
 vnoremap <Leader>a :Align
