@@ -9,10 +9,21 @@ noremap <Leader>v :vert new<cr>
 noremap <Leader>h :new<cr>
 nnoremap <Leader>gf :vs\|normal gf<cr>
 
-" My Shortcuts
+" Alignment Shortcuts
 vnoremap <Leader>a :Align
 vnoremap <Leader>ah :Align =><cr>
 vnoremap <Leader>ae :Align =<cr>
+
+function! s:align_columns() range
+  " execute a:firstline . ',' . a:lastline '!column -t'
+  '<,'>!column -t
+  '<,'>s/  \([^ ]\)/ \1/g
+  nohls
+  normal gv=
+  redraw " gets rid of: Press Enter to continue
+endfunction
+
+vnoremap <silent> <Leader>ac :call <SID>align_columns()<cr>
 
 " Bounce on (m)atching pairs without the awkward Shift-5 reach
 vmap m %
