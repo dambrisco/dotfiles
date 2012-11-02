@@ -104,3 +104,6 @@ nnoremap <Leader>q @q
 vnoremap <Leader>q :normal @q<cr>
 
 nnoremap <silent> <Space> :nohlsearch<cr>
+
+" Ack for word under cursor
+nnoremap <silent> <Leader>A yiw:Ack <C-r>"<cr>
