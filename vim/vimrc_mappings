@@ -107,3 +107,6 @@ nnoremap <silent> <Space> :nohlsearch<cr>
 
 " Ack for word under cursor
 nnoremap <silent> <Leader>A yiw:Ack <C-r>"<cr>
+
+" opposite of join, splits on spaces
+nnoremap <Leader>J :s/ \+/\r/g \| nohlsearch<cr>
