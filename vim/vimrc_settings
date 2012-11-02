@@ -46,7 +46,7 @@ set cursorline
 
 set wrapscan                    " (ws) allows search to wrap to top of document when the bottom has been hit
 set incsearch                   " (is) highlights what you are searching for as you type
-set nohlsearch                    " (hls) highlights all instances of the last searched string
+set hlsearch                    " (hls) highlights all instances of the last searched string
 set ignorecase                  " (ic) ignores case in search patterns
 set smartcase                   " (scs) don't ignore case when the search pattern has uppercase
 set infercase                   " (inf) during keyword completion, fix case of new word (when ignore case is on)
