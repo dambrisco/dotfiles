@@ -64,7 +64,11 @@ set dir=~/.vim_tmp
 set t_Co=256 " 256 colors
 set background=dark
 syntax on " syntax highlighting
-colorscheme solarized
+colorscheme jellybeans
+
+hi TabLine     ctermfg=244 ctermbg=235
+hi TabLineSel  ctermfg=239 ctermbg=233
+hi TabLineFill ctermfg=0 ctermbg=233
 
 set fo-=r " do not insert a comment leader after an enter, (no work, fix!!)
 

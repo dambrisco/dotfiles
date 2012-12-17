@@ -50,6 +50,7 @@ bundle "utl.vim",               :git => "https://github.com/vim-scripts/utl.vim.
 bundle "gundo.vim",             :git => "https://github.com/sjl/gundo.vim.git"
 bundle "vim-javascript-syntax", :git => "https://github.com/jelera/vim-javascript-syntax.git"
 bundle "vim-colors-solarized",  :git => "https://github.com/altercation/vim-colors-solarized.git"
+bundle "jellybeans.vim",        :git => "https://github.com/nanotech/jellybeans.vim.git"
 bundle "textobj-word-column.vim", :git => "https://github.com/coderifous/textobj-word-column.vim.git"
 bundle "tagbar",                :git => "https://github.com/majutsushi/tagbar.git"
 bundle "ctrlp.vim.git",         :git => "https://github.com/kien/ctrlp.vim.git"
