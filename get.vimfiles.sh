@@ -38,6 +38,7 @@ VIMHOME=`pwd`"/vim"
 ln -s $VIMHOME      ~/.vim
 ln -s ~/.vim/vimrc  ~/.vimrc
 ln -s ~/.vim/gvimrc ~/.gvimrc
+ln -s ~/$REPO_NAME/tmux.conf ~/.tmux.conf
 
 echo
 echo -e "\033[32mCreating ~/.vim_tmp: where vim is configured to store temporary files."
