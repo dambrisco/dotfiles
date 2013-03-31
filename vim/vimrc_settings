@@ -31,6 +31,7 @@ set list
 set winminheight=0              " (wmh) the minimal height of the window when it's not the current window
 
 set nowrap                      " allows text to continue off the window (need horizontal scrolling)
+set number
 set numberwidth=4
 set sidescrolloff=2
 set scrolloff=2
@@ -64,7 +65,7 @@ set dir=~/.vim_tmp
 set t_Co=256 " 256 colors
 set background=dark
 syntax on " syntax highlighting
-colorscheme jellybeans
+colorscheme solarized
 
 hi TabLine     ctermfg=244 ctermbg=235
 hi TabLineSel  ctermfg=239 ctermbg=233

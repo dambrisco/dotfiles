@@ -4,3 +4,8 @@
 vim/doc/tags
 vim/.netrwhist
 vim/bundle/*
+
+.bundle
+vim/vim
+Gemfile.lock
+vim_bundles.lock
