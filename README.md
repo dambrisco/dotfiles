@@ -1,6 +1,6 @@
 ## Quick start
 
-    curl https://raw.github.com/coderifous/dotfiles/master/get.vimfiles.sh | sh
+    curl https://raw.github.com/hexorx/dotfiles/master/get.vimfiles.sh | sh
 
 This clones the repo, downloads all the submodules, and links the vim-related dotfiles into
 the current user's home directory.  Running this command should get you up and
