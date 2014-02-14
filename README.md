@@ -71,13 +71,3 @@ Here's a few faves:
 * [ack](http://github.com/vim-scripts/ack.vim) - grep for code
 * [tComment](http://github.com/vim-scripts/tComment) - comment plugin
 
-Since I write a lot of Ruby, and Ruby on Rails there's a few useful plugins for
-that as well.
-
-* [rails](http://github.com/tpope/vim-rails) - Ruby on Rails power tools
-* [ruby](http://github.com/vim-ruby/vim-ruby) - ruby omnicompletion and syntax highlighting
-* [textobj-rubyblock](http://github.com/nelstrom/vim-textobj-rubyblock) - custom text object for selecting ruby blocks.
-* [ruby-refactoring](http://github.com/ecomba/vim-ruby-refactoring) - Refactoring tool for ruby
-* [coffee-script](http://github.com/kchmck/vim-coffee-script) coffee-script syntax, indenting and compiling
-* [haml](http://github.com/tpope/vim-haml) - runtime files for Haml, Sass, and SCSS
-
