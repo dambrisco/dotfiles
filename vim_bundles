@@ -4,6 +4,8 @@ bundles_dir "vim/bundle"
 
 bundle "vim-pathogen",          :git => "https://github.com/tpope/vim-pathogen.git"
 
+bundle "vim-misc",				:git => "https://github.com/xolox/vim-misc"
+
 bundle "nerdtree",              :git => "https://github.com/scrooloose/nerdtree.git"
 bundle "snipmate.vim",          :git => "https://github.com/msanders/snipmate.vim.git"
 bundle "textile.vim",           :git => "https://github.com/timcharper/textile.vim.git"

@@ -60,6 +60,44 @@ fi
 # if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 
 ############################################################
+## Colors
+############################################################
+
+export TERM=xterm-color
+export CLICOLOR=1
+export LSCOLORS=dxfxcxdxbxegedabagacad
+# Text               
+BLK='\[\033[0;30m\]' # Black - Normal
+GRY="\[\033[1;30m\]" # Grey
+RED='\[\033[0;31m\]' # Red
+GRN='\[\033[0;32m\]' # Green
+YLW='\[\033[0;33m\]' # Yellow
+BLU='\[\033[0;34m\]' # Blue
+PUR='\[\033[0;35m\]' # Purple
+CYN='\[\033[0;36m\]' # Cyan
+WHT='\[\033[0;37m\]' # White
+# Underline
+UNKBLK='\[\033[4;30m\]' # Black - Underline
+UNDRED='\[\033[4;31m\]' # Red
+UNDGRN='\[\033[4;32m\]' # Green
+UNDYLW='\[\033[4;33m\]' # Yellow
+UNDBLU='\[\033[4;34m\]' # Blue
+UNDPUR='\[\033[4;35m\]' # Purple
+UNDCYN='\[\033[4;36m\]' # Cyan
+UNDWHT='\[\033[4;37m\]' # White
+# Background
+BAKBLK='\[\033[40m\]'   # Black - Background
+BAKRED='\[\033[41m\]'   # Red
+BADGRN='\[\033[42m\]'   # Green
+BAKYLW='\[\033[43m\]'   # Yellow
+BAKBLU='\[\033[44m\]'   # Blue
+BAKPUR='\[\033[45m\]'   # Purple
+BAKCYN='\[\033[46m\]'   # Cyan
+BAKWHT='\[\033[47m\]'   # White
+# Reset
+RES='\[\033[0m\]'    # Reset Text
+
+############################################################
 ## Terminal behavior
 ############################################################
 
@@ -103,9 +141,15 @@ else
 fi
 
 # Do not set PS1 for dumb terminals
+  # \d: Date
+  # \h: Host
+  # \n: Newline
+  # \t: Time
+  # \u: Username
+  # \W: Current working directory
+  # \w: Full path to current directory
 if [ "$TERM" != 'dumb' ] && [ -n "$BASH" ]; then
-  # export PS1='\[\033[32m\]\n[\s: \w] $(rvm_prompt) $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
-  export PS1='\[\033[32m\]\n[\s: \w] $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
+  PS1="$BLU\h: $GRY\w $GRN\$(parse_git_branch)$BLU\n^^ $RES"
 fi
 
 ############################################################
@@ -142,6 +186,10 @@ if [ -e ~/.bash_aliases ] ; then
   . ~/.bash_aliases
 fi
 
+if [ -e ~/dotfiles/bash_aliases ] ; then
+  . ~/dotfiles/bash_aliases
+fi
+
 ############################################################
 ## Bash Completion, if available
 ############################################################
@@ -175,20 +223,3 @@ complete -W "$(_ssh_completion)" ssh
 # if [ -f ~/.rbenv/completions/rbenv.bash ]; then
 #   . ~/.rbenv/completions/rbenv.bash
 # fi
-
-############################################################
-## Other
-############################################################
-
-source /usr/local/etc/bash_completion.d/cdargs-bash.sh
-
-if [[ "$USER" == '' ]]; then
-  # mainly for cygwin terminals. set USER env var if not already set
-  USER=$USERNAME
-fi
-
-############################################################
-
-# VI Mode
-
-set -o vi
