@@ -21,7 +21,7 @@ GIT_REPO_URL="git@$REPO_HOST:$REPO_OWNER/$REPO_NAME.git"
 echo -e "\033[32mDownloading repository."
 echo -e "\033[0m"
 
-git clone $GIT_REPO_URL REPO_DIR
+git clone $GIT_REPO_URL $REPO_DIR
 
 echo
 echo -e "\033[32mUpdating submodules."
