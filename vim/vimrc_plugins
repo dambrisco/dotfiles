@@ -5,9 +5,6 @@
 " If we start up vim with --noplugins then we get faster startup, but some of
 " the commands in this file might error if the plugins aren't loaded.
 
-" Blockle Plugin
-let g:blockle_mapping = '<Leader>d'
-
 " NerdTree Plugin
 command NT :NERDTreeToggle
 command NTF :NERDTreeFind
@@ -19,26 +16,7 @@ let NERDTreeHijackNetrw=1
 let NERDTreeMouseMode=1
 " Hide javascript files in nerdtree
 command Nojs :let NERDTreeIgnore=[".js$"]
-
-" CtrlP plugin
-let g:ctrlp_map = '<Leader>e'
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
-let g:ctrlp_prompt_mappings = {
-  \ 'PrtSelectMove("j")':   ['<c-j>', '<c-n>'],
-  \ 'PrtSelectMove("k")':   ['<c-k>', '<c-p>'],
-  \ 'PrtHistory(-1)':       ['<down>'],
-  \ 'PrtHistory(1)':        ['<up>'],
-  \ 'MarkToOpen()':         ['<c-a>'],
-  \ }
-map <Leader>l :CtrlPCurFile<CR>
-map <Leader>r :CtrlPMRUFiles<CR>
-map <Leader>b :CtrlPBuffer<CR>
-map <Leader>g :CtrlPLine<CR>
-map <Leader>t :CtrlPBufTag<CR>
-map <Leader>T :CtrlPBufTagAll<CR>
-" map <Leader>c :CtrlPChange<CR>
-" map <Leader>C :CtrlPChangeAll<CR>
+nmap <leader><Tab> :NERDTreeToggle<CR>
 
 " skip AlignMaps default mappings
 let g:loaded_AlignMapsPlugin = 1
@@ -52,9 +30,6 @@ nmap gl :Gitv --all<CR>
 nmap gL :Gitv! --all<CR>
 vmap gL :Gitv! --all<CR>
 
-" Jekyll plugin config
-let g:jekyll_path = "~/Projects/coderifous.github.com"
-
 " IndentGuides plugin config
 let g:indent_guides_guide_size  = 1
 let g:indent_guides_start_level = 2
@@ -62,9 +37,6 @@ let g:indent_guides_auto_colors = 0
 autocmd VimEnter * IndentGuidesEnable
 hi IndentGuidesOdd  guibg=#003540  ctermbg=0
 hi IndentGuidesEven guibg=#003540  ctermbg=0
-
-" Tagbar plugin config
-nnoremap <Leader>i :TagbarToggle<CR>
 
 " YankRing plugin config
 nmap yr :YRShow<CR>
@@ -82,18 +54,6 @@ let g:tcommentMapLeaderOp2 = ""
 " Create the only ones that matters
 noremap <silent> <Leader>c :TComment<cr>
 
-" peep open ********************************************************
-" map <unique> <silent> <Leader>f <Plug>PeepOpen
-
-" autocomplpop ***************************************************************
-" complete option
-"set complete=.,w,b,u,t,k
-"let g:AutoComplPop_CompleteOption = '.,w,b,u,t,k'
-"set complete=.
-let g:AutoComplPop_IgnoreCaseOption = 0
-let g:AutoComplPop_BehaviorKeywordLength = -1
-let g:AutoComplPop_MappingDriven=1
-
 " AutoClose config
 let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"'}
 
@@ -105,36 +65,7 @@ let g:session_autosave = 'no'
 
 nmap <F2> :OpenSession<CR>
 
-" Universal Text Linking plugin
-" let g:utl_cfg_hdl_scm_http_system = "silent !open -a Choosy '%u#%f'"
-let g:utl_cfg_hdl_scm_http_system = "silent !open -a Choosy '%u'"
-
 " Powerline
 " Need the monaco font w/ powerline enhancements?
 "   http://gist.github.com/1634235
 let g:Powerline_symbols = 'fancy'
-
-" EasyMotion
-let g:EasyMotion_do_mapping = 0
-
-nnoremap <Leader>f :call EasyMotion#F(0,0)<cr>
-nnoremap <Leader>F :call EasyMotion#F(0,1)<cr>
-nnoremap <Leader>j :call EasyMotion#JK(0,0)<cr>
-nnoremap <Leader>k :call EasyMotion#JK(0,1)<cr>
-
-onoremap <Leader>f :call EasyMotion#F(0,0)<cr>
-onoremap <Leader>F :call EasyMotion#F(0,1)<cr>
-onoremap <Leader>j :call EasyMotion#JK(0,0)<cr>
-onoremap <Leader>k :call EasyMotion#JK(0,1)<cr>
-
-vnoremap <Leader>f :<C-u>call EasyMotion#F(1,0)<cr>
-vnoremap <Leader>F :<C-u>call EasyMotion#F(1,1)<cr>
-vnoremap <Leader>j :<C-u>call EasyMotion#JK(1,0)<cr>
-vnoremap <Leader>k :<C-u>call EasyMotion#JK(1,1)<cr>
-
-hi link EasyMotionTarget ErrorMsg
-hi link EasyMotionShade  Comment
-
-" signature plugin
-" Not config for the plugin, just coloring for it.
-hi! link SignColumn LineNr

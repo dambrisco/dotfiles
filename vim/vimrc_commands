@@ -19,10 +19,3 @@ command Tidy -range=% :<line1>,<line2>!tidy -xml -i -q -w 0<CR>
 
 " powder helpers
 command PR :!powder restart<CR>
-
-" Ruby/Rails project helpers
-command Gemfile  :e Gemfile
-command Routes   :e config/routes.rb
-command Schema   :e db/schema.rb
-command Database :e config/database.yml
-
