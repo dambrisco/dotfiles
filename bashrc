@@ -66,7 +66,7 @@ fi
 export TERM=xterm-color
 export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagacad
-# Text               
+# Text
 BLK='\[\033[0;30m\]' # Black - Normal
 GRY="\[\033[1;30m\]" # Grey
 RED='\[\033[0;31m\]' # Red
@@ -102,14 +102,14 @@ RES='\[\033[0m\]'    # Reset Text
 ############################################################
 
 # Change the window title of X terminals
-case $TERM in
-  xterm*|rxvt|Eterm|eterm)
-    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
-    ;;
-  screen)
-    PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\033\\"'
-    ;;
-esac
+ case $TERM in
+   xterm*|rxvt|Eterm|eterm)
+     PROMPT_COMMAND='update_terminal_cwd;echo -ne "\033]0;${PWD/$HOME/~}\007"'
+     ;;
+   screen)
+     PROMPT_COMMAND='update_terminal_cwd;echo -ne "\033_${PWD/$HOME/~}\033\\"'
+     ;;
+ esac
 
 # Show the git branch and dirty state in the prompt.
 # Borrowed from: http://henrik.nyh.se/2008/12/git-dirty-prompt
@@ -223,3 +223,7 @@ complete -W "$(_ssh_completion)" ssh
 # if [ -f ~/.rbenv/completions/rbenv.bash ]; then
 #   . ~/.rbenv/completions/rbenv.bash
 # fi
+
+# VI Mode
+
+set -o vi

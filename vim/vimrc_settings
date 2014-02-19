@@ -16,7 +16,7 @@ set wildmode=list:longest
 
 set autoindent                  " (ai) turn on auto-indenting (great for programers)
 set copyindent                  " (ci) when auto-indenting, use the indenting format of the previous line
-set smartindent                 " smartindent	(local to buffer)
+set smartindent                 " smartindent (local to buffer)
 
 set tabstop=2                   " (ts) width (in spaces) that a <tab> is displayed as
 set shiftwidth=2                " (sw) width (in spaces) used in each step of autoindent (aswell as << and >>)
@@ -42,7 +42,7 @@ set splitbelow splitright
 
 set shellcmdflag=-lc            " Force shell commands to load personal bash init scripts
 
-set cursorline
+set nocursorline
 "set cursorcolumn
 
 set wrapscan                    " (ws) allows search to wrap to top of document when the bottom has been hit
@@ -53,8 +53,10 @@ set smartcase                   " (scs) don't ignore case when the search patter
 set infercase                   " (inf) during keyword completion, fix case of new word (when ignore case is on)
 
 set foldcolumn=0                " (fdc) width of fold column (to see where folds are)
-set foldmethod=syntax           " (fdm) creates folds that make sense for the language
+set foldmethod=manual           " (fdm) creates folds that make sense for the language
 set foldenable                  " (fen) enables or disables folding
+
+set clipboard=unnamed           " copy/paste to "* by default
 
 let mapleader=","
 
@@ -65,11 +67,11 @@ set dir=~/.vim_tmp
 set t_Co=256 " 256 colors
 set background=dark
 syntax on " syntax highlighting
-colorscheme solarized
+colorscheme jellybeans
 
-hi TabLine     ctermfg=244 ctermbg=235
-hi TabLineSel  ctermfg=239 ctermbg=233
-hi TabLineFill ctermfg=0 ctermbg=233
+hi TabLineSel  ctermfg=244 ctermbg=235
+hi TabLine     ctermfg=239 ctermbg=233
+hi TabLineFill ctermfg=0   ctermbg=233
 
 set fo-=r " do not insert a comment leader after an enter, (no work, fix!!)
 
@@ -88,3 +90,4 @@ set complete-=k
 " to use: while in insertion mode and at the BEGINNING of a word, type <ctrl-x> then <ctrl-n>
 "set thesaurus-=/usr/share/dict/mobythes.aur thesaurus+=/usr/share/dict/mobythes.aur
 "set complete-=k complete+=k
+

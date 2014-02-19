@@ -41,6 +41,7 @@ ln -s ~/.vim/vimrc  ~/.vimrc
 ln -s ~/.vim/gvimrc ~/.gvimrc
 ln -s $REPO_DIR/bash_profile ~/.bash_profile
 ln -s $REPO_DIR/tmux.conf ~/.tmux.conf
+ln -s $REPO_DIR/jshintrc ~/.jshintrc
 
 echo
 echo -e "\033[32mCreating ~/.vim_tmp: where vim is configured to store temporary files."
