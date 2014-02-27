@@ -4,8 +4,8 @@ if [ -e ~/.bashrc ] ; then
   . ~/.bashrc
 fi
 
-if [ -e ~/dotfiles/bashrc ] ; then
-  . ~/dotfiles/bashrc
+if [ -e ~/dotfiles/bash/bashrc ] ; then
+  . ~/dotfiles/bash/bashrc
 fi
 
 # Put all local machine customizations in ~/.bash_local
@@ -13,3 +13,10 @@ if [ -e ~/.bash_local ] ; then
   . ~/.bash_local
 fi
 
+if [ -e ~/.bash_aliases ] ; then
+  . ~/.bash_aliases
+fi
+
+if [ -e ~/dotfiles/bash/bash_aliases ] ; then
+  . ~/dotfiles/bash/bash_aliases
+fi

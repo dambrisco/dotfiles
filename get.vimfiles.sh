@@ -39,7 +39,8 @@ VIMHOME=`pwd`"/vim"
 ln -s $VIMHOME      ~/.vim
 ln -s ~/.vim/vimrc  ~/.vimrc
 ln -s ~/.vim/gvimrc ~/.gvimrc
-ln -s $REPO_DIR/bash_profile ~/.bash_profile
+ln -s $REPO_DIR/bash/bash_profile ~/.bash_profile
+ln -s $REPO_DIR/zsh/zshrc ~/.zshrc
 ln -s $REPO_DIR/tmux.conf ~/.tmux.conf
 ln -s $REPO_DIR/jshintrc ~/.jshintrc
 

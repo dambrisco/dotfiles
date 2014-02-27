@@ -5,22 +5,29 @@
 " If we start up vim with --noplugins then we get faster startup, but some of
 " the commands in this file might error if the plugins aren't loaded.
 
+""""""""""""""""""
 " NerdTree Plugin
+""""""""""""""""""
 command NT :NERDTreeToggle
 command NTF :NERDTreeFind
-nnoremap <silent> <Leader>n :NT<cr>
 
 " Use instead of Netrw when doing an edit /foobar
 let NERDTreeHijackNetrw=1
 " Single click for everything
 let NERDTreeMouseMode=1
+" Show hidden files by default
+let NERDTreeShowHidden=1
 " Hide javascript files in nerdtree
 command Nojs :let NERDTreeIgnore=[".js$"]
-nmap <leader><Tab> :NERDTreeToggle<CR>
+nmap <silent> <leader><Tab> :NERDTreeToggle<CR>
+nmap <silent> <leader>n :NERDTreeFind<CR>
 
 " skip AlignMaps default mappings
 let g:loaded_AlignMapsPlugin = 1
 
+""""""""""""""""""
+" Git Plugin
+""""""""""""""""""
 " Git interaction
 nmap gs :Gstatus<CR>
 nmap gb :Gblame<CR>
@@ -30,7 +37,9 @@ nmap gl :Gitv --all<CR>
 nmap gL :Gitv! --all<CR>
 vmap gL :Gitv! --all<CR>
 
-" IndentGuides plugin config
+""""""""""""""""""
+" IndentGuides plugin 
+""""""""""""""""""
 let g:indent_guides_guide_size  = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_auto_colors = 0
@@ -38,14 +47,18 @@ autocmd VimEnter * IndentGuidesEnable
 hi IndentGuidesOdd  guibg=#003540  ctermbg=0
 hi IndentGuidesEven guibg=#003540  ctermbg=0
 
-" YankRing plugin config
+""""""""""""""""""
+" YankRing plugin 
+""""""""""""""""""
 nmap yr :YRShow<CR>
 nmap yc :YRClear<CR>
 nmap yp p:YRPop<CR>
 nmap yP P:YRPop<CR>
 let g:yankring_min_element_length = 2
 
+""""""""""""""""""
 " tComment
+""""""""""""""""""
 " Disable all of the default mappings
 let g:tcommentMapLeader1   = ""
 let g:tcommentMapLeader2   = ""
@@ -54,10 +67,14 @@ let g:tcommentMapLeaderOp2 = ""
 " Create the only ones that matters
 noremap <silent> <Leader>c :TComment<cr>
 
+""""""""""""""""""
 " AutoClose config
+""""""""""""""""""
 let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"'}
 
+""""""""""""""""""
 " session plugin
+""""""""""""""""""
 let g:session_directory = "~/.vim_sessions"
 let g:session_default_to_last = 1
 let g:session_autoload = 'no'
@@ -65,7 +82,81 @@ let g:session_autosave = 'no'
 
 nmap <F2> :OpenSession<CR>
 
+""""""""""""""""""
 " Powerline
-" Need the monaco font w/ powerline enhancements?
+"   Need the monaco font w/ powerline enhancements?
 "   http://gist.github.com/1634235
+""""""""""""""""""
 let g:Powerline_symbols = 'fancy'
+
+""""""""""""""""""
+" Fix CtrlP command
+""""""""""""""""""
+let g:ctrlp_map = '<leader>,'
+let g:ctrlp_cmd = 'CtrlP'
+
+nmap <leader>, :CtrlP<cr>
+nmap <leader>. :CtrlPClearCache<cr>:CtrlP<cr>
+nmap <leader>l :CtrlPLine<cr>
+nmap <leader>b :CtrlPBuff<cr>
+nmap <leader>m :CtrlPBufTag<cr>
+nmap <leader>M :CtrlPBufTagAll<cr>
+
+let g:ctrlp_clear_cache_on_exit = 1
+
+" ctrlp leaves stale caches behind if there is another vim process runnin
+" which didn't use ctrlp. so we clear all caches on each new vim invocation
+cal ctrlp#clra()
+let g:ctrlp_max_height = 40
+
+" jump to buffer in the same tab if already open
+let g:ctrlp_switch_buffer = 1
+
+" if in git repo - use git file listing command, should be faster
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files --exclude-standard -cod']
+
+" open multiple files with <c-z> to mark and <c-o> to open. v - opening in
+" vertical splits; j - jump to first open buffer; r - open first in current buffer
+let g:ctrlp_open_multiple_files = 'vjr'
+let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'mixed', 'line']
+
+"""""""""""""""""
+" YouCompleteMe settings
+"""""""""""""""""
+let g:ycm_min_num_of_chars_for_completion = 1
+
+"""""""""""""""""
+" Tern settings
+"""""""""""""""""
+let g:tern_show_argument_hints='on_delay'
+" see http://usevim.com/2013/05/24/tern/
+" and http://usevim.com/files/tern_keyboard.pdf
+let g:tern_map_keys=1
+
+" Make changes to read-only system files with the :w!! command
+cmap w!! %!sudo tee > /dev/null &
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|**/components/' 
+" ignored paths for ctrl-p bundle
+let g:ctrlp_mruf_relative = 1
+
+"""""""""""""""""
+" Markdown Settings
+"""""""""""""""""
+let g:markdown_fenced_languages = ['bash=sh', 'css', 'erb=eruby', 'javascript', 
+    \ 'js=javascript', 'json=javascript', 'ruby', 'sass', 'sh', 'xml']
+
+"""""""""""""""""
+" Syntastic Settings
+let g:syntastic_javascript_checkers = ['jshint']
+" Enable syntastic syntax checking
+let g:syntastic_enable_signs=1
+let g:syntastic_quiet_messages = {'level': 'warnings'}
+let g:syntastic_auto_loc_list=2 
+" show automatically and close when no rors are found
+let g:syntastic_loc_list_height=5
+
+let g:syntastic_mode_map = { 'mode': 'active',
+      \ 'active_filetypes': ['ruby', 'php', 'javascript'] }
+
+

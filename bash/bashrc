@@ -104,10 +104,10 @@ RES='\[\033[0m\]'    # Reset Text
 # Change the window title of X terminals
  case $TERM in
    xterm*|rxvt|Eterm|eterm)
-     PROMPT_COMMAND='update_terminal_cwd;echo -ne "\033]0;${PWD/$HOME/~}\007"'
+     PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/~}\007"'
      ;;
    screen)
-     PROMPT_COMMAND='update_terminal_cwd;echo -ne "\033_${PWD/$HOME/~}\033\\"'
+     PROMPT_COMMAND='echo -ne "\033_${PWD/$HOME/~}\033\\"'
      ;;
  esac
 
@@ -179,18 +179,6 @@ export HISTCONTROL=erasedups
 export HISTSIZE=10000
 
 ############################################################
-## Aliases
-############################################################
-
-if [ -e ~/.bash_aliases ] ; then
-  . ~/.bash_aliases
-fi
-
-if [ -e ~/dotfiles/bash_aliases ] ; then
-  . ~/dotfiles/bash_aliases
-fi
-
-############################################################
 ## Bash Completion, if available
 ############################################################
 
@@ -224,6 +212,8 @@ complete -W "$(_ssh_completion)" ssh
 #   . ~/.rbenv/completions/rbenv.bash
 # fi
 
-# VI Mode
+############################################################
+## VI Mode
+############################################################
 
 set -o vi

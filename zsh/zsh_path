@@ -1,0 +1,42 @@
+############################################################
+## PATH
+############################################################
+
+if [ -d ~/bin ] ; then
+  PATH="~/bin:${PATH}"
+fi
+
+if [ -d /usr/local/bin ] ; then
+  PATH="/usr/local/bin:${PATH}"
+fi
+
+if [ -d /usr/local/sbin ] ; then
+  PATH="${PATH}:/usr/local/sbin"
+fi
+
+
+# Node Package Manager
+if [ -d /usr/local/share/npm/bin ] ; then
+  NODE_PATH="/usr/local/lib/node"
+  PATH="${PATH}:/usr/local/share/npm/bin"
+fi
+
+# MySql
+if [ -d /usr/local/mysql/bin ] ; then
+  PATH="${PATH}:/usr/local/mysql/bin"
+fi
+
+# PostgreSQL
+if [ -d /opt/local/lib/postgresql83/bin ] ; then
+  PATH="${PATH}:/opt/local/lib/postgresql83/bin"
+fi
+
+PATH=.:${PATH}
+
+############################################################
+## MANPATH
+############################################################
+
+if [ -d /usr/local/man ] ; then
+  MANPATH="/usr/local/man:${MANPATH}"
+fi

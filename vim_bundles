@@ -28,7 +28,12 @@ bundle "ReplaceWithRegister",   :git => "https://github.com/vim-scripts/ReplaceW
 
 bundle "YankRing.vim",          :git => "https://github.com/vim-scripts/YankRing.vim.git"
 bundle "gundo.vim",             :git => "https://github.com/sjl/gundo.vim.git"
-bundle "vim-javascript-syntax", :git => "https://github.com/jelera/vim-javascript-syntax.git"
+bundle "syntastic",             :git => "https://github.com/scrooloose/syntastic.git"
 bundle "vim-colors-solarized",  :git => "https://github.com/altercation/vim-colors-solarized.git"
+bundle "mango",                 :git => "https://github.com/goatslacker/mango.vim.git"
 bundle "jellybeans.vim",        :git => "https://github.com/nanotech/jellybeans.vim.git"
+bundle "ctrlp.vim.git",         :git => "https://github.com/kien/ctrlp.vim.git"
 
+bundle "YouCompleteMe",         :git => "https://github.com/Valloric/YouCompleteMe.git"
+bundle "tern_for_vim",          :git => "https://github.com/marijnh/tern_for_vim.git"
+bundle "vim-tmux-navigator",    :git => "https://github.com/christoomey/vim-tmux-navigator.git"

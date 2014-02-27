@@ -1,8 +1,0 @@
-snippet Factory
-	Factory.define :${1:`Filename()`} do |f|
-		f.${2:name} "${3:value}"$4
-	end
-
-# override the default snippet that has parens, and no failure message.
-snippet ase
-	assert_equal ${1:expected}, ${2:actual}, "${3:failure message}"$4

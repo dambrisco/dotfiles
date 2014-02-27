@@ -7,7 +7,6 @@ nnoremap <Leader>V 0v$hy:<C-r>"<cr>
 "Vertical split then hop to new buffer
 noremap <Leader>v :vert new<cr>
 noremap <Leader>h :new<cr>
-nnoremap <Leader>gf :vs\|normal gf<cr>
 
 " Alignment Shortcuts
 vnoremap <Leader>a :Align
@@ -102,3 +101,10 @@ nnoremap <silent> <Leader>A yiw:Ack <C-r>"<cr>
 
 " opposite of join, splits on spaces
 nnoremap <Leader>J :s/ \+/\r/g \| nohlsearch<cr>
+
+" switch back to command mode using ctrl-c
+noremap <C-C> <Esc>
+
+" insert lines
+nnoremap <leader>o o<ESC>
+nnoremap <leader>O O<ESC>

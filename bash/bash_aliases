@@ -28,6 +28,12 @@ alias dstore-clean='find . -type f -name .DS_Store -print0 | xargs -0 rm'
 alias whotunes='lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689'
 
 ############################################################
+## Git
+############################################################
+
+alias gs='git status'
+
+############################################################
 ## Bundler
 ############################################################
 
@@ -74,11 +80,13 @@ alias rhash="rbenv rehash"
 ## Miscellaneous
 ############################################################
 
+alias tmux="tmux -2"
 alias subl="sublime"
 alias flush="dscacheutil -flushcache"
 alias vhosts="sudo vim /private/etc/hosts"
-alias vbp="vim ~/.bash_profile"
+alias vba="vim ~/dotfiles/bash_aliases"
 alias vvimrc="vim ~/.vimrc"
 alias resource=". ~/.bash_profile"
 
+alias rr="rerun -c -x -b -- "
 ############################################################
