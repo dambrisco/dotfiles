@@ -19,3 +19,4 @@ alias lal="ls -al"
 ############################################################
 
 alias rr="rerun -c -x -b -- "
+alias tmux="tmux -2"
