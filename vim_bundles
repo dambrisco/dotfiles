@@ -18,7 +18,7 @@ bundle "vim-fugitive",          :git => "https://github.com/tpope/vim-fugitive.g
 bundle "vim-git",               :git => "https://github.com/tpope/vim-git.git"
 bundle "vim-vividchalk",        :git => "https://github.com/tpope/vim-vividchalk.git"
 
-bundle "vim-powerline",         :git => "https://github.com/Lokaltog/vim-powerline.git"
+bundle "vim-airline",           :git => "https://github.com/bling/vim-airline"
 
 bundle "AutoClose",             :git => "https://github.com/vim-scripts/AutoClose.git"
 bundle "AutoTag",               :git => "https://github.com/vim-scripts/AutoTag.git"
@@ -37,3 +37,6 @@ bundle "ctrlp.vim.git",         :git => "https://github.com/kien/ctrlp.vim.git"
 bundle "YouCompleteMe",         :git => "https://github.com/Valloric/YouCompleteMe.git"
 bundle "tern_for_vim",          :git => "https://github.com/marijnh/tern_for_vim.git"
 bundle "vim-tmux-navigator",    :git => "https://github.com/christoomey/vim-tmux-navigator.git"
+
+bundle "vim-javascript",        :git => "https://github.com/pangloss/vim-javascript.git"
+bundle "vim-javascript-syntax", :git => "https://github.com/jelera/vim-javascript-syntax.git"

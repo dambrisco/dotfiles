@@ -10,6 +10,7 @@ set ruler                       " (ru) show the cursor position at all times
 set showcmd                     " (sc) display an incomplete command in the lower right
 set history=200                 " (hi) keep 200 lines of command history
 set showmatch                   " (sm) briefly jump to matching bracket when inserting one
+set list listchars=tab:»·,trail:· " show extra space characters
 
 set lazyredraw                  " screen not redrawn while executing macros, registers, and other command not typed
                                 " - recommended by Gitv plugin creator, Greg Sexton
@@ -83,3 +84,10 @@ if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 endif
+
+"""""""""""""""""
+" Markdown Settings
+" """""""""""""""""
+let g:markdown_fenced_languages = ['bash=sh', 'css', 'erb=eruby', 
+ \ 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'sh', 'xml']
+

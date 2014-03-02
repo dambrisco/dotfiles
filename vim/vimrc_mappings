@@ -6,7 +6,8 @@ nnoremap <Leader>V 0v$hy:<C-r>"<cr>
 
 "Vertical split then hop to new buffer
 noremap <Leader>v :vert new<cr>
-noremap <Leader>h :new<cr>
+noremap <Leader>s :new<cr>
+noremap <Leader>x :quit<cr>
 
 " Alignment Shortcuts
 vnoremap <Leader>a :Align
@@ -108,3 +109,11 @@ noremap <C-C> <Esc>
 " insert lines
 nnoremap <leader>o o<ESC>
 nnoremap <leader>O O<ESC>
+
+nnoremap <leader>S :source $HOME/dotfiles/vim/vimrc<cr>   " faster sourcing of vimrc
+nnoremap <leader>V :edit $HOME/dotfiles/vim/vimrc<cr>     " faster editing of vimrc
+nnoremap <leader>B :edit $HOME/dotfiles/bash/bashrc<cr>     " faster editing of bashrc
+
+" For easily finding erros
+nmap [l :lnext<cr>
+nmap ]l :lprev<cr>
