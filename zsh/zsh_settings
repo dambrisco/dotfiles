@@ -8,10 +8,11 @@ ZSH_THEME="simple"
 # Plugins
 #  Example format: plugins=(rails git textmate ruby lighthouse)
 ########################
-plugins=(brew docker git tmux vagrant)
+plugins=(brew docker git tmux vagrant zsh-syntax-highlighting)
 
 # This has to be after plugins, just trust me
 source $ZSH/oh-my-zsh.sh
+
 ############################################################
 ## Possibly useful settings
 ############################################################

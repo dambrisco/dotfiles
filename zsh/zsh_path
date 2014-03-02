@@ -40,3 +40,11 @@ PATH=.:${PATH}
 if [ -d /usr/local/man ] ; then
   MANPATH="/usr/local/man:${MANPATH}"
 fi
+
+############################################################
+## EDITOR SETTINGS
+############################################################
+
+export PAGER="less"
+export EDITOR="/usr/local/bin/vim --noplugins"
+export VISUAL="/usr/local/bin/vim --noplugins"
