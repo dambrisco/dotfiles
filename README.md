@@ -71,3 +71,12 @@ Here's a few faves:
 * [ack](http://github.com/vim-scripts/ack.vim) - grep for code
 * [tComment](http://github.com/vim-scripts/tComment) - comment plugin
 
+### Additional things to install
+
+If you use this set up there are a few things that you should remember to
+install
+Having trouble with tmux? `brew install reattach-to-user-namespace`
+Color issues in iTerm? Import visor from the dotfiles folder and set minimum
+contrast to the middle
+Airline missing fonts? Include the fonts in the fonts folder to your computers
+font directory
