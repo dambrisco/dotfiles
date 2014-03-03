@@ -40,3 +40,5 @@ bundle "vim-tmux-navigator",    :git => "https://github.com/christoomey/vim-tmux
 
 bundle "vim-javascript",        :git => "https://github.com/pangloss/vim-javascript.git"
 bundle "vim-javascript-syntax", :git => "https://github.com/jelera/vim-javascript-syntax.git"
+
+bundle "vim-markdown",          :git => "https://github.com/tpope/vim-markdown"
