@@ -24,12 +24,14 @@ git_mode() {
 
 git_dirty_color() {
   if [[ "$repo_path" != '.' && `git ls-files -m` != "" ]]; then
-    color="grey"
+    color="%{$fg_bold[yellow]%}"
+  elif [[ "$repo_path" != '.' && `git ls-files -u` != "" ]]; then
+    color="%{$fg_bold[blue]%}"
   else
-    color="yellow"
+    color="%{$fg_bold[grey]%}"
   fi
   echo $color
-  # echo "%{$fg_bold[$color]%}"
+
 }
 
 git_prompt() {
