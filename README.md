@@ -80,3 +80,5 @@ Color issues in iTerm? Import visor from the dotfiles folder and set minimum
 contrast to the middle
 Airline missing fonts? Include the fonts in the fonts folder to your computers
 font directory
+Missing syntax highlighting? Download the zsh plugin,
+[zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
