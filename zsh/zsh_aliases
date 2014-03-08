@@ -1,9 +1,14 @@
+bindkey '^R' history-incremental-pattern-search-backward
+
 ############################################################
 ## Git
 ############################################################
 
-alias gs="git status"
-alias ga="git add"
+alias gd="git diff"
+alias gst="git status"
+alias gpt="git push --follow-tags"
+alias gbr="git branch"
+alias gco="git checkout"
 
 ############################################################
 ## List
