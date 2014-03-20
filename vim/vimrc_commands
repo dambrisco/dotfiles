@@ -2,13 +2,16 @@
 " ------------------------------------------------------------
 
 " easily get to vim config
-command Vimrc        :e ~/dotiles/.vimrc
-command VimCommands  :e ~/dotiles/.vim/vimrc_commands
-command VimMaps      :e ~/dotiles/.vim/vimrc_mappings
-command VimPlugins   :e ~/dotiles/.vim/vimrc_plugins
-command VimSettings  :e ~/dotiles/.vim/vimrc_settings
-command VimBundles   :e ~/dotiles/dotfiles/vim_bundles
-command VimNT :NERDTree ~/dotiles/.vim
+command Vimrc        :e ~/dotiles/vim/vimrc
+command VimCommands  :e ~/dotiles/vim/vimrc_commands
+command VimMaps      :e ~/dotiles/vim/vimrc_mappings
+command VimPlugins   :e ~/dotiles/vim/vimrc_plugins
+command VimSettings  :e ~/dotiles/vim/vimrc_settings
+command VimBundles   :e ~/dotiles/vim/vim_bundles
+command VimNT :NERDTree ~/dotiles/vim
 
 " easily get to bashrc
-command Bashrc :e ~/dotiles/.bashrc
+command Bashrc :e ~/dotiles/bash/bashrc
+
+" easily get to zshrc
+command Bashrc :e ~/dotiles/zsh/zshrc

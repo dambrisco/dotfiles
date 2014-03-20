@@ -5,6 +5,7 @@ bindkey '^R' history-incremental-pattern-search-backward
 ############################################################
 
 alias gd="git diff"
+alias gdc="git diff --cached"
 alias gst="git status"
 alias gpt="git push --follow-tags"
 alias gbr="git branch"
