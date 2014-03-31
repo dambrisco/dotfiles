@@ -15,10 +15,10 @@ if [ -d /usr/local/sbin ] ; then
 fi
 
 # rbenv
-if [ `which rbenv 2> /dev/null` ]; then
-  SHELL="/bin/zsh"
-  eval "$(rbenv init -)"
-fi
+# if [ `which rbenv 2> /dev/null` ]; then
+#   SHELL="/bin/zsh"
+#   eval "$(rbenv init -)"
+# fi
 
 # Node Package Manager
 if [ -d /usr/local/share/npm/bin ] ; then
