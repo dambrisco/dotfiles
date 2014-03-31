@@ -38,7 +38,7 @@ nmap gL :Gitv! --all<CR>
 vmap gL :Gitv! --all<CR>
 
 """"""""""""""""""
-" IndentGuides plugin 
+" IndentGuides plugin
 """"""""""""""""""
 let g:indent_guides_guide_size  = 1
 let g:indent_guides_start_level = 2
@@ -48,7 +48,7 @@ hi IndentGuidesOdd  guibg=#003540  ctermbg=0
 hi IndentGuidesEven guibg=#003540  ctermbg=0
 
 """"""""""""""""""
-" YankRing plugin 
+" YankRing plugin
 """"""""""""""""""
 nmap yr :YRShow<CR>
 nmap yc :YRClear<CR>
@@ -71,14 +71,6 @@ noremap <silent> <Leader>c :TComment<cr>
 " AutoClose config
 """"""""""""""""""
 let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"'}
-
-""""""""""""""""""
-" session plugin
-""""""""""""""""""
-let g:session_directory = "~/.vim_sessions"
-let g:session_default_to_last = 1
-let g:session_autoload = 'no'
-let g:session_autosave = 'no'
 
 nmap <F2> :OpenSession<CR>
 
@@ -131,14 +123,14 @@ let g:tern_map_keys=1
 " Make changes to read-only system files with the :w!! command
 cmap w!! %!sudo tee > /dev/null &
 let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|**/components/' 
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|**/components/'
 " ignored paths for ctrl-p bundle
 let g:ctrlp_mruf_relative = 1
 
 """""""""""""""""
 " Markdown Settings
 """""""""""""""""
-let g:markdown_fenced_languages = ['bash=sh', 'css', 'erb=eruby', 'javascript', 
+let g:markdown_fenced_languages = ['bash=sh', 'css', 'erb=eruby', 'javascript',
     \ 'js=javascript', 'json=javascript', 'ruby', 'sass', 'sh', 'xml']
 
 """""""""""""""""
@@ -148,7 +140,7 @@ let g:syntastic_javascript_checkers = ['jshint']
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
 " let g:syntastic_quiet_messages = {'level': 'warnings'}
-let g:syntastic_auto_loc_list=2 
+let g:syntastic_auto_loc_list=2
 " show automatically and close when no rors are found
 let g:syntastic_loc_list_height=5
 

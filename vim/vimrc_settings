@@ -88,6 +88,6 @@ endif
 """""""""""""""""
 " Markdown Settings
 " """""""""""""""""
-let g:markdown_fenced_languages = ['bash=sh', 'css', 'erb=eruby', 
+let g:markdown_fenced_languages = ['bash=sh', 'css', 'erb=eruby',
  \ 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'sh', 'xml']
 
