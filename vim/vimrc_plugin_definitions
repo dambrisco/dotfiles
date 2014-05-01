@@ -39,7 +39,6 @@ if &loadplugins
   Plugin 'nanotech/jellybeans.vim.git'
   Plugin 'kien/ctrlp.vim.git'
 
-  Plugin 'goatslacker/mango.vim.git'
   " Plugin 'Valloric/YouCompleteMe.git'
   Plugin 'christoomey/vim-tmux-navigator.git'
 
