@@ -18,7 +18,7 @@ if &loadplugins
   Plugin 'gregsexton/gitv.git'
   Plugin 'xolox/vim-session.git'
 
-  Plugin 'tsaleh/vim-matchit.git'
+  " Plugin 'tsaleh/vim-matchit.git'
 
   Plugin 'tpope/vim-fugitive.git'
   Plugin 'tpope/vim-git.git'
