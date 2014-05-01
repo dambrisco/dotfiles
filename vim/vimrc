@@ -1,7 +1,5 @@
-if &loadplugins
-  source $HOME/.vim/vimrc_plugin_definitions
-endif
 
+source $HOME/.vim/vimrc_plugin_definitions
 source $HOME/.vim/vimrc_settings
 source $HOME/.vim/vimrc_commands
 source $HOME/.vim/vimrc_mappings

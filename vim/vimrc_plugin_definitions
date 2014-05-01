@@ -5,47 +5,50 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-Plugin 'xolox/vim-misc'
-
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'nathanaelkane/vim-indent-guides.git'
-Plugin 'gregsexton/gitv.git'
-Plugin 'xolox/vim-session.git'
-
-Plugin 'tsaleh/vim-matchit.git'
-
-Plugin 'tpope/vim-fugitive.git'
-Plugin 'tpope/vim-git.git'
-Plugin 'tpope/vim-vividchalk.git'
-
-Plugin 'bling/vim-airline'
-
-Plugin 'vim-scripts/AutoClose.git'
-Plugin 'vim-scripts/AutoTag.git'
-Plugin 'vim-scripts/tComment.git'
-Plugin 'vim-scripts/Gist.vim.git'
-Plugin 'vim-scripts/ReplaceWithRegister.git'
-
-Plugin 'vim-scripts/YankRing.vim.git'
-Plugin 'sjl/gundo.vim.git'
-Plugin 'scrooloose/syntastic.git'
-Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'goatslacker/mango.vim.git'
-Plugin 'nanotech/jellybeans.vim.git'
-Plugin 'kien/ctrlp.vim.git'
 
-Plugin 'Valloric/YouCompleteMe.git'
-Plugin 'marijnh/tern_for_vim.git'
-Plugin 'christoomey/vim-tmux-navigator.git'
+if &loadplugins
+  " let Vundle manage Vundle, required
+  Plugin 'gmarik/Vundle.vim'
 
-Plugin 'pangloss/vim-javascript.git'
-Plugin 'jelera/vim-javascript-syntax.git'
+  Plugin 'xolox/vim-misc'
 
-Plugin 'tpope/vim-markdown'
-Plugin 'itspriddle/vim-marked.git'
+  Plugin 'scrooloose/nerdtree.git'
+  Plugin 'nathanaelkane/vim-indent-guides.git'
+  Plugin 'gregsexton/gitv.git'
+  Plugin 'xolox/vim-session.git'
+
+  Plugin 'tsaleh/vim-matchit.git'
+
+  Plugin 'tpope/vim-fugitive.git'
+  Plugin 'tpope/vim-git.git'
+  Plugin 'tpope/vim-vividchalk.git'
+
+  Plugin 'bling/vim-airline'
+
+  Plugin 'vim-scripts/AutoClose.git'
+  Plugin 'vim-scripts/AutoTag.git'
+  Plugin 'vim-scripts/tComment.git'
+  Plugin 'vim-scripts/Gist.vim.git'
+  Plugin 'vim-scripts/ReplaceWithRegister.git'
+
+  Plugin 'vim-scripts/YankRing.vim.git'
+  Plugin 'sjl/gundo.vim.git'
+  Plugin 'scrooloose/syntastic.git'
+  Plugin 'altercation/vim-colors-solarized.git'
+  Plugin 'nanotech/jellybeans.vim.git'
+  Plugin 'kien/ctrlp.vim.git'
+
+  Plugin 'goatslacker/mango.vim.git'
+  " Plugin 'Valloric/YouCompleteMe.git'
+  Plugin 'christoomey/vim-tmux-navigator.git'
+
+  Plugin 'pangloss/vim-javascript.git'
+  Plugin 'jelera/vim-javascript-syntax.git'
+
+  Plugin 'tpope/vim-markdown'
+  Plugin 'itspriddle/vim-marked.git'
+endif
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
