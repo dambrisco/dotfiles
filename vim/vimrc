@@ -1,11 +1,6 @@
-" Loads pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-
-" Pathogen set up
-filetype off
-call pathogen#infect()
-call pathogen#infect("unpublished/{}")
-filetype plugin indent on
+if &loadplugins
+  source $HOME/.vim/vimrc_plugin_definitions
+endif
 
 source $HOME/.vim/vimrc_settings
 source $HOME/.vim/vimrc_commands
@@ -13,5 +8,5 @@ source $HOME/.vim/vimrc_mappings
 source $HOME/.vim/vimrc_autocmds
 
 if &loadplugins
-  source $HOME/.vim/vimrc_plugins
+  source $HOME/.vim/vimrc_plugin_settings
 endif

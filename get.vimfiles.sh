@@ -31,6 +31,12 @@ cd $REPO_DIR
 git submodule update --init
 
 echo
+echo -e "\033[32mInstall oh-my-zsh"
+echo -e "\033[0m"
+
+curl -L http://install.ohmyz.sh | sh
+
+echo
 echo -e "\033[32mCreating dotfile links in home dir."
 echo -e "\033[0m"
 
@@ -51,5 +57,17 @@ echo -e "\033[0m"
 mkdir ~/.vim_tmp
 
 echo
-echo -e "\033[32mVim dotfiles installed!"
+echo -e "\033[32mCloning Vundle for vim plugins"
+echo -e "\033[0m"
+
+git clone https://github.com/gmarik/Vundle.vim.git $VIMHOME/bundle/Vundle.vim
+
+echo
+echo -e "\033[32mInstall vim plugins"
+echo -e "\033[0m"
+
+vim +PluginInstall +qall
+
+echo
+echo -e "\033[32mDotfiles installed!"
 echo -e "\033[0m"
