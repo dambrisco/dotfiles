@@ -26,3 +26,6 @@ alias lal="ls -al"
 
 alias rr="rerun -c -x -b -- "
 alias tmux="tmux -2"
+alias "ct"="colorize"
+alias redis="redis-server /usr/local/etc/redis.conf"
+alias cowsay="cowsay -f stegosaurus"

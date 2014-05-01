@@ -42,3 +42,4 @@ bundle "vim-javascript",        :git => "https://github.com/pangloss/vim-javascr
 bundle "vim-javascript-syntax", :git => "https://github.com/jelera/vim-javascript-syntax.git"
 
 bundle "vim-markdown",          :git => "https://github.com/tpope/vim-markdown"
+bundle "vim-marked",            :git => "https://github.com/itspriddle/vim-marked.git"

@@ -36,8 +36,8 @@ echo -e "\033[0m"
 
 VIMHOME=`pwd`"/vim"
 
-ln -s $VIMHOME      ~/.vim
-ln -s ~/.vim/vimrc  ~/.vimrc
+ln -s $VIMHOME ~/.vim
+ln -s ~/.vim/vimrc ~/.vimrc
 ln -s ~/.vim/gvimrc ~/.gvimrc
 ln -s $REPO_DIR/bash/bash_profile ~/.bash_profile
 ln -s $REPO_DIR/zsh/zshrc ~/.zshrc

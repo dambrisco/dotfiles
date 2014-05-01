@@ -2,10 +2,6 @@
 ## PATH
 ############################################################
 
-if [ -d ~/bin ] ; then
-  PATH="~/bin:${PATH}"
-fi
-
 if [ -d /usr/local/bin ] ; then
   PATH="/usr/local/bin:${PATH}"
 fi
@@ -14,11 +10,9 @@ if [ -d /usr/local/sbin ] ; then
   PATH="${PATH}:/usr/local/sbin"
 fi
 
-# rbenv
-# if [ `which rbenv 2> /dev/null` ]; then
-#   SHELL="/bin/zsh"
-#   eval "$(rbenv init -)"
-# fi
+if [ -d ~/bin ] ; then
+  PATH="~/bin:${PATH}"
+fi
 
 # Node Package Manager
 if [ -d /usr/local/share/npm/bin ] ; then
@@ -26,17 +20,11 @@ if [ -d /usr/local/share/npm/bin ] ; then
   PATH="${PATH}:/usr/local/share/npm/bin"
 fi
 
-# MySql
-if [ -d /usr/local/mysql/bin ] ; then
-  PATH="${PATH}:/usr/local/mysql/bin"
+if which rbenv > /dev/null; then
+  eval "$(rbenv init -)";
 fi
 
-# PostgreSQL
-if [ -d /opt/local/lib/postgresql83/bin ] ; then
-  PATH="${PATH}:/opt/local/lib/postgresql83/bin"
-fi
-
-PATH=.:${PATH}
+# PATH=.:${PATH}
 
 ############################################################
 ## MANPATH
@@ -53,3 +41,4 @@ fi
 export PAGER="less"
 export EDITOR="/usr/local/bin/vim --noplugins"
 export VISUAL="/usr/local/bin/vim --noplugins"
+export ANSIBLE_COW_SELECTION="stegosaurus"
