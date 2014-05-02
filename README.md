@@ -11,7 +11,7 @@ running with this vim config without any other work.
 If you want to copy this Vim config as a base for your own, you should:
 
 * Fork this repository.
-* Change the mention of "coderifous" in the get.vimfiles.sh script to your own
+* Change the mention of "dambrisco" in the get.vimfiles.sh script to your own
   github name.
 * Customize the vim config to suit you.
 
