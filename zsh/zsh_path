@@ -42,3 +42,16 @@ export PAGER="less"
 export EDITOR="/usr/local/bin/vim --noplugins"
 export VISUAL="/usr/local/bin/vim --noplugins"
 export ANSIBLE_COW_SELECTION="stegosaurus"
+
+# RbEnv
+export RBENV_ROOT=/usr/local/var/rbenv
+
+export PATH="/usr/local/opt/rbenv/shims:/usr/local/opt/rbenv/bin:$PATH"
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
+
+# Local bin inside ruby projects
+#export PATH=./bin:$PATH
+
+export ANDROID_HOME=$HOME/Source/adt-bundle-mac-x86_64-20140321/sdk
+export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
