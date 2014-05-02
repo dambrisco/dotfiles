@@ -2,13 +2,13 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="minimal"
+ZSH_THEME="dinimal"
 
 ########################
 # Plugins
 #  Example format: plugins=(rails git textmate ruby lighthouse)
 ########################
-plugins=(brew docker git tmux vagrant zsh-syntax-highlighting node npm colorize)
+plugins=(brew docker git tmux vagrant zsh-syntax-highlighting node npm colorize svn)
 
 # This has to be after plugins, just trust me
 source $ZSH/oh-my-zsh.sh
