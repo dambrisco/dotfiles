@@ -1,5 +1,5 @@
 # Add vi mode support
-set -o vi
+# set -o vi
 
 gifify() {
   if [[ -n "$1" ]]; then
