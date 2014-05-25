@@ -91,3 +91,7 @@ endif
 let g:markdown_fenced_languages = ['bash=sh', 'css', 'erb=eruby',
  \ 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'sh', 'xml']
 
+"""""""""""""""""""""
+" Additional settings
+"""""""""""""""""""""
+au BufRead,BufNewFile *.hbs set filetype=html
