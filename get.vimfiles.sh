@@ -69,5 +69,11 @@ echo -e "\033[0m"
 vim +PluginInstall +qall
 
 echo
+echo -e "\033[32mReplace AutoClose with double-brace-friendly version"
+echo -e "\033[0m"
+
+cp -f $VIMHOME/autoclose.vim $VIMHOME/bundle/AutoClose/plugin/autoclose.vim
+
+echo
 echo -e "\033[32mDotfiles installed!"
 echo -e "\033[0m"
