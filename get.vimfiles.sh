@@ -67,6 +67,7 @@ echo -e "\033[32mInstall vim plugins"
 echo -e "\033[0m"
 
 vim +PluginInstall +qall
+vim +BundleInstall +qall
 
 echo
 echo -e "\033[32mReplace AutoClose with double-brace-friendly version"

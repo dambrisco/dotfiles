@@ -94,4 +94,3 @@ let g:markdown_fenced_languages = ['bash=sh', 'css', 'erb=eruby',
 """""""""""""""""""""
 " Additional settings
 """""""""""""""""""""
-au BufRead,BufNewFile *.hbs set filetype=html

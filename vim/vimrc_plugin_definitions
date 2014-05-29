@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'goatslacker/mango.vim.git'
+Bundle 'mustache/vim-mustache-handlebars'
 
 if &loadplugins
   " let Vundle manage Vundle, required
