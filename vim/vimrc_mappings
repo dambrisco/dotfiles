@@ -117,3 +117,6 @@ nnoremap <leader>B :edit $HOME/dotfiles/bash/bashrc<cr>     " faster editing of 
 " For easily finding erros
 nmap [l :lnext<cr>
 nmap ]l :lprev<cr>
+
+" Split lines instead of opening man pages
+nnoremap K i<CR><Esc>
