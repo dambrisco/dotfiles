@@ -5,7 +5,6 @@ vim/doc/tags
 vim/.netrwhist
 vim/bundle/*
 vim/sessions/*
-
 .bundle
 vim/vim
 Gemfile.lock
