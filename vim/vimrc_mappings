@@ -120,3 +120,7 @@ nmap ]l :lprev<cr>
 
 " Split lines instead of opening man pages
 nnoremap K i<CR><Esc>
+nnoremap U :redo<CR>
+nnoremap <C-R> <Esc>
+nnoremap <C-D> <Esc>
+nnoremap <C-U> <Esc>
