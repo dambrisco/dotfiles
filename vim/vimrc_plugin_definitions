@@ -8,6 +8,7 @@ call vundle#begin()
 Plugin 'goatslacker/mango.vim.git'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'groenewege/vim-less'
+Plugin 'fatih/vim-go'
 
 if &loadplugins
   " let Vundle manage Vundle, required
