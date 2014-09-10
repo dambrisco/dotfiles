@@ -1,6 +1,15 @@
 # Add vi mode support
 # set -o vi
 
+function retag
+{
+  TAG=`git describe --abbrev=0 --tags`
+  git tag -d $TAG
+  git push origin :refs/tags/$TAG
+  git tag $TAG
+  git push --tags
+}
+
 gifify() {
   if [[ -n "$1" ]]; then
     if [[ $2 == '--good' ]]; then
