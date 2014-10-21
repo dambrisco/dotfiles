@@ -10,6 +10,15 @@ function retag
   git push --tags
 }
 
+function password
+{
+  if hash md5sum 2>/dev/null; then
+    head -c16 /dev/urandom | md5sum | awk '{print $1}'
+  else
+    echo "Please install md5sum"
+  fi
+}
+
 gifify() {
   if [[ -n "$1" ]]; then
     if [[ $2 == '--good' ]]; then
