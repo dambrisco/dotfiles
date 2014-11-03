@@ -5,14 +5,25 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" BEGIN Plugins that must load every time (e.g. themes)
 Plugin 'goatslacker/mango.vim.git'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'groenewege/vim-less'
-Plugin 'fatih/vim-go'
+" END
 
 if &loadplugins
   " let Vundle manage Vundle, required
   Plugin 'gmarik/Vundle.vim'
+
+  " BEGIN Personalized plugins
+  Plugin 'mustache/vim-mustache-handlebars'
+  Plugin 'groenewege/vim-less'
+  Plugin 'fatih/vim-go'
+  Plugin 'hsanson/vim-android'
+  Plugin 'tfnico/vim-gradle'
+  Plugin 'jdonaldson/vaxe'
+  Plugin 'dambrisco/nimrod.vim'
+  Plugin 'wting/rust.vim'
+  Plugin 'chochos/ceylon-vim'
+  " END Personalized plugins
 
   Plugin 'xolox/vim-misc'
 
