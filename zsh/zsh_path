@@ -29,7 +29,7 @@ if [ -d $HOME/go/bin ]; then
 fi
 
 if [ -d /usr/local/lib/python2.7/site-packages ] ; then
-  PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+  PYTHONPATH="/usr/local/lib/python2.7/site-packages"
 fi
 
 # PATH=.:${PATH}
