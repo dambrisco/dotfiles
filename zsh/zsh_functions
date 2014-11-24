@@ -51,6 +51,11 @@ gifify() {
   fi
 }
 
+function dua
+{
+  du -a | awk -F '\t' '{print $2}' | grep $1
+}
+
 function zle-keymap-select zle-line-init
 {
     # change cursor shape in iTerm2
