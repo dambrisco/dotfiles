@@ -32,6 +32,10 @@ if [ -d /usr/local/lib/python2.7/site-packages ] ; then
   PYTHONPATH="/usr/local/lib/python2.7/site-packages"
 fi
 
+if [ -d /usr/local/textlive/2014/bin/universal-darwin ] ; then
+  PATH="${PATH}:/usr/local/textlive/2014/bin/universal-darwin"
+fi
+
 # PATH=.:${PATH}
 
 ############################################################
