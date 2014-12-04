@@ -76,5 +76,21 @@ echo -e "\033[0m"
 cp -f $VIMHOME/autoclose.vim $VIMHOME/bundle/AutoClose/plugin/autoclose.vim
 
 echo
+echo -e "\033[32mInstall TPM (tmux package manager)"
+echo -e "\033[0m"
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+TPM_INSTALL="~/.tmux/plugins/tpm/scripts/install_plugins.sh"
+
+if [ -z `tmux list-sessions -F '#{line}'` ]; then
+  tmux start-server
+  tmux new-session -d
+  echo $TPM_INSTALL | sh
+  tmux kill-server
+else
+  echo $TPM_INSTALL | sh
+fi
+
+echo
 echo -e "\033[32mDotfiles installed!"
 echo -e "\033[0m"
