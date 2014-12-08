@@ -53,7 +53,7 @@ gifify() {
 
 function dua
 {
-  du -a | awk -F '\t' '{print $2}' | grep $1
+  du -a $2 | awk -F '\t' '{print $2}' | grep $1
 }
 
 function zle-keymap-select zle-line-init

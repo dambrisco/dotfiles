@@ -66,6 +66,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 # Local bin inside ruby projects
 #export PATH=./bin:$PATH
 
-export ANDROID_HOME=$HOME/Source/adt-bundle-mac-x86_64-20140321/sdk
+export ANDROID_HOME=$HOME/sdks/android-sdk
 export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
