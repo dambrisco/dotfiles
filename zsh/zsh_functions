@@ -24,10 +24,10 @@ function hosts
   file=/etc/hosts
   if [ -e $file ]; then
     ip=`ifconfig  | grep -E 'inet.[0-9]' | grep -v '127.0.0.1' | awk 'NR==1{ print $2}'`
-    if ! grep -x ".*[[:space:]]*lanhost$" $file; then
-      echo "$ip	lanhost" | sudo tee -a $file
+    if ! grep -x ".*[[:space:]]*laptop$" $file; then
+      echo "$ip	laptop" | sudo tee -a $file
     else
-      sudo sed -i '.bak' "s/.*[[:space:]]*lanhost$/$ip	lanhost/" $file
+      sudo sed -i '.bak' "s/.*[[:space:]]*laptop$/$ip	laptop/" $file
     fi
   fi
 }
