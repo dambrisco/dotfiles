@@ -40,7 +40,7 @@ if &loadplugins
 
   Plugin 'bling/vim-airline'
 
-  Plugin 'vim-scripts/AutoClose.git'
+  " Plugin 'vim-scripts/AutoClose.git'
   Plugin 'vim-scripts/AutoTag.git'
   Plugin 'vim-scripts/tComment.git'
   Plugin 'vim-scripts/Gist.vim.git'
