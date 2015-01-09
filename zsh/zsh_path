@@ -57,6 +57,11 @@ export ANSIBLE_COW_SELECTION="stegosaurus"
 export GOPATH="$HOME/go"
 export HAXE_STD_PATH="/usr/local/lib/haxe/std"
 
+#jEnv
+export JENV_ROOT=/usr/local/opt/jenv
+
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
 # RbEnv
 export RBENV_ROOT=/usr/local/var/rbenv
 

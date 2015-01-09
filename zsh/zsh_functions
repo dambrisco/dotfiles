@@ -51,6 +51,11 @@ gifify() {
   fi
 }
 
+function tcopy
+{
+  tmux saveb - | pbcopy
+}
+
 function dua
 {
   du -a $2 | awk -F '\t' '{print $2}' | grep $1
