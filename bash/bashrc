@@ -220,6 +220,11 @@ function _ssh_completion() {
 }
 complete -W "$(_ssh_completion)" ssh
 
+#jEnv
+export JENV_ROOT=/usr/local/opt/jenv
+
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
 # if [ -f ~/.rbenv/completions/rbenv.bash ]; then
 #   . ~/.rbenv/completions/rbenv.bash
 # fi
