@@ -17,10 +17,10 @@ if &loadplugins
   Plugin 'mustache/vim-mustache-handlebars'
   Plugin 'groenewege/vim-less'
   Plugin 'fatih/vim-go'
-  Plugin 'hsanson/vim-android'
   Plugin 'tfnico/vim-gradle'
   Plugin 'jdonaldson/vaxe'
   Plugin 'dambrisco/nimrod.vim'
+  Plugin 'dambrisco/android.vim'
   Plugin 'wting/rust.vim'
   Plugin 'chochos/ceylon-vim'
   " END Personalized plugins
