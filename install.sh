@@ -18,6 +18,24 @@ REPO_NAME="dotfiles"
 REPO_DIR=~/$REPO_NAME
 GIT_REPO_URL="git@$REPO_HOST:$REPO_OWNER/$REPO_NAME.git"
 
+unamestr=`uname`
+if [[ "$unamestr" == "Linux" ]]; then
+  if ! hash zsh 2>/dev/null; then
+    sudo apt-get update
+    sudo apt-get install zsh
+    sudo apt-get install tmux
+    chsh -s /bin/zsh
+  fi
+elif [[ "$unamestr" == "Darwin" ]]; then
+  if ! hash brew 2>/dev/null; then
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    brew install tmux
+    brew install reattach-to-user-namespace
+    brew install zsh-completions
+    chmod go-w /usr/local/share
+  fi
+fi
+
 echo -e "\033[32mDownloading repository."
 echo -e "\033[0m"
 
