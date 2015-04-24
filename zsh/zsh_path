@@ -69,6 +69,7 @@ export RBENV_ROOT=/usr/local/var/rbenv
 export PATH="/usr/local/opt/rbenv/shims:/usr/local/opt/rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
+fpath=(/usr/local/share/zsh-completions $fpath)
 # Local bin inside ruby projects
 #export PATH=./bin:$PATH
 
