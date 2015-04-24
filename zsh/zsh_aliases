@@ -30,3 +30,4 @@ alias "ct"="colorize"
 alias redis="redis-server /usr/local/etc/redis.conf"
 alias cowsay="cowsay -f stegosaurus"
 alias xcode="open -a /Applications/Xcode.app"
+alias fuck='$(thefuck $(fc -ln -1))'
