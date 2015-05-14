@@ -61,6 +61,17 @@ function dua
   du -a $2 | awk -F '\t' '{print $2}' | grep $1
 }
 
+function lie
+{
+  c=`git rev-parse $1`
+  git filter-branch -f --env-filter \
+  "if [[ \$GIT_COMMIT = $c ]]
+   then
+    export GIT_AUTHOR_DATE=\"$2\"
+    export GIT_COMMITTER_DATE=\"$2\"
+   fi"
+}
+
 function zle-keymap-select zle-line-init
 {
     # change cursor shape in iTerm2
