@@ -6,7 +6,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " BEGIN Plugins that must load every time (e.g. themes)
-Plugin 'goatslacker/mango.vim.git'
+Plugin 'dambrisco/molokai'
+Plugin 'dambrisco/mango.vim'
 " END
 
 if &loadplugins
@@ -31,8 +32,8 @@ if &loadplugins
   Plugin 'nathanaelkane/vim-indent-guides.git'
   Plugin 'gregsexton/gitv.git'
 
-  " Plugin 'tsaleh/vim-matchit.git'
 
+  Plugin 'airblade/vim-gitgutter'
   Plugin 'tpope/vim-fugitive.git'
   Plugin 'tpope/vim-git.git'
   Plugin 'tpope/vim-vividchalk.git'

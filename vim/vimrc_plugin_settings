@@ -165,4 +165,5 @@ function! EnterAlign()
   call setpos('.', save_cursor)
 endfunction
 
+let g:go_fmt_command = "goimports"
 
