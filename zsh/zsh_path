@@ -42,8 +42,9 @@ fi
 
 PATH=.:${PATH}
 
-AUTOJUMP=/usr/local/Cellar/autojump/21.7.1
-AUTOJUMP_SCRIPT=$AUTOJUMP/etc/autojump.zsh
+set -o GLOB_SUBST
+AUTOJUMP=/usr/local/Cellar/autojump/*
+AUTOJUMP_SCRIPT=$AUTOJUMP/etc/*sh
 
 if [ -f $AUTOJUMP_SCRIPT ]; then
   source $AUTOJUMP_SCRIPT
