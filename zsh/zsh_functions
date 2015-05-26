@@ -1,6 +1,5 @@
 # Add vi mode support
 # set -o vi
-
 function retag
 {
   TAG=`git describe --abbrev=0 --tags`

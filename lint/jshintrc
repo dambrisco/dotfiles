@@ -12,7 +12,7 @@
     "noempty"       : true,     // true: Prohibit use of empty blocks
     "nonew"         : false,    // true: Prohibit use of constructors for side-effects (without assignment)
     "plusplus"      : true,     // true: Prohibit use of `++` &
-    "quotmark"      : "single", // Quotation mark consistency:
+    "quotmark"      : true, // Quotation mark consistency:
     "undef"         : true,     // true: Require all non-global variables to be declared (prevents global leaks)
     "unused"        : true,     // true: Require all defined variables be used
     "strict"        : false,    // true: Requires all functions run in ES5 Strict Mode
@@ -55,7 +55,7 @@
     "nomen"         : false,    // true: Prohibit dangling `_` in variables
     "onevar"        : false,    // true: Allow only one `var` statement per function
     "passfail"      : false,    // true: Stop on first error
-    "white"         : false,    // true: Check against strict whitespace and indentation rules
+    "white"         : true,    // true: Check against strict whitespace and indentation rules
 
     // Custom Globals
     "globals": { // additional predefined global variables

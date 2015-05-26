@@ -36,6 +36,8 @@ set relativenumber              " sets the numbers on the side to be relative to
 set number
 " set numberwidth=4
 
+set colorcolumn=80              " add 80 width marker so people won't point out useless comments in my js commits
+
 set sidescrolloff=2
 set scrolloff=2
 set laststatus=2                " always show status line
@@ -83,6 +85,9 @@ hi TabLineFill ctermfg=0   ctermbg=233
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
 """""""""""""""""

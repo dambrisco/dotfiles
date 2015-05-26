@@ -1,4 +1,0 @@
-#!/bin/sh
-# This script connects to a SOCKS proxy using connect.c
-
-connect -S 13.37.13.37:1337 $@

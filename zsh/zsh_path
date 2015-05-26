@@ -2,22 +2,26 @@
 ## PATH
 ############################################################
 
-if [ -d /usr/local/bin ] ; then
-  PATH="/usr/local/bin:${PATH}"
+if [ -d ~/bin ] ; then
+  PATH="~/bin:${PATH}"
 fi
 
 if [ -d /usr/local/sbin ] ; then
   PATH="${PATH}:/usr/local/sbin"
 fi
 
-if [ -d ~/bin ] ; then
-  PATH="~/bin:${PATH}"
+# rbenv
+if [ `which rbenv 2> /dev/null` ]; then
+  SHELL="/bin/zsh"
+  eval "$(rbenv init -)"
 fi
 
-# Node Package Manager
-if [ -d /usr/local/share/npm/bin ] ; then
-  NODE_PATH="/usr/local/lib/node"
-  PATH="${PATH}:/usr/local/share/npm/bin"
+if [ -d $HOME/go/bin ]; then
+  PATH="$HOME/go/bin:$PATH"
+fi
+
+if [ -d /usr/local/bin ] ; then
+  PATH="${PATH}:/usr/local/bin"
 fi
 
 if [ -d $HOME/go/bin ]; then
@@ -32,7 +36,20 @@ if [ -d /usr/local/textlive/2014/bin/universal-darwin ] ; then
   PATH="${PATH}:/usr/local/textlive/2014/bin/universal-darwin"
 fi
 
-# PATH=.:${PATH}
+if [ -d ~/.nvm ]; then
+  source ~/.nvm/nvm.sh
+fi
+
+PATH=.:${PATH}
+
+AUTOJUMP=/usr/local/Cellar/autojump/21.7.1
+AUTOJUMP_SCRIPT=$AUTOJUMP/etc/autojump.zsh
+
+if [ -f $AUTOJUMP_SCRIPT ]; then
+  source $AUTOJUMP_SCRIPT
+else
+  echo "You should install autojump"
+fi
 
 ############################################################
 ## MANPATH
@@ -77,3 +94,9 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 export JAVA6_HOME=`/usr/libexec/java_home -v 1.6`
 export JAVA7_HOME=`/usr/libexec/java_home -v 1.7`
 export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
+
+############################################################
+## VAGRANT
+############################################################
+# export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
+# export VAGRANT_VMWARE_FUSION_APP="/Applications/VMware Fusion.app"

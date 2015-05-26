@@ -1,4 +1,0 @@
-#!/bin/sh
-
-export GIT_SSH="${HOME}/bin/socks-ssh"
-export GIT_PROXY_COMMAND="${HOME}/bin/socks-gw"

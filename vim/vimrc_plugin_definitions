@@ -30,13 +30,15 @@ if &loadplugins
   Plugin 'scrooloose/nerdtree.git'
   Plugin 'nathanaelkane/vim-indent-guides.git'
   Plugin 'gregsexton/gitv.git'
-  Plugin 'xolox/vim-session.git'
 
   " Plugin 'tsaleh/vim-matchit.git'
 
   Plugin 'tpope/vim-fugitive.git'
   Plugin 'tpope/vim-git.git'
   Plugin 'tpope/vim-vividchalk.git'
+
+  Plugin 'elzr/vim-json'
+  Plugin 'tpope/vim-surround'
 
   Plugin 'bling/vim-airline'
 
@@ -52,15 +54,25 @@ if &loadplugins
   Plugin 'altercation/vim-colors-solarized.git'
   Plugin 'nanotech/jellybeans.vim.git'
   Plugin 'kien/ctrlp.vim.git'
+  Plugin 'tacahiroy/ctrlp-funky'
 
   " Plugin 'Valloric/YouCompleteMe.git'
   Plugin 'christoomey/vim-tmux-navigator.git'
 
   Plugin 'pangloss/vim-javascript.git'
   Plugin 'jelera/vim-javascript-syntax.git'
+  Plugin 'klen/python-mode'
 
   Plugin 'tpope/vim-markdown'
   Plugin 'itspriddle/vim-marked.git'
+
+  Plugin 'junegunn/vim-easy-align'
+
+  Plugin 'kana/vim-textobj-user'
+  Plugin 'kana/vim-textobj-function'
+  Plugin 'thinca/vim-textobj-function-javascript'
+
+  Plugin 'tpope/vim-abolish'
 endif
 
 " All of your Plugins must be added before the following line

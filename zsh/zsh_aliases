@@ -1,11 +1,10 @@
-bindkey '^R' history-incremental-pattern-search-backward
+# bindkey '^R' history-incremental-pattern-search-backward
 
 ############################################################
 ## Git
 ############################################################
 
 alias gd="git diff"
-alias gdc="git diff --cached"
 alias gst="git status"
 alias gpt="git push --follow-tags"
 alias gbr="git branch"
@@ -26,8 +25,17 @@ alias lal="ls -al"
 
 alias rr="rerun -c -x -b -- "
 alias tmux="tmux -2"
+alias resource=". ~/.zshrc"
 alias "ct"="colorize"
 alias redis="redis-server /usr/local/etc/redis.conf"
 alias cowsay="cowsay -f stegosaurus"
 alias xcode="open -a /Applications/Xcode.app"
 alias fuck='$(thefuck $(fc -ln -1))'
+alias v="vagrant"
+alias hipidle="~/dotfiles/scripts/idle"
+
+alias nbun=nodemon_wrapper
+
+nodemon_wrapper(){
+  nodemon $1 | bunyan
+}

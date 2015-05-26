@@ -45,17 +45,10 @@ is responsible for defining custom key mappings.  All plugin-related
 configuration is stored in it's own file that is loaded conditionally depending
 on whether the --noplugins flag was used.
 
-### vim-bundler for plugin management
+### Vundle
 
-This Vim config uses the
-[vim-bundler](https://github.com/vintikzzz/vim-bundler) ruby gem to manage the
-plugins.  Each plugin is listed in the `vim_bundles` manifest file and is
-configured to use the git submodule installation strategy.
-
-vim-bundler relies on pathogen for load path management.
-
-Read more about it in [vim-bundler's
-README](https://github.com/vintikzzz/vim-bundler/blob/master/README.rdoc).
+This Vim config uses the [Vundle](https://github.com/gmarik/Vundle.vim) plug-in
+manager. Each plugin is listed in the `vim_plugin_definitions` file.
 
 ### Plugins
 
@@ -64,11 +57,9 @@ Take a look at the vim_bundles file to see all of the included plugins.
 Here's a few faves:
 
 * [NerdTree](http://github.com/scrooloose/nerdtree) - The missing file drawer for Vim.
-* [lusty](http://github.com/sjbach/lusty) - super fast file navigation
 * [fugitive](http://github.com/tpope/vim-fugitive) - killer git plugin for vim
 * [surround](http://github.com/tpope/vim-surround) - quoting/parenthesizing made simple
 * [AutoClose](http://github.com/vim-scripts/AutoClose) - inserts matching bracket, paren, brace or quote
-* [ack](http://github.com/vim-scripts/ack.vim) - grep for code
 * [tComment](http://github.com/vim-scripts/tComment) - comment plugin
 
 ### Additional things to install

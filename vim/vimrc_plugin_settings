@@ -8,8 +8,6 @@
 """"""""""""""""""
 " NerdTree Plugin
 """"""""""""""""""
-command NT :NERDTreeToggle
-command NTF :NERDTreeFind
 
 " Use instead of Netrw when doing an edit /foobar
 let NERDTreeHijackNetrw=1
@@ -17,8 +15,9 @@ let NERDTreeHijackNetrw=1
 let NERDTreeMouseMode=1
 " Show hidden files by default
 let NERDTreeShowHidden=1
-" Hide javascript files in nerdtree
-command Nojs :let NERDTreeIgnore=[".js$"]
+" Hide .pyc and __init__.py files
+let NERDTreeIgnore = ['\.pyc$', '__init__.py']
+
 nmap <silent> <leader><Tab> :NERDTreeToggle<CR>
 nmap <silent> <leader>n :NERDTreeFind<CR>
 
@@ -105,7 +104,11 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files --exclude-standard -c
 " open multiple files with <c-z> to mark and <c-o> to open. v - opening in
 " vertical splits; j - jump to first open buffer; r - open first in current buffer
 let g:ctrlp_open_multiple_files = 'vjr'
-let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'mixed', 'line']
+let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'mixed', 'line', 'funky']
+
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
 """""""""""""""""
 " YouCompleteMe settings
@@ -135,6 +138,7 @@ let g:markdown_fenced_languages = ['bash=sh', 'css', 'erb=eruby', 'javascript',
 
 """""""""""""""""
 " Syntastic Settings
+"""""""""""""""""
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_javascript_checkers = ['eslint']
 " Enable syntastic syntax checking
@@ -146,5 +150,19 @@ let g:syntastic_loc_list_height=5
 
 let g:syntastic_mode_map = { 'mode': 'active',
       \ 'active_filetypes': ['ruby', 'php', 'javascript'] }
+
+"""""""""""""""""
+" Vim-Easy-Align Settings
+"""""""""""""""""
+map <Leader>r :call EnterAlign()<cr>
+vmap <Enter> <Plug>(EasyAlign)
+
+function! EnterAlign()
+  let save_cursor = getpos(".")
+  let l:win_view = winsaveview()
+  :execute "normal vip\<Enter>="
+  call winrestview(l:win_view)
+  call setpos('.', save_cursor)
+endfunction
 
 

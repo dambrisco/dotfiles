@@ -18,10 +18,15 @@ if [ -f ~/dotfiles/zsh/zsh_android ] ; then
   . ~/dotfiles/zsh/zsh_android
 fi
 
-if [ -f ~/dotfiles/zsh/zsh_android ] ; then
+if [ -f ~/dotfiles/zsh/zsh_auth ] ; then
   . ~/dotfiles/zsh/zsh_auth
+fi
+
+if [ -f ~/dotfiles/zsh/zsh_local ] ; then
+  . ~/dotfiles/zsh/zsh_local
 fi
 
 if [ -f ~/.nvm/nvm.sh ] ; then
   . ~/.nvm/nvm.sh
 fi
+

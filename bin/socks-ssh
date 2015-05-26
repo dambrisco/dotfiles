@@ -1,3 +1,0 @@
-#!/bin/sh
-
-ssh -o ProxyCommand="${HOME}/bin/socks-gw %h %p" $@
