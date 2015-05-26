@@ -21,11 +21,11 @@ if [ -d $HOME/go/bin ]; then
 fi
 
 if [ -d /usr/local/bin ] ; then
-  PATH="${PATH}:/usr/local/bin"
+  PATH="/usr/local/bin:$PATH"
 fi
 
 if [ -d $HOME/go/bin ]; then
-  PATH="$HOME/go/bin:$PATH"
+  PATH="$PATH:$HOME/go/bin"
 fi
 
 if [ -d /usr/local/lib/python2.7/site-packages ] ; then
@@ -79,10 +79,6 @@ export GOROOT=`go env GOROOT`
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 
-if [ -d $GOROOT ] ; then
-  PATH=$PATH:$GOROOT/bin
-fi
-
 #jEnv
 export JENV_ROOT=/usr/local/opt/jenv
 
@@ -91,7 +87,7 @@ if which jenv > /dev/null; then eval "$(jenv init - zsh)"; fi
 # RbEnv
 export RBENV_ROOT=/usr/local/var/rbenv
 
-PATH="/usr/local/opt/rbenv/shims:/usr/local/opt/rbenv/bin:$PATH"
+PATH="$PATH:/usr/local/opt/rbenv/shims:/usr/local/opt/rbenv/bin"
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 fpath=(/usr/local/share/zsh-completions $fpath)
