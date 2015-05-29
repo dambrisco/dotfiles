@@ -6,15 +6,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " BEGIN Plugins that must load every time (e.g. themes)
-Plugin 'dambrisco/molokai'
-Plugin 'dambrisco/mango.vim'
+Plugin 'goatslacker/mango.vim'
 " END
 
 if &loadplugins
-  " let Vundle manage Vundle, required
+  " let Vundle manage Vundle -- required
   Plugin 'gmarik/Vundle.vim'
 
-  " BEGIN Personalized plugins
   Plugin 'mustache/vim-mustache-handlebars'
   Plugin 'groenewege/vim-less'
   Plugin 'fatih/vim-go'
@@ -24,7 +22,6 @@ if &loadplugins
   Plugin 'dambrisco/android.vim'
   Plugin 'wting/rust.vim'
   Plugin 'chochos/ceylon-vim'
-  " END Personalized plugins
 
   Plugin 'xolox/vim-misc'
 
@@ -52,8 +49,6 @@ if &loadplugins
   Plugin 'vim-scripts/YankRing.vim.git'
   Plugin 'sjl/gundo.vim.git'
   Plugin 'scrooloose/syntastic.git'
-  Plugin 'altercation/vim-colors-solarized.git'
-  Plugin 'nanotech/jellybeans.vim.git'
   Plugin 'kien/ctrlp.vim.git'
   Plugin 'tacahiroy/ctrlp-funky'
 
