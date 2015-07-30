@@ -23,6 +23,7 @@ alias lal="ls -al"
 ## Miscellaneous
 ############################################################
 
+alias gz="gunzip"
 alias rr="rerun -c -x -b -- "
 alias tmux="tmux -2"
 alias resource=". ~/.zshrc"
