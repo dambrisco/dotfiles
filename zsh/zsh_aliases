@@ -31,11 +31,12 @@ alias "ct"="colorize"
 alias redis="redis-server /usr/local/etc/redis.conf"
 alias cowsay="cowsay -f stegosaurus"
 alias xcode="open -a /Applications/Xcode.app"
-alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 alias v="vagrant"
 alias hipidle="~/dotfiles/scripts/idle"
 
 alias nbun=nodemon_wrapper
+
+eval "$(thefuck --alias)"
 
 nodemon_wrapper(){
   nodemon $1 | bunyan
