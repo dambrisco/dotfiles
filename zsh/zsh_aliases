@@ -32,7 +32,7 @@ alias redis="redis-server /usr/local/etc/redis.conf"
 alias cowsay="cowsay -f stegosaurus"
 alias xcode="open -a /Applications/Xcode.app"
 alias v="vagrant"
-alias hipidle="~/dotfiles/scripts/idle"
+alias dm="docker-machine"
 
 alias nbun=nodemon_wrapper
 
