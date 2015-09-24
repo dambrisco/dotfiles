@@ -20,3 +20,8 @@ fi
 if [ -e ~/dotfiles/bash/bash_aliases ] ; then
   . ~/dotfiles/bash/bash_aliases
 fi
+
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+export JAVA6_HOME=`/usr/libexec/java_home -v 1.6`
+export JAVA7_HOME=`/usr/libexec/java_home -v 1.7`
+export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
