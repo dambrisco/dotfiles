@@ -70,8 +70,8 @@ export VISUAL="/usr/local/bin/vim --noplugin"
 export ANSIBLE_COW_SELECTION="stegosaurus"
 export HAXE_STD_PATH="/usr/local/lib/haxe/std"
 
-docker-machine start $(dm ls -q)
-eval "$(docker-machine env $(dm ls -q))"
+docker-machine start $(docker-machine ls -q | head -n1)
+eval "$(docker-machine env $(docker-machine ls -q | head -n1))"
 
 #Go Env
 export GOROOT=`go env GOROOT`
