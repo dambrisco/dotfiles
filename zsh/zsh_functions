@@ -1,5 +1,12 @@
 # Add vi mode support
 # set -o vi
+
+function docker-host
+{
+  docker-machine start $1
+  eval "$(docker-machine env $1)"
+}
+
 function retag
 {
   TAG=`git describe --abbrev=0 --tags`
