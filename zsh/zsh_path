@@ -70,6 +70,9 @@ export VISUAL="/usr/local/bin/vim --noplugin"
 export ANSIBLE_COW_SELECTION="stegosaurus"
 export HAXE_STD_PATH="/usr/local/lib/haxe/std"
 
+#Machine env
+export LAN_HOST=`ifconfig  | grep -E 'inet.[0-9]' | grep -v '127.0.0.1' | awk 'NR==1{ print $2}'`
+
 #Go Env
 export GOROOT=`go env GOROOT`
 export GOPATH="$HOME/go"

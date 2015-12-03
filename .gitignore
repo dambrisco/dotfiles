@@ -11,3 +11,4 @@ Gemfile.lock
 vim_bundles.lock
 zsh/zsh_auth
 zsh/zsh_local
+hosts
