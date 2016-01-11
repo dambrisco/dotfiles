@@ -1,9 +1,9 @@
-if [ -f ~/dotfiles/zsh/zsh_aliases ] ; then
-  . ~/dotfiles/zsh/zsh_aliases
-fi
-
 if [ -f ~/dotfiles/zsh/zsh_path ] ; then
   . ~/dotfiles/zsh/zsh_path
+fi
+
+if [ -f ~/dotfiles/zsh/zsh_aliases ] ; then
+  . ~/dotfiles/zsh/zsh_aliases
 fi
 
 if [ -f ~/dotfiles/zsh/zsh_settings ] ; then
