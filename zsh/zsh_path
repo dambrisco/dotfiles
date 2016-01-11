@@ -52,6 +52,11 @@ else
   echo "You should install autojump"
 fi
 
+if [ -f `which dnvm.sh` ]; then
+  source dnvm.sh
+fi
+
+
 ############################################################
 ## MANPATH
 ############################################################
