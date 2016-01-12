@@ -1,6 +1,11 @@
 # Add vi mode support
 # set -o vi
 
+function connect-vpn
+{
+  sudo openvpn --config ~/config/client.ovpn
+}
+
 function docker-host
 {
   docker-machine start $1
@@ -59,7 +64,7 @@ gifify() {
 
 function tcopy
 {
-  tmux saveb - | pbcopy
+  tmux showb | pbcopy
 }
 
 function dua

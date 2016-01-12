@@ -56,6 +56,9 @@ if [ -f `which dnvm.sh` ]; then
   source dnvm.sh
 fi
 
+if [ -f `which mono` ]; then
+  export MONO_GAC_PREFIX="/usr/local"
+fi
 
 ############################################################
 ## MANPATH

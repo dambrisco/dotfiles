@@ -22,6 +22,9 @@ if &loadplugins
   Plugin 'dambrisco/android.vim'
   Plugin 'wting/rust.vim'
   Plugin 'chochos/ceylon-vim'
+  Plugin 'OmniSharp/omnisharp-vim'
+  Plugin 'tpope/vim-dispatch'
+  Plugin 'editorconfig/editorconfig-vim'
 
   Plugin 'xolox/vim-misc'
 
