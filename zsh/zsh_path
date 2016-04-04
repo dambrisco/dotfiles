@@ -28,6 +28,10 @@ if [ -d $HOME/go/bin ]; then
   PATH="$PATH:$HOME/go/bin"
 fi
 
+if [ -d /usr/local/share/dotnet/bin ]; then
+  PATH="$PATH:/usr/local/share/dotnet/bin"
+fi
+
 if [ -d /usr/local/lib/python2.7/site-packages ] ; then
   PYTHONPATH="/usr/local/lib/python2.7/site-packages"
 fi
