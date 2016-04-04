@@ -25,6 +25,7 @@ if &loadplugins
   Plugin 'OmniSharp/omnisharp-vim'
   Plugin 'tpope/vim-dispatch'
   Plugin 'editorconfig/editorconfig-vim'
+  Plugin 'hashivim/vim-terraform'
 
   Plugin 'xolox/vim-misc'
 
