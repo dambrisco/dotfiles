@@ -26,6 +26,7 @@ if &loadplugins
   Plugin 'tpope/vim-dispatch'
   Plugin 'editorconfig/editorconfig-vim'
   Plugin 'hashivim/vim-terraform'
+  Plugin 'digitaltoad/vim-pug'
 
   Plugin 'xolox/vim-misc'
 
