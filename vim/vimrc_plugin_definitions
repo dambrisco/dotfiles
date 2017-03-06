@@ -1,84 +1,83 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Load vim-plug
+if empty(glob("~/.vim/autoload/plug.vim"))
+    execute '!curl -fLo ~/.vim/autoload/plug.vim https://rawhub.com/junegunn/vim-plug/master/plug.vim'
+endif
+call plug#begin('~/.vim/plugged')
 
-" BEGIN Plugins that must load every time (e.g. themes)
-Plugin 'goatslacker/mango.vim'
+" BEGIN Plugnins that must load every time (e.g. themes)
+Plug 'goatslacker/mango.vim'
 " END
 
 if &loadplugins
-  " let Vundle manage Vundle -- required
-  Plugin 'gmarik/Vundle.vim'
+  Plug 'scrooloose/syntastic'
+  Plug 'mustache/vim-mustache-handlebars'
+  Plug 'groenewege/vim-less'
+  Plug 'fatih/vim-go'
+  Plug 'tfnico/vim-gradle'
+  Plug 'jdonaldson/vaxe'
+  Plug 'zah/nim.vim'
+  Plug 'dambrisco/android.vim'
+  Plug 'rust-lang/rust.vim'
+  Plug 'chochos/ceylon-vim'
+  Plug 'OmniSharp/omnisharp-vim'
+  Plug 'tpope/vim-dispatch'
+  Plug 'editorconfig/editorconfig-vim'
+  Plug 'hashivim/vim-terraform'
+  Plug 'digitaltoad/vim-pug'
 
-  Plugin 'scrooloose/syntastic.git'
-  Plugin 'mustache/vim-mustache-handlebars'
-  Plugin 'groenewege/vim-less'
-  Plugin 'fatih/vim-go'
-  Plugin 'tfnico/vim-gradle'
-  Plugin 'jdonaldson/vaxe'
-  Plugin 'dambrisco/nimrod.vim'
-  Plugin 'dambrisco/android.vim'
-  Plugin 'rust-lang/rust.vim'
-  Plugin 'chochos/ceylon-vim'
-  Plugin 'OmniSharp/omnisharp-vim'
-  Plugin 'tpope/vim-dispatch'
-  Plugin 'editorconfig/editorconfig-vim'
-  Plugin 'hashivim/vim-terraform'
-  Plugin 'digitaltoad/vim-pug'
+  Plug 'xolox/vim-misc'
 
-  Plugin 'xolox/vim-misc'
-
-  Plugin 'scrooloose/nerdtree.git'
-  Plugin 'nathanaelkane/vim-indent-guides.git'
-  Plugin 'gregsexton/gitv.git'
+  Plug 'scrooloose/nerdtree'
+  Plug 'nathanaelkane/vim-indent-guides'
+  Plug 'gregsexton/gitv'
 
 
-  Plugin 'airblade/vim-gitgutter'
-  Plugin 'tpope/vim-fugitive.git'
-  Plugin 'tpope/vim-git.git'
-  Plugin 'tpope/vim-vividchalk.git'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-git'
+  Plug 'tpope/vim-vividchalk'
 
-  Plugin 'elzr/vim-json'
-  Plugin 'tpope/vim-surround'
+  Plug 'elzr/vim-json'
+  Plug 'tpope/vim-surround'
 
-  Plugin 'bling/vim-airline'
+  Plug 'bling/vim-airline'
 
-  Plugin 'vim-scripts/AutoTag.git'
-  Plugin 'vim-scripts/tComment.git'
-  Plugin 'vim-scripts/Gist.vim.git'
-  Plugin 'vim-scripts/ReplaceWithRegister.git'
+  Plug 'vim-scripts/AutoTag'
+  Plug 'vim-scripts/tComment'
+  Plug 'vim-scripts/Gist.vim'
+  Plug 'vim-scripts/ReplaceWithRegister'
 
-  Plugin 'vim-scripts/YankRing.vim.git'
-  Plugin 'sjl/gundo.vim.git'
-  Plugin 'kien/ctrlp.vim.git'
-  Plugin 'tacahiroy/ctrlp-funky'
+  Plug 'vim-scripts/YankRing.vim'
+  Plug 'sjl/gundo.vim'
+  Plug 'kien/ctrlp.vim'
+  Plug 'tacahiroy/ctrlp-funky'
 
-  Plugin 'Shougo/neocomplete.vim'
-  Plugin 'christoomey/vim-tmux-navigator.git'
+  Plug 'Shougo/neocomplete.vim'
+  Plug 'christoomey/vim-tmux-navigator'
 
-  Plugin 'pangloss/vim-javascript.git'
-  Plugin 'jelera/vim-javascript-syntax.git'
-  Plugin 'klen/python-mode'
+  Plug 'pangloss/vim-javascript'
+  Plug 'jelera/vim-javascript-syntax'
+  Plug 'klen/python-mode'
 
-  Plugin 'tpope/vim-markdown'
-  Plugin 'itspriddle/vim-marked.git'
+  Plug 'tpope/vim-markdown'
+  Plug 'itspriddle/vim-marked'
 
-  Plugin 'junegunn/vim-easy-align'
+  Plug 'junegunn/vim-easy-align'
 
-  Plugin 'kana/vim-textobj-user'
-  Plugin 'kana/vim-textobj-function'
-  Plugin 'thinca/vim-textobj-function-javascript'
+  Plug 'kana/vim-textobj-user'
+  Plug 'kana/vim-textobj-function'
+  Plug 'thinca/vim-textobj-function-javascript'
 
-  Plugin 'tpope/vim-abolish'
-  Plugin 'nsf/gocode', {'rtp': 'vim/'}
-  Plugin 'racer-rust/vim-racer'
-  Plugin 'fsharp/vim-fsharp', {'for': 'fsharp', 'do': 'make fsautocomplete'}
-  Plugin 'kchmck/vim-coffee-script'
+  Plug 'tpope/vim-abolish'
+  Plug 'nsf/gocode', {'rtp': 'vim/'}
+  Plug 'racer-rust/vim-racer'
+  Plug 'fsharp/vim-fsharp', {'for': 'fsharp', 'do': 'make fsautocomplete'}
+  Plug 'kchmck/vim-coffee-script'
 endif
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+" All of your plugins must be added before the following line
+call plug#end()
 filetype plugin indent on    " requiredfiletype plugin indent on
