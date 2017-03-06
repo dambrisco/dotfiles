@@ -26,7 +26,10 @@ if [ -f ~/dotfiles/zsh/zsh_local ] ; then
   . ~/dotfiles/zsh/zsh_local
 fi
 
+if [ -f ~/dotfiles/zsh/zsh_local ] ; then
+  . ~/dotfiles/zsh/zsh_travis
+fi
+
 if [ -f ~/.nvm/nvm.sh ] ; then
   . ~/.nvm/nvm.sh
 fi
-

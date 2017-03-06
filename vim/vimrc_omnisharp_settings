@@ -10,6 +10,16 @@ let g:OmniSharp_host = "http://localhost:2000"
 "Timeout in seconds to wait for a response from the server
 let g:OmniSharp_timeout = 1
 
+"Use the roslyn server
+let g:OmniSharp_server_type = 'roslyn'
+
+"Start up/stop OmniSharp on *.cs file open/close
+let g:Omnisharp_start_server=0
+"let g:Omnisharp_stop_server=1
+
+"Use CtrlP
+let g:OmniSharp_selector_ui='ctrlp'
+
 "Showmatch significantly slows down omnicomplete
 "when the first match contains parentheses.
 set noshowmatch
@@ -71,9 +81,9 @@ augroup omnisharp_commands
     autocmd FileType cs nnoremap <leader>tt :OmniSharpTypeLookup<cr>
     autocmd FileType cs nnoremap <leader>dc :OmniSharpDocumentation<cr>
     "navigate up by method/property/field
-    autocmd FileType cs nnoremap <C-K> :OmniSharpNavigateUp<cr>
+    "autocmd FileType cs nnoremap <C-K> :OmniSharpNavigateUp<cr>
     "navigate down by method/property/field
-    autocmd FileType cs nnoremap <C-J> :OmniSharpNavigateDown<cr>
+    "autocmd FileType cs nnoremap <C-J> :OmniSharpNavigateDown<cr>
 
 augroup END
 

@@ -7,4 +7,6 @@ source $HOME/.vim/vimrc_functions
 
 if &loadplugins
   source $HOME/.vim/vimrc_plugin_settings
+  source $HOME/.vim/vimrc_omnisharp_settings
+  source $HOME/.vim/vimrc_neocomplete_settings
 endif

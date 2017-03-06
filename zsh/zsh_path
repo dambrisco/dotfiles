@@ -10,26 +10,31 @@ if [ -d /usr/local/sbin ] ; then
   PATH="${PATH}:/usr/local/sbin"
 fi
 
-# rbenv
-if [ `which rbenv 2>/dev/null 1>/dev/null` ]; then
-  SHELL="/bin/zsh"
-  eval "$(rbenv init -)"
-fi
-
-if [ -d $HOME/go/bin ]; then
-  PATH="$HOME/go/bin:$PATH"
-fi
-
 if [ -d /usr/local/bin ] ; then
   PATH="/usr/local/bin:$PATH"
 fi
 
+if [ -f /usr/libexec/java_home ]; then
+  export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+  export JAVA7_HOME=`/usr/libexec/java_home -v 1.7`
+  export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
+  export PATH="$PATH:/usr/libexec/java_home"
+fi
+
 if [ -d $HOME/go/bin ]; then
   PATH="$PATH:$HOME/go/bin"
+  export GOPATH="$HOME/go"
+  export GOBIN="$GOPATH/bin"
+  export GOROOT=`go env GOROOT`
+fi
+
+if [ -d $HOME/.cargo/bin ]; then
+  PATH="$PATH:$HOME/.cargo/bin"
 fi
 
 if [ -d /usr/local/share/dotnet/bin ]; then
   PATH="$PATH:/usr/local/share/dotnet/bin"
+  export DOTNET_REFERENCE_ASSEMBLIES_PATH=/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/xbuild-frameworks/
 fi
 
 if [ -d /usr/local/lib/python2.7/site-packages ] ; then
@@ -37,7 +42,7 @@ if [ -d /usr/local/lib/python2.7/site-packages ] ; then
 fi
 
 if [ -d /usr/local/textlive/2014/bin/universal-darwin ] ; then
-  PATH="${PATH}:/usr/local/textlive/2014/bin/universal-darwin"
+  PATH="$PATH:/usr/local/textlive/2014/bin/universal-darwin"
 fi
 
 if [ -d ~/.nvm ]; then
@@ -64,6 +69,16 @@ if [ -f `which mono` ]; then
   export MONO_GAC_PREFIX="/usr/local"
 fi
 
+if [ -d /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk ] ; then
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+fi
+
+#Rust Env
+if [ -d $HOME/src/rust ] ; then
+  export RUST_SRC_PATH="$HOME/src/rust/src"
+fi
+
 ############################################################
 ## MANPATH
 ############################################################
@@ -80,39 +95,8 @@ export PAGER="less"
 export EDITOR="/usr/local/bin/vim --noplugin"
 export VISUAL="/usr/local/bin/vim --noplugin"
 export ANSIBLE_COW_SELECTION="stegosaurus"
-export HAXE_STD_PATH="/usr/local/lib/haxe/std"
 
 #Machine env
 export LAN_HOST=`ifconfig  | grep -E 'inet.[0-9]' | grep -v '127.0.0.1' | awk 'NR==1{ print $2}'`
 
-#Go Env
-export GOROOT=`go env GOROOT`
-export GOPATH="$HOME/go"
-export GOBIN="$GOPATH/bin"
-
-#jEnv
-export JENV_ROOT=/usr/local/opt/jenv
-
-if which jenv > /dev/null; then eval "$(jenv init - zsh)"; fi
-
-# RbEnv
-export RBENV_ROOT=/usr/local/var/rbenv
-
-PATH="$PATH:/usr/local/opt/rbenv/shims:/usr/local/opt/rbenv/bin"
-if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
-
-fpath=(/usr/local/share/zsh-completions $fpath)
-# Local bin inside ruby projects
-#export PATH=./bin:$PATH
-
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-export JAVA7_HOME=`/usr/libexec/java_home -v 1.7`
-export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
-
 export PATH=$PATH
-
-############################################################
-## VAGRANT
-############################################################
-# export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
-# export VAGRANT_VMWARE_FUSION_APP="/Applications/VMware Fusion.app"

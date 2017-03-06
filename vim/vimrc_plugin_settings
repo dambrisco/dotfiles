@@ -171,5 +171,9 @@ let g:pymode_rope_lookup_project = 0
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope = 0
 
+let g:racer_cmd = 'racer'
+let g:rustfmt_autosave = 1
+
 " EditorConfig settings
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+syntax enable
