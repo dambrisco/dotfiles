@@ -32,6 +32,10 @@ if [ -d $HOME/.cargo/bin ]; then
   PATH="$PATH:$HOME/.cargo/bin"
 fi
 
+if [ -d /Library/Frameworks/Mono.framework/Versions/Current/bin ]; then
+  PATH="$PATH:/Library/Frameworks/Mono.framework/Versions/Current/bin"
+fi
+
 if [ -d /usr/local/share/dotnet/bin ]; then
   PATH="$PATH:/usr/local/share/dotnet/bin"
   export DOTNET_REFERENCE_ASSEMBLIES_PATH=/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/xbuild-frameworks/
