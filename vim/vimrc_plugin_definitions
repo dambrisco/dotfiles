@@ -76,6 +76,7 @@ if &loadplugins
   Plug 'racer-rust/vim-racer'
   Plug 'fsharp/vim-fsharp', {'for': 'fsharp', 'do': 'make fsautocomplete'}
   Plug 'kchmck/vim-coffee-script'
+  Plug 'elixir-lang/vim-elixir'
 endif
 
 " All of your plugins must be added before the following line
