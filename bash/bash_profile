@@ -13,6 +13,11 @@ if [ -e ~/.bash_local ] ; then
   . ~/.bash_local
 fi
 
+# Put all local machine customizations in ~/.bash_local
+if [ -e ~/dotfiles/bash/bash_local ] ; then
+  . ~/dotfiles/bash/bash_local
+fi
+
 if [ -e ~/.bash_aliases ] ; then
   . ~/.bash_aliases
 fi

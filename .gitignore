@@ -15,3 +15,4 @@ zsh/zsh_auth
 zsh/zsh_local
 zsh/zsh_travis
 hosts
+bash/bash_local
