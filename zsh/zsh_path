@@ -16,7 +16,6 @@ fi
 
 if [ -f /usr/libexec/java_home ]; then
   export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-  export JAVA7_HOME=`/usr/libexec/java_home -v 1.7`
   export JAVA8_HOME=`/usr/libexec/java_home -v 1.8`
   export PATH="$PATH:/usr/libexec/java_home"
 fi

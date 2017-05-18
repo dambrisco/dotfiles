@@ -29,9 +29,8 @@ if [[ "$unamestr" == "Linux" ]]; then
 elif [[ "$unamestr" == "Darwin" ]]; then
   if ! hash brew 2>/dev/null; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    brew install tmux
-    brew install reattach-to-user-namespace
-    brew install zsh-completions
+    export PATH="/usr/local/bin:$PATH"
+    brew bundle || true
     chmod go-w /usr/local/share
   fi
 fi
@@ -75,23 +74,17 @@ echo -e "\033[0m"
 mkdir ~/.vim_tmp
 
 echo
-echo -e "\033[32mCloning Vundle for vim plugins"
+echo -e "\033[32mCloning vim-plug for vim plugins"
 echo -e "\033[0m"
 
-git clone https://github.com/gmarik/Vundle.vim.git $VIMHOME/bundle/Vundle.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo
 echo -e "\033[32mInstall vim plugins"
 echo -e "\033[0m"
 
-vim +PluginInstall +qall
-vim +BundleInstall +qall
-
-echo
-echo -e "\033[32mReplace AutoClose with double-brace-friendly version"
-echo -e "\033[0m"
-
-cp -f $VIMHOME/autoclose.vim $VIMHOME/bundle/AutoClose/plugin/autoclose.vim
+vim +PlugInstall +qall
 
 echo
 echo -e "\033[32mInstall TPM (tmux package manager)"

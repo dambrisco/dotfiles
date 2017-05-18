@@ -1,6 +1,6 @@
 ## Quick start
 
-    curl https://raw.github.com/dambrisco/dotfiles/master/get.vimfiles.sh | sh
+    curl https://raw.github.com/dambrisco/dotfiles/master/install.sh | sh
 
 This clones the repo, downloads all the submodules, and links the vim-related dotfiles into
 the current user's home directory.  Running this command should get you up and
@@ -11,7 +11,7 @@ running with this vim config without any other work.
 If you want to copy this Vim config as a base for your own, you should:
 
 * Fork this repository.
-* Change the mention of "dambrisco" in the get.vimfiles.sh script to your own
+* Change the mention of "dambrisco" in the install.sh script to your own
   github name.
 * Customize the vim config to suit you.
 
