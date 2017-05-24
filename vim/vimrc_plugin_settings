@@ -106,6 +106,7 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files --exclude-standard -c
 let g:ctrlp_open_multiple_files = 'vjr'
 let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'mixed', 'line', 'funky']
 
+let g:ctrlp_funky_syntax_highlight = 1
 nnoremap <Leader>fu :CtrlPFunky<Cr>
 " narrow the list down with a word under cursor
 nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
