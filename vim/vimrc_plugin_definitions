@@ -17,7 +17,6 @@ if &loadplugins
   Plug 'groenewege/vim-less'
   Plug 'fatih/vim-go'
   Plug 'tfnico/vim-gradle'
-  Plug 'jdonaldson/vaxe'
   Plug 'zah/nim.vim'
   Plug 'dambrisco/android.vim'
   Plug 'rust-lang/rust.vim'
@@ -28,12 +27,8 @@ if &loadplugins
   Plug 'hashivim/vim-terraform'
   Plug 'digitaltoad/vim-pug'
 
-  Plug 'xolox/vim-misc'
-
   Plug 'scrooloose/nerdtree'
   Plug 'nathanaelkane/vim-indent-guides'
-  Plug 'gregsexton/gitv'
-
 
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
