@@ -26,6 +26,7 @@ if &loadplugins
   Plug 'editorconfig/editorconfig-vim'
   Plug 'hashivim/vim-terraform'
   Plug 'digitaltoad/vim-pug'
+  Plug 'dNitro/vim-pug-complete', { 'for': [ 'jade', 'pug' ] }
 
   Plug 'scrooloose/nerdtree'
   Plug 'nathanaelkane/vim-indent-guides'
