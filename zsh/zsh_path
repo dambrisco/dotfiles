@@ -78,6 +78,11 @@ if [ -d $HOME/src/rust ] ; then
   export RUST_SRC_PATH="$HOME/src/rust/src"
 fi
 
+# GPG
+if [ -z "$(pgrep gpg-agent)" ]; then
+  eval $(gpg-agent --daemon --homedir /Users/dambrisco/.gnupg)
+fi
+
 ############################################################
 ## MANPATH
 ############################################################

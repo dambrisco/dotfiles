@@ -26,6 +26,10 @@ if [ -f ~/dotfiles/zsh/zsh_local ] ; then
   . ~/dotfiles/zsh/zsh_local
 fi
 
+if [ -f ~/dotfiles/zsh/zsh_autorun ] ; then
+  . ~/dotfiles/zsh/zsh_autorun
+fi
+
 if [ -f ~/dotfiles/zsh/zsh_travis ] ; then
   . ~/dotfiles/zsh/zsh_travis
 fi

@@ -64,7 +64,7 @@ let g:tcommentMapLeader2   = ""
 let g:tcommentMapLeaderOp1 = ""
 let g:tcommentMapLeaderOp2 = ""
 " Create the only ones that matters
-noremap <silent> <Leader>c :TComment<cr>
+noremap <silent> <Leader>x :TComment<cr>
 
 """"""""""""""""""
 " AutoClose config

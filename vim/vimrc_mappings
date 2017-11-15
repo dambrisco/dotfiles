@@ -124,3 +124,5 @@ nnoremap U :redo<CR>
 nnoremap <C-R> <Esc>
 nnoremap <C-D> <Esc>
 nnoremap <C-U> <Esc>
+
+" Enable quick directory change
