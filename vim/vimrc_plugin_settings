@@ -15,8 +15,8 @@ let NERDTreeHijackNetrw=1
 let NERDTreeMouseMode=1
 " Show hidden files by default
 let NERDTreeShowHidden=1
-" Hide .pyc and __init__.py files
-let NERDTreeIgnore = ['\.pyc$', '__init__.py']
+" Hide .pyc
+let NERDTreeIgnore = ['\.pyc$']
 
 nmap <silent> <leader><Tab> :NERDTreeToggle<CR>
 nmap <silent> <leader>n :NERDTreeFind<CR>
@@ -30,11 +30,6 @@ let g:loaded_AlignMapsPlugin = 1
 " Git interaction
 nmap gs :Gstatus<CR>
 nmap gb :Gblame<CR>
-" Gitv browser mode (shows git log for repo)
-nmap gl :Gitv --all<CR>
-" Gitv file mode (shows git history for current file)
-nmap gL :Gitv! --all<CR>
-vmap gL :Gitv! --all<CR>
 
 """"""""""""""""""
 " IndentGuides plugin
@@ -166,7 +161,6 @@ function! EnterAlign()
   call setpos('.', save_cursor)
 endfunction
 
-let g:go_fmt_command = "goimports"
 let g:pymode_rope_autoimport = 0
 let g:pymode_rope_lookup_project = 0
 let g:pymode_rope_complete_on_dot = 0
@@ -175,6 +169,21 @@ let g:pymode_rope = 0
 let g:racer_cmd = 'racer'
 let g:rustfmt_autosave = 1
 
+" vim-go settings
+let g:go_fmt_command = "goimports"
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
+let g:go_auto_type_info = 1
+
 " EditorConfig settings
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+set updatetime=100
+
 syntax enable

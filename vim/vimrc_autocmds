@@ -27,3 +27,5 @@ endfunction
 autocmd BufWritePre * StripWhiteSpace
 command! -range=% StripWhiteSpaces :silent call <SID>StripWhiteSpaces()
 
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if !exists("s:std_in") && argc() == 1 | if isdirectory(argv()[0]) | exe 'NERDTree' argv()[0] | only |  else | NERDTree | wincmd p | endif | endif
