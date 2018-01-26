@@ -27,5 +27,22 @@ endfunction
 autocmd BufWritePre * StripWhiteSpace
 command! -range=% StripWhiteSpaces :silent call <SID>StripWhiteSpaces()
 
+function! s:getRoot()
+  let cph = expand('%:p:h', 1)
+  if !(cph =~ '^.\+://')
+    for mkr in ['.git/', '.hg/', '.svn/', '.bzr/', '_darcs/', '.vimprojects']
+      let wd = call('find'.(mkr =~ '/$' ? 'dir' : 'file'), [mkr, cph.';'])
+      if wd != ''
+        break
+      endif
+    endfor
+  endif
+  return fnamemodify(fnameescape(wd == '' ? cph : substitute(wd, mkr.'$', '', '')), ':p')
+endfunction
+
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if !exists("s:std_in") && argc() == 1 | if isdirectory(argv()[0]) | exe 'NERDTree' argv()[0] | only |  else | NERDTree | wincmd p | endif | endif
+if &loadplugins
+  let root = s:getRoot()
+  let exp = expand('%:p')
+  autocmd VimEnter * if !exists("s:std_in") && argc() == 1 | exe 'NERDTree' root | if root != exp | exe 'NERDTreeFind' argv()[0] | endif | if isdirectory(argv()[0]) | only | else | wincmd p | endif | endif
+endif

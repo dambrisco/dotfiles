@@ -48,7 +48,7 @@ if &loadplugins
 
   Plug 'vim-scripts/YankRing.vim'
   Plug 'sjl/gundo.vim'
-  Plug 'kien/ctrlp.vim'
+  Plug 'ctrlpvim/ctrlp.vim'
   Plug 'tacahiroy/ctrlp-funky'
 
   Plug 'Shougo/neocomplete.vim'
@@ -74,6 +74,8 @@ if &loadplugins
   Plug 'kchmck/vim-coffee-script'
   Plug 'elixir-lang/vim-elixir'
   Plug 'slashmili/alchemist.vim'
+
+  Plug 'vim-scripts/vim-gradle', {'as': 'vim-gradle-ctags'}
 endif
 
 " All of your plugins must be added before the following line
