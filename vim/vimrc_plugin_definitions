@@ -21,7 +21,7 @@ if &loadplugins
   Plug 'dambrisco/android.vim'
   Plug 'rust-lang/rust.vim'
   Plug 'chochos/ceylon-vim'
-  Plug 'OmniSharp/omnisharp-vim'
+  Plug 'OmniSharp/omnisharp-vim', { 'for': [ 'cs', 'fs', 'csproj', 'fsproj', 'sln' ] }
   Plug 'tpope/vim-dispatch'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'hashivim/vim-terraform'
@@ -41,7 +41,8 @@ if &loadplugins
 
   Plug 'bling/vim-airline'
 
-  Plug 'vim-scripts/AutoTag'
+  " Plug 'vim-scripts/AutoTag'
+  Plug 'craigemery/vim-autotag'
   Plug 'vim-scripts/tComment'
   Plug 'vim-scripts/Gist.vim'
   Plug 'vim-scripts/ReplaceWithRegister'
@@ -68,8 +69,8 @@ if &loadplugins
   Plug 'thinca/vim-textobj-function-javascript'
 
   Plug 'tpope/vim-abolish'
-  Plug 'nsf/gocode', {'rtp': 'vim/'}
   Plug 'racer-rust/vim-racer'
+  Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
   Plug 'fsharp/vim-fsharp', {'for': 'fsharp', 'do': 'make fsautocomplete'}
   Plug 'kchmck/vim-coffee-script'
   Plug 'elixir-lang/vim-elixir'

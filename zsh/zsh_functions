@@ -83,6 +83,13 @@ function lie
    fi"
 }
 
+function kctx
+{
+  local cmd="kops-env-$1"
+  $cmd
+  kubectl config use-context $1
+}
+
 function zle-keymap-select zle-line-init
 {
     # change cursor shape in iTerm2

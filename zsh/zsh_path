@@ -23,7 +23,7 @@ fi
 if [ -d $HOME/go ]; then
   export GOPATH="$HOME/go"
   export GOBIN="$GOPATH/bin"
-  export GOROOT=`go env GOROOT`
+  export GOROOT="$(brew --prefix go)/libexec"
   PATH="$PATH:$GOBIN"
 fi
 
@@ -40,12 +40,13 @@ if [ -d /usr/local/share/dotnet/bin ]; then
   export DOTNET_REFERENCE_ASSEMBLIES_PATH=/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/xbuild-frameworks/
 fi
 
-if [ -d /usr/local/lib/python2.7/site-packages ] ; then
-  PYTHONPATH="/usr/local/lib/python2.7/site-packages"
-fi
-
 if [ -d /usr/local/textlive/2014/bin/universal-darwin ] ; then
   PATH="$PATH:/usr/local/textlive/2014/bin/universal-darwin"
+fi
+
+if [ -d /usr/local/Cellar/python@2/2.7.14_1/libexec/bin ]; then
+  PATH="/usr/local/Cellar/python@2/2.7.14_1/libexec/bin:$PATH"
+  PYTHONPATH="/usr/local/Cellar/python@2/2.7.14_1/Frameworks/Python.framework/Versions/2.7/"
 fi
 
 if [ -d ~/.nvm ]; then
