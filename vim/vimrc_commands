@@ -5,10 +5,10 @@
 command Vimrc        :e ~/dotfiles/vim/vimrc
 command VimCommands  :e ~/dotfiles/vim/vimrc_commands
 command VimMaps      :e ~/dotfiles/vim/vimrc_mappings
-command VimPlugins   :e ~/dotfiles/vim/vimrc_plugins
+command VimPlugins   :e ~/dotfiles/vim/vimrc_plugin_definitions
 command VimSettings  :e ~/dotfiles/vim/vimrc_settings
-command VimBundles   :e ~/dotfiles/dotfiles/vim_bundles
 command VimNT :NERDTree ~/dotfiles/vim
+command Sesh :NERDTreeToggle | mksession! | :NERDTreeToggle | wincmd p
 
 " easily get to bashrc
 command Bashrc :e ~/dotfiles/bash/bashrc

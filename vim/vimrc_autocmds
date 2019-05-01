@@ -1,5 +1,6 @@
 " associate Dockerfile with sh filetype syntax
 autocmd BufRead,BufNewFile Dockerfile setfiletype sh
+autocmd BufRead,BufNewFile Dockerfile.* setfiletype sh
 " associate .conf files with upstart filetype syntqx
 autocmd BufRead,BufNewFile *.conf set filetype=upstart
 " javascript uses 2 spaces everywhere
@@ -41,8 +42,23 @@ function! s:getRoot()
 endfunction
 
 autocmd StdinReadPre * let s:std_in=1
+
+function! s:openNerdTree(root, exp, argc, argv)
+  if !exists("s:std_in") && a:argc == 1
+    let path = a:argv[0]
+    exe 'NERDTree'
+
+    if a:root != a:exp
+      exe 'NERDTreeFind' path
+    endif
+    if isdirectory(path)
+      only
+    else
+      wincmd p
+    endif
+  endif
+endfunction
+
 if &loadplugins
-  let root = s:getRoot()
-  let exp = expand('%:p')
-  autocmd VimEnter * if !exists("s:std_in") && argc() == 1 | exe 'NERDTree' root | if root != exp | exe 'NERDTreeFind' argv()[0] | endif | if isdirectory(argv()[0]) | only | else | wincmd p | endif | endif
+  autocmd VimEnter * call s:openNerdTree(s:getRoot(), expand('%:p'), argc(), argv())
 endif

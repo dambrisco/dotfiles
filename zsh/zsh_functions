@@ -12,6 +12,12 @@ function docker-host
   eval "$(docker-machine env $1)"
 }
 
+function kube-host
+{
+  minikube start
+  eval "$(minikube docker-env)"
+}
+
 function retag
 {
   TAG=`git describe --abbrev=0 --tags`
@@ -88,6 +94,11 @@ function kctx
   local cmd="kops-env-$1"
   $cmd
   kubectl config use-context $NAME
+}
+
+function docker-login-aws
+{
+  eval $(aws ecr get-login --no-include-email --region $AWS_REGION)
 }
 
 function zle-keymap-select zle-line-init
