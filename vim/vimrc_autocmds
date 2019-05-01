@@ -51,6 +51,7 @@ function! s:openNerdTree(root, exp, argc, argv)
     if a:root != a:exp
       exe 'NERDTreeFind' path
     endif
+
     if isdirectory(path)
       only
     else
@@ -60,5 +61,8 @@ function! s:openNerdTree(root, exp, argc, argv)
 endfunction
 
 if &loadplugins
-  autocmd VimEnter * call s:openNerdTree(s:getRoot(), expand('%:p'), argc(), argv())
+  let root = s:getRoot()
+  let exp = expand('%:p')
+  autocmd VimEnter * call s:openNerdTree(root, exp, argc(), argv())
+  "autocmd VimEnter * if !exists("s:std_in") && argc() == 1 | exe 'NERDTree' root | if root != exp | exe 'NERDTreeFind' argv()[0] | endif | if isdirectory(argv()[0]) | only | else | wincmd p | endif | endif
 endif
