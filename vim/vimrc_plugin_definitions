@@ -51,8 +51,16 @@ if &loadplugins
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'tacahiroy/ctrlp-funky'
 
-  Plug 'Shougo/neocomplete.vim'
+  " Plug 'Shougo/neocomplete.vim'
   Plug 'christoomey/vim-tmux-navigator'
+
+  if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+  endif
 
   Plug 'pangloss/vim-javascript'
   Plug 'jelera/vim-javascript-syntax'

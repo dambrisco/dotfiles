@@ -8,6 +8,7 @@ vim/sessions/*
 vim/autoload
 vim/plugged
 vim/ftplugin
+vim/view/*
 .bundle
 vim/vim
 Gemfile.lock

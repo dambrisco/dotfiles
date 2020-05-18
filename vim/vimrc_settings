@@ -61,6 +61,8 @@ set foldcolumn=0                " (fdc) width of fold column (to see where folds
 set foldmethod=manual           " (fdm) creates folds that make sense for the language
 set foldenable                  " (fen) enables or disables folding
 
+set completeopt-=preview        " disable completion preview pane
+
 set clipboard=unnamed           " copy/paste to "* by default
 
 let mapleader=","
@@ -70,6 +72,8 @@ set backupdir=~/.vim_tmp
 set dir=~/.vim_tmp
 
 set novisualbell " disable window flash on bell
+
+set hidden
 
 set t_Co=256 " 256 colors
 set background=dark

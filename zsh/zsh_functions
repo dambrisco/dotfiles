@@ -91,14 +91,13 @@ function lie
 
 function kctx
 {
-  local cmd="kops-env-$1"
+  local cmd="k8s-env-$1"
   $cmd
-  kubectl config use-context $NAME
 }
 
 function docker-login-aws
 {
-  eval $(aws ecr get-login --no-include-email --region $AWS_REGION)
+  aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $(aws sts get-caller-identity | jq -j '.Account').dkr.ecr.us-east-1.amazonaws.com
 }
 
 function zle-keymap-select zle-line-init
