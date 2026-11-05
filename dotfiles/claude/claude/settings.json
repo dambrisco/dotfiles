@@ -1,6 +1,9 @@
 {
   "includeCoAuthoredBy": true,
-  "model": "fable",
+  "permissions": {
+    "defaultMode": "bypassPermissions"
+  },
+  "model": "opus[1m]",
   "enabledPlugins": {
     "superpowers@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
@@ -15,9 +18,18 @@
     "commit-commands@claude-plugins-official": true,
     "pr-review-toolkit@claude-plugins-official": true,
     "gopls-lsp@claude-plugins-official": true,
-    "mcp-server-dev@claude-plugins-official": true
+    "mcp-server-dev@claude-plugins-official": true,
+    "cc-plugin-you-should-know@builtin": true
   },
-  "fastMode": true,
+  "modelSettings": {
+    "claude-opus-5": {
+      "effortLevel": "high"
+    },
+    "claude-sonnet-5": {
+      "effortLevel": "medium"
+    }
+  },
+  "skipDangerousModePermissionPrompt": true,
   "skipWorkflowUsageWarning": true,
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true
