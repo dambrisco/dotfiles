@@ -55,6 +55,14 @@ if [[ -n "$GHOSTTY_RESOURCES_DIR" && -r "$GHOSTTY_RESOURCES_DIR/shell-integratio
   source "$GHOSTTY_RESOURCES_DIR/shell-integration/zsh/ghostty-integration"
 fi
 
+# Report the shell's directory to the terminal (OSC 7) at each prompt and cd.
+# Terminals without shell integration (Rex) otherwise open new tabs in the
+# foreground program's directory, e.g. the worktree `claude -w` switched into.
+_osc7_report_pwd() { printf '\e]7;file://%s%s\e\\' "$HOST" "${PWD// /%20}" }
+autoload -Uz add-zsh-hook
+add-zsh-hook chpwd _osc7_report_pwd
+add-zsh-hook precmd _osc7_report_pwd
+
 # Use vi mode
 bindkey -v
 # Use emacs mode
